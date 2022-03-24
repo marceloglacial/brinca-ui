@@ -2,13 +2,10 @@ import '../../tailwind.css'
 import React, { FC } from 'react'
 
 export interface ButtonProps {
-    variant: 'primary' | 'secondaty'
+    variant: 'primary' | 'secondary'
 }
 
-const Button: FC<ButtonProps & HTMLButtonElement> = ({
-    variant,
-    children,
-}): JSX.Element => {
+const Button: FC<ButtonProps> = ({ variant, children }): JSX.Element => {
     return (
         <button
             className={`${styles.container} ${styles[variant]}`}
