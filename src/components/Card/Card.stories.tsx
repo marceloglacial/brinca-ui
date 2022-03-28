@@ -5,7 +5,7 @@ import CardBody from './CardBody'
 import CardContent from './CardContent'
 import CardFooter from './CardFooter'
 import CardHeader from './CardHeader'
-import CardImage, { CardImageProps } from './CardImage'
+import CardImage from './CardImage'
 
 const meta: Meta = {
     title: 'Components/Card',

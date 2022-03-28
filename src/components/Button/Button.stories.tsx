@@ -14,6 +14,7 @@ export const Primary = Template.bind({})
 Primary.args = {
     variant: 'primary',
     children: 'Primary Button',
+    onClick: () => alert('click'),
 }
 
 export const Secondary = Template.bind({})
