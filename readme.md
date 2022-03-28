@@ -1,7 +1,11 @@
+![npm](https://img.shields.io/npm/v/@marceloglacial/brinca-ui)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/marceloglacial/brinca-ui)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/marceloglacial/brinca-ui/Publish)
+![Cypress workflow](https://github.com/marceloglacial/brinca-ui/actions/workflows/tests.yml/badge.svg) 
 # Brinca UI 
 
-
 Design System and React component library for [Brinca](https://brinca.ca/)
+
 ## Details
 
 The library is built with:
