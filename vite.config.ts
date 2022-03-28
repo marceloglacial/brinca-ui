@@ -18,7 +18,7 @@ export default defineConfig({
                     emitDeclarationOnly: true,
                     declaration: true,
                     declarationDir: path.resolve(__dirname, 'dist'),
-                    exclude: '**/src/stories/**/*.*',
+                    exclude: ['**/src/**/*.stories.*', '**/src/**/*.spec.*'],
                 }),
             ],
             external: ['react', 'react-dom', 'styled-components'],

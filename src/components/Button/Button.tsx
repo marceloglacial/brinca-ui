@@ -2,12 +2,12 @@ import React, { FC } from 'react'
 import styles from './ButtonStyles'
 
 export interface ButtonProps {
-    variant: 'primary' | 'secondary'
+    variant?: 'primary' | 'secondary'
     full?: boolean | ''
 }
 
 const Button: FC<ButtonProps> = ({
-    variant,
+    variant = 'primary',
     children,
     full = '',
 }): JSX.Element => {

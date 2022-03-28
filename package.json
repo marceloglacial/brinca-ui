@@ -20,7 +20,8 @@
         "serve": "vite preview",
         "storybook": "start-storybook -p 6006 --modern",
         "format": "prettier -w src",
-        "lint": "eslint --fix src/**/*.ts*"
+        "lint": "eslint --fix src/**/*.ts*",
+        "test": "(yarn dev & yarn run cypress open)"
     },
     "dependencies": {
         "prettier": "^2.6.0",
@@ -46,6 +47,7 @@
         "@vitejs/plugin-react": "^1.2.0",
         "autoprefixer": "^10.4.4",
         "babel-loader": "^8.2.4",
+        "cypress": "^9.5.2",
         "eslint": "^8.11.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.0.0",
