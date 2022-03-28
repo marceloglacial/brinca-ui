@@ -21,3 +21,9 @@ Secondary.args = {
     variant: 'secondary',
     children: 'Secondary Button',
 }
+export const FullWidth = Template.bind({})
+FullWidth.args = {
+    variant: 'primary',
+    children: 'Full Width',
+    full: true,
+}
