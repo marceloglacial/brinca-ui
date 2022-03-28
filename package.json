@@ -1,6 +1,6 @@
 {
     "name": "@marceloglacial/brinca-ui",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "author": "Marcelo Glacial",
     "types": "dist/index.d.ts",
     "module": "dist/brinca-ui.esm.js",
@@ -16,9 +16,9 @@
     "scripts": {
         "dev": "yarn storybook",
         "build": "yarn lint && yarn format && tsc && vite build",
+        "build:docs": "build-storybook -o docs",
         "serve": "vite preview",
         "storybook": "start-storybook -p 6006 --modern",
-        "build-storybook": "build-storybook -o docs",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.ts*"
     },
