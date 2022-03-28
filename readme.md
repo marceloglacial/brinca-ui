@@ -1,26 +1,42 @@
-# Component library starter
+# Brinca UI 
 
-This code was written for a talk at the Sydney AltNet Meetup; [Building a web component library in an hour](https://www.meetup.com/Sydney-Alt-Net/events/ftrmfsyccmblc/) in September, 2021
 
-The recording of [the session is on YouTube](https://www.youtube.com/watch?v=RoY3N_nDs0M).
+Design System and React component library for [Brinca](https://brinca.ca/)
+## Details
 
-### Details
+The library is built with:
 
-The library is built with
-* React
-* TypeScript
+* [React](https://reactjs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
 * [Vite](https://vitejs.dev/)
 * [Storybook](https://storybook.js.org/)
-* [Styled Components](https://styled-components.com/)
 * [Tailwind CSS](https://tailwindcss.com/)
 
 ## Get Started
 
-* Clone the repo (duh!)
-* Run `yarn` or `npm` to install all the dependencies
-* Use `yarn storybook` to start storybook
-* Use `yarn build` to create a release build in the `dist` folder
+Install all the dependencies
+```terminal 
+yarn install
+```
 
-Enjoy!
+Start the project
+```terminal
+yarn dev
+```
 
-https://github.com/rbanks54/ComponentLibraryStarter
+Build 
+
+```terminal
+yarn build
+```
+
+## Deployment
+
+This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.com/package/@marceloglacial/brinca-ui) and to build the docs.
+
+
+## References
+
+- [Building a web component library in an hour](https://www.meetup.com/Sydney-Alt-Net/events/ftrmfsyccmblc/)
+- [Building a web component library in an hour on YouTube](https://www.youtube.com/watch?v=RoY3N_nDs0M).
+- [Component Library Starter](https://github.com/rbanks54/ComponentLibraryStarter)
