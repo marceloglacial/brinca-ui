@@ -1,12 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false,
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+    content: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
+    theme: {
+        fontFamily: {
+            sans: ['Mulish', ...defaultTheme.fontFamily.sans],
+            serif: [...defaultTheme.fontFamily.serif],
+            mono: [...defaultTheme.fontFamily.mono],
+        },
+    },
 }

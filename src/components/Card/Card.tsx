@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-
-const Card: FC = (): JSX.Element => {
-    return <div className='px-4 py-2 border-2 rounded-full'>Card</div>
+import styles from './CardStyles'
+const Card: FC = ({ children }): JSX.Element => {
+    return <div className={styles.container}>{children}</div>
 }
 export default Card
