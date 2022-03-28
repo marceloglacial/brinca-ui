@@ -7,6 +7,9 @@
       "DOM.Iterable",
       "ESNext"
     ],
+    "types": [
+      "cypress"
+    ],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
