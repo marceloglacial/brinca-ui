@@ -23,19 +23,19 @@ const testWidth = () => {
     })
 }
 
-describe('Primary', () => {
+describe('Button - Primary', () => {
     testBaseUrl('button--primary')
     testContainer()
     testType('primary')
 })
 
-describe('Secondary', () => {
+describe('Button - Secondary', () => {
     testBaseUrl('button--secondary')
     testContainer()
     testType('secondary')
 })
 
-describe('Full Width', () => {
+describe('Button - Full Width', () => {
     testBaseUrl('button--full-width')
     testContainer()
     testType('primary')

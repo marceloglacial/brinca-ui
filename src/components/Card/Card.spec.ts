@@ -42,7 +42,7 @@ const testFooter = () => {
     })
 }
 
-describe('Base', () => {
+describe('Card - Base', () => {
     testBaseUrl('card--base')
     testContainer()
     testHeader()
@@ -50,7 +50,7 @@ describe('Base', () => {
     testContent()
 })
 
-describe('With Image', () => {
+describe('Card - With Image', () => {
     testBaseUrl('card--with-image')
     testContainer()
     testHeader()
@@ -59,7 +59,7 @@ describe('With Image', () => {
     testImage()
 })
 
-describe('With Button', () => {
+describe('Card - With Button', () => {
     testBaseUrl('card--with-button')
     testContainer()
     testHeader()

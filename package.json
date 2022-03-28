@@ -21,9 +21,11 @@
         "storybook": "start-storybook -p 6006 --modern",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.ts*",
-        "test": "(yarn dev & yarn run cypress open)"
+        "test": "concurrently \"yarn dev\" \"yarn run cypress open\"",
+        "test:ci": "concurrently \"start-storybook -p 6006 --ci --quiet\" \"cypress run --headless\""
     },
     "dependencies": {
+        "concurrently": "^7.0.0",
         "prettier": "^2.6.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
