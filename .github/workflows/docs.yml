@@ -1,3 +1,4 @@
+#DCOS FIX
 name: Build Docs and Deploy
 on:
     push:
