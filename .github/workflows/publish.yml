@@ -1,24 +1,24 @@
-name: Publish
+name: Build Docs and Deploy
 on:
     release:
         types: [published]
 jobs:
-    release:
-        name: 🚀 release
+    build-and-deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: 📚 checkout
-              uses: actions/checkout@v2
-            - name: 🟢 node
-              uses: actions/setup-node@v2
-              with:
-                  node-version: 16
-                  registry-url: https://registry.npmjs.org
+            - name: 🛎️ checkout
+              uses: actions/checkout@v3
+
             - name: 📦 install
               run: yarn install
-            - name: 🔧 build
-              run: yarn build
-            - name: 🚀 publish
-              run: npm publish --access public
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+
+            - name: 🔧 build docs
+              run: yarn build:docs
+
+            - name: 🚀 deploy
+              uses: JamesIves/github-pages-deploy-action@v4.2.5
+              with:
+                  BRANCH: storybook
+                  FOLDER: docs
+                  CLEAN: true
+                  TARGET_FOLDER: docs
