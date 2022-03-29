@@ -4,9 +4,9 @@ jobs:
     cypress-run:
         runs-on: ubuntu-latest
         steps:
-            - name: 🟢 Checkout
+            - name: 🛎️ Checkout
               uses: actions/checkout@v2
-            - name: 📦 Cypress run
+            - name: 🔧 Cypress run
               uses: cypress-io/github-action@v2
               with:
                   install:

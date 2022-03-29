@@ -1,8 +1,7 @@
-#DCOS FIX
-name: Build Docs and Deploy
+name: Build Docs
 on:
-    push:
-        paths: ['src/components/**']
+    release:
+        types: [published]
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
