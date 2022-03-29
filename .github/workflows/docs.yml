@@ -18,6 +18,6 @@ jobs:
             - name: 🚀 deploy
               uses: JamesIves/github-pages-deploy-action@v4.2.5
               with:
-                  BRANCH: storybook
-                  FOLDER: docs
-                  CLEAN: true
+                  branch: docs
+                  folder: docs
+                  clean: true
