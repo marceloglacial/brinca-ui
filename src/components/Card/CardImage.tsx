@@ -1,15 +1,8 @@
+import Image, { ImageProps } from '@components/Image/Image'
 import React, { FC } from 'react'
 import styles from './CardStyles'
 
-export interface CardImageProps {
-    src: string
-    alt?: string
-    width?: number
-    height?: number
-    className?: string
-}
-
-const CardImage: FC<CardImageProps> = ({
+const CardImage: FC<ImageProps> = ({
     src,
     alt = '',
     width = 200,
@@ -18,7 +11,7 @@ const CardImage: FC<CardImageProps> = ({
 }): JSX.Element => {
     return (
         <figure className={styles.figure}>
-            <img
+            <Image
                 src={src}
                 alt={alt}
                 width={width}
