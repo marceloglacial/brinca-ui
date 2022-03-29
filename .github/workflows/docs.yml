@@ -1,11 +1,10 @@
 name: Build Docs and Deploy
 on:
-    release:
-        types: [published]
+    push:
+        paths: ['src/components/**']
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
-        concurrency: ci-${{ github.ref }}
         steps:
             - name: 🛎️ checkout
               uses: actions/checkout@v3
@@ -19,5 +18,7 @@ jobs:
             - name: 🚀 deploy
               uses: JamesIves/github-pages-deploy-action@v4.2.5
               with:
-                  branch: docs
-                  folder: docs
+                  BRANCH: main
+                  FOLDER: docs
+                  CLEAN: true
+                  TARGET_FOLDER: docs
