@@ -1,7 +1,0 @@
-*.css
-*.svg
-*.stories.*
-*.spec*.*
-node_module
-dist
-/*.js
