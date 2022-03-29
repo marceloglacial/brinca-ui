@@ -5,6 +5,14 @@ import typescript from '@rollup/plugin-typescript'
 
 export default defineConfig({
     plugins: [react()],
+    resolve: {
+        alias: [
+            { find: '@components', replacement: '/src/components' },
+            { find: '@functions', replacement: '/src/functions' },
+            { find: '@hooks', replacement: '/src/hooks' },
+        ],
+    },
+
     build: {
         lib: {
             entry: path.resolve(__dirname, 'src/index.tsx'),

@@ -1,11 +1,11 @@
 import { Meta, Story } from '@storybook/react'
-import Button from '../Button/Button'
 import Card from './Card'
 import CardBody from './CardBody'
 import CardContent from './CardContent'
 import CardFooter from './CardFooter'
 import CardHeader from './CardHeader'
 import CardImage from './CardImage'
+import Button from '@components/Button/Button'
 
 const meta: Meta = {
     title: 'Components/Card',
