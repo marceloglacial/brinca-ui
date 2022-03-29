@@ -21,3 +21,4 @@ jobs:
               with:
                   branch: docs
                   folder: docs
+                  clean: true
