@@ -1,6 +1,6 @@
 {
     "name": "@marceloglacial/brinca-ui",
-    "version": "0.7.1",
+    "version": "0.8.0",
     "author": "Marcelo Glacial",
     "types": "dist/index.d.ts",
     "module": "dist/brinca-ui.esm.js",
@@ -23,7 +23,8 @@
         "lint": "eslint --fix src/**/*.ts*",
         "start": "start-storybook -p 6006 --ci --quiet",
         "test": "concurrently \"yarn dev\" \"yarn run cypress open\"",
-        "test:ci": "concurrently \"yarn start\" \"cypress run --headless\""
+        "test:ci": "concurrently \"yarn start\" \"cypress run --headless\"",
+        "predeploy": "yarn build && yarn build:docs && yarn test:ci"
     },
     "dependencies": {
         "concurrently": "^7.0.0",
