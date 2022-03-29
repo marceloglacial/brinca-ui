@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 import styles from './ImageStyles'
 
 export interface ImageProps {
-    src: 'string'
-    alt?: 'string'
+    src: string
+    alt?: string
     width?: number
     height?: number
     shadow?: boolean | ''
