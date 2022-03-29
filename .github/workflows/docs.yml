@@ -1,4 +1,4 @@
-name: Build Docs and Deploy
+name: Build Docs
 on:
     release:
         types: [published]
