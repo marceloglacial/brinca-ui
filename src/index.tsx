@@ -6,6 +6,7 @@ import CardContent from '@components/Card/CardContent'
 import CardHeader from '@components/Card/CardHeader'
 import CardImage from '@components/Card/CardImage'
 import CardFooter from '@components/Card/CardFooter'
+import Image from '@components/Image/Image'
 
 export {
     Button,
@@ -15,4 +16,5 @@ export {
     CardHeader,
     CardImage,
     CardFooter,
+    Image,
 }
