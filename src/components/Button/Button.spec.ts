@@ -17,6 +17,12 @@ const testType = (type: string = 'primary') => {
     })
 }
 
+const testClassName = (classname: string) => {
+    it(`Should have ${classname} classname`, () => {
+        cy.get(classname).should('exist')
+    })
+}
+
 const testWidth = () => {
     it(`Should render a full width button`, () => {
         cy.get(`.w-full`).should('exist')
@@ -33,6 +39,11 @@ describe('Button - Secondary', () => {
     testBaseUrl('button--secondary')
     testContainer()
     testType('secondary')
+})
+describe('Button - As Link', () => {
+    testBaseUrl('button--as-link')
+    testContainer()
+    testClassName('a')
 })
 
 describe('Button - Full Width', () => {

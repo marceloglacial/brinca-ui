@@ -1,4 +1,4 @@
-import Image from './Image'
+import Hero from './Hero'
 
 const testBaseUrl = (component: string) => {
     it(`Visit base url`, () => {
@@ -6,32 +6,30 @@ const testBaseUrl = (component: string) => {
         cy.visit(`/iframe.html?id=components-${component}`)
     })
 }
-const testContainer = () => {
-    it(`Should render Image`, () => {
-        cy.get('.image').should('exist')
-        cy.get('img').should('exist')
-    })
-}
-
 const testClassName = (classname: string) => {
     it(`Should have ${classname} classname`, () => {
         cy.get(classname).should('exist')
     })
 }
 
-describe('Image - Base', () => {
-    testBaseUrl('image--base')
-    testContainer()
+const testGlobal = () => {
+    testClassName('.hero')
+    testClassName('.hero__body')
+    testClassName('.hero__header')
+    testClassName('.hero__content')
+    testClassName('.hero__image')
+    testClassName('.hero figure')
+    testClassName('.hero__image img')
+    testClassName('.hero__button')
+}
+
+describe('Hero - Base', () => {
+    testBaseUrl('hero')
+    testGlobal()
 })
 
-describe('Image - Rounded', () => {
-    testBaseUrl('image--rounded')
-    testContainer()
-    testClassName('.image--rounded')
-})
-
-describe('Image - with shadow', () => {
-    testBaseUrl('image--with-shadow')
-    testContainer()
-    testClassName('.image--shadow')
+describe('Hero - Reversed', () => {
+    testBaseUrl('hero--reversed')
+    testGlobal()
+    testClassName('.hero--reversed')
 })
