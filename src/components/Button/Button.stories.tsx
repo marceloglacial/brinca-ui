@@ -22,6 +22,15 @@ Secondary.args = {
     variant: 'secondary',
     children: 'Secondary Button',
 }
+
+export const AsLink = Template.bind({})
+AsLink.args = {
+    isLink: true,
+    variant: 'primary',
+    children: 'Full Width',
+    full: true,
+}
+
 export const FullWidth = Template.bind({})
 FullWidth.args = {
     variant: 'primary',
