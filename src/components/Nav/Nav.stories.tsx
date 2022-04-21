@@ -10,8 +10,7 @@ export default meta
 
 const Template: Story<NavProps> = (args) => <Nav {...args} />
 
-export const Base = Template.bind({})
-Base.args = {
+const menu = {
     menu: [
         {
             text: 'Item 1',
@@ -32,4 +31,13 @@ Base.args = {
             link: '#',
         },
     ],
+}
+
+export const Top = Template.bind({})
+Top.args = menu
+
+export const Bottom = Template.bind({})
+Bottom.args = {
+    ...menu,
+    variant: 'bottom',
 }
