@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { NavVariant } from './Nav'
 import styles from './NavItemStyles'
 
 export interface NavItemProps {
@@ -6,6 +7,7 @@ export interface NavItemProps {
     link: string
     target?: string
     className?: string
+    variant?: NavVariant
     menu?: NavItemProps[]
 }
 const NavItem: FC<NavItemProps> = ({
@@ -14,10 +16,11 @@ const NavItem: FC<NavItemProps> = ({
     target,
     text,
     menu,
+    variant = 'top',
 }): JSX.Element => {
     return (
         <li className={`${styles.container} ${className}`}>
-            <a href={link} target={target}>
+            <a href={link} target={target} className={styles[variant].link}>
                 {text}
             </a>
             {menu && (

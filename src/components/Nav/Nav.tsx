@@ -5,8 +5,10 @@ import styles from './NavStyles'
 export interface NavProps {
     menu: NavItemProps[]
     className?: string
-    variant?: 'top' | 'bottom'
+    variant?: NavVariant
 }
+
+export type NavVariant = 'top' | 'bottom'
 
 const Nav: FC<NavProps> = ({
     menu,
@@ -14,10 +16,10 @@ const Nav: FC<NavProps> = ({
     variant = 'top',
 }): JSX.Element => {
     return (
-        <nav className={`nav ${styles[variant]} ${className}`}>
+        <nav className={`nav ${`nav--${variant}`} ${className}`}>
             <ul className={`nav__list ${styles.container}`}>
                 {menu.map((item, index) => {
-                    return <NavItem key={index} {...item} />
+                    return <NavItem key={index} variant={variant} {...item} />
                 })}
             </ul>
         </nav>

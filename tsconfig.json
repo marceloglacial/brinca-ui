@@ -11,6 +11,9 @@
       "@functions/*": [
         "functions/*"
       ],
+      "@styles/*": [
+        "styles/*"
+      ],
     },
     "target": "ESNext",
     "useDefineForClassFields": true,
