@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import NavItem, { NavItemProps } from './NavItem'
+import styles from './NavStyles'
 
 export interface NavProps {
     menu: NavItemProps[]
@@ -18,10 +19,3 @@ const Nav: FC<NavProps> = ({ menu, className = '' }): JSX.Element => {
     )
 }
 export default Nav
-
-export interface stylesProps {
-    [index: string]: string
-}
-const styles: stylesProps = {
-    container: `flex items-center gap-12`,
-}

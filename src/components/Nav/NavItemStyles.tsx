@@ -2,7 +2,7 @@ export interface stylesProps {
     [index: string]: string
 }
 const styles: stylesProps = {
-    container: `flex items-center gap-12`,
+    container: `nav__item flex items-center justify-center`,
+    menu: `hidden`,
 }
-
 export default styles

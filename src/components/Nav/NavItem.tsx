@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import styles from './NavItemStyles'
 
 export interface NavItemProps {
     text: string
@@ -31,11 +32,3 @@ const NavItem: FC<NavItemProps> = ({
 }
 
 export default NavItem
-
-export interface stylesProps {
-    [index: string]: string
-}
-const styles: stylesProps = {
-    container: `flex items-center justify-center`,
-    menu: `hidden`,
-}
