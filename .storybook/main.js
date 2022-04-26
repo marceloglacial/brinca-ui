@@ -7,8 +7,9 @@ module.exports = {
     ],
     addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
     core: {
-        builder: 'storybook-builder-vite',
+        builder: '@storybook/builder-vite',
     },
+
     async viteFinal(config) {
         return {
             ...config,
@@ -31,6 +32,10 @@ module.exports = {
                     {
                         find: '@hooks',
                         replacement: path.resolve(__dirname, '../src/hooks'),
+                    },
+                    {
+                        find: '@styles',
+                        replacement: path.resolve(__dirname, '../src/styles'),
                     },
                 ],
             },
