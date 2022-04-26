@@ -5,7 +5,7 @@ const styles = {
     body: 'hero__body flex flex-col justify-center w-1/2',
     header: 'hero__header text-4xl font-bold pb-8',
     content: 'hero__content text-xl font-light leading-8',
-    image: 'hero__image w-1/2 h-full bg-green-600',
+    image: 'hero__image w-1/2 h-full',
     buttom: 'hero__button pt-8',
 }
 export default styles

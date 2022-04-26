@@ -1,4 +1,3 @@
-import Section from '@components/Section/Section'
 import { Meta } from '@storybook/react'
 import Heading from './Heading'
 
@@ -10,7 +9,7 @@ const meta: Meta = {
 export default meta
 
 export const Base = (args: any) => (
-    <Section>
+    <>
         <Heading>Base Heading</Heading>
         <p>
             Reprehenderit ut pariatur est pariatur duis esse non culpa. Cillum
@@ -20,5 +19,5 @@ export const Base = (args: any) => (
             consequat nulla ea veniam commodo aliquip consectetur tempor
             cupidatat tempor anim.
         </p>
-    </Section>
+    </>
 )
