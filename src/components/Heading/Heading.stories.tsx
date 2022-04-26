@@ -56,7 +56,8 @@ export const Base = (args: any) => (
             Reprehenderit ut pariatur est pariatur duis esse non culpa. Cillum
             aliquip quis cillum nulla duis ut ex elit proident dolor. Labore
             proident non laboris nostrud ipsum eiusmod. Minim duis cillum non
-            pariatur consectetur et commodo mollit culpa incididunt. Voluptate
+            pariatur consectetur{' '}
+            <strong>et commodo mollit culpa incididunt</strong>. Voluptate
             consequat nulla ea veniam commodo aliquip consectetur tempor
             cupidatat tempor anim.
         </p>
