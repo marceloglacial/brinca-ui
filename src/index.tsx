@@ -16,8 +16,8 @@ import HeroImage from '@components/Hero/HeroImage'
 import Image from '@components/Image/Image'
 import Nav from '@components/Nav/Nav'
 import NavItem from '@components/Nav/NavItem'
-import NavBar from '@components/NavBar/Navbar'
 import NavBarBrand from '@components/NavBar/NavBarBrand'
+import NavBar from '@components/NavBar/NavBar'
 import NavBarContent from '@components/NavBar/NavBarContent'
 
 export {
@@ -37,8 +37,8 @@ export {
     HeroHeader,
     HeroImage,
     Nav,
-    NavItem,
     NavBar,
+    NavItem,
     NavBarBrand,
     NavBarContent,
 }

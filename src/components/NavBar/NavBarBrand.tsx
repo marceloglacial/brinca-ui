@@ -9,7 +9,7 @@ const NavBarBrand: FC<NavBarBrandProps> = ({
     className = '',
     children,
 }): JSX.Element => {
-    return <nav className={`${styles.brand} ${className}`}>{children}</nav>
+    return <div className={`${styles.brand} ${className}`}>{children}</div>
 }
 
 export default NavBarBrand

@@ -9,7 +9,7 @@ const NavBarContent: FC<NavBarContentProps> = ({
     className = '',
     children,
 }): JSX.Element => {
-    return <nav className={`${styles.content} ${className}`}>{children}</nav>
+    return <div className={`${styles.content} ${className}`}>{children}</div>
 }
 
 export default NavBarContent

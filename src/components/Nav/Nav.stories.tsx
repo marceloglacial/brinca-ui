@@ -34,11 +34,7 @@ const menu: NavProps = {
     className: 'test',
 }
 
-export const Top = (args: any) => (
-    <Footer>
-        <Nav {...menu} />
-    </Footer>
-)
+export const Top = (args: any) => <Nav {...menu} />
 export const Bottom = (args: any) => (
     <Footer>
         <Nav variant={'bottom'} {...menu} />

@@ -1,10 +1,11 @@
-import React from 'react'
-import Button from '@components/Button/Button'
 import Nav, { NavProps } from '@components/Nav/Nav'
 import { Meta } from '@storybook/react'
 import NavBarBrand from './NavBarBrand'
 import NavBarContent from './NavBarContent'
 import NavBar from './NavBar'
+import Button from '@components/Button/Button'
+import Footer from '@components/Footer/Footer'
+import NavBarSocial from './NavBarSocial'
 
 const meta: Meta = {
     title: 'Components/NavBar',
@@ -38,7 +39,7 @@ const menu: NavProps = {
     className: 'test',
 }
 
-export const Header = (args: any) => (
+export const Top = (args: any) => (
     <NavBar>
         <NavBarBrand>
             <a href='#'>
@@ -56,21 +57,21 @@ export const Header = (args: any) => (
         </NavBarContent>
     </NavBar>
 )
-export const Footer = (args: any) => (
-    <NavBar>
-        <NavBarBrand>
-            <a href='#'>
-                <img
-                    src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75'
-                    width={230}
-                />
-            </a>
-        </NavBarBrand>
-        <NavBarContent>
-            <Nav {...menu} />
-            <Button isLink url='#'>
-                Button
-            </Button>
-        </NavBarContent>
-    </NavBar>
+export const Bottom = (args: any) => (
+    <Footer>
+        <NavBar>
+            <NavBarBrand>
+                <a href='#'>
+                    <img
+                        src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo-white.png&w=384&q=75'
+                        width={150}
+                    />
+                </a>
+            </NavBarBrand>
+            <NavBarSocial>Social</NavBarSocial>
+            <NavBarContent>
+                <Nav {...menu} variant='bottom' />
+            </NavBarContent>
+        </NavBar>
+    </Footer>
 )
