@@ -1,9 +1,10 @@
+import React from 'react'
 import Button from '@components/Button/Button'
 import Nav, { NavProps } from '@components/Nav/Nav'
 import { Meta } from '@storybook/react'
-import NavBar from './NavBar'
 import NavBarBrand from './NavBarBrand'
 import NavBarContent from './NavBarContent'
+import NavBar from './NavBar'
 
 const meta: Meta = {
     title: 'Components/NavBar',
@@ -37,17 +38,39 @@ const menu: NavProps = {
     className: 'test',
 }
 
-export const Primary = (args: any) => (
+export const Header = (args: any) => (
     <NavBar>
         <NavBarBrand>
-            <img
-                src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75'
-                width={230}
-            />
+            <a href='#'>
+                <img
+                    src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75'
+                    width={230}
+                />
+            </a>
         </NavBarBrand>
         <NavBarContent>
             <Nav {...menu} />
-            <Button>Cadastre-se</Button>
+            <Button isLink url='#'>
+                Button
+            </Button>
+        </NavBarContent>
+    </NavBar>
+)
+export const Footer = (args: any) => (
+    <NavBar>
+        <NavBarBrand>
+            <a href='#'>
+                <img
+                    src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75'
+                    width={230}
+                />
+            </a>
+        </NavBarBrand>
+        <NavBarContent>
+            <Nav {...menu} />
+            <Button isLink url='#'>
+                Button
+            </Button>
         </NavBarContent>
     </NavBar>
 )
