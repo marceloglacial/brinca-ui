@@ -6,6 +6,7 @@ import NavBar from './NavBar'
 import Button from '@components/Button/Button'
 import Footer from '@components/Footer/Footer'
 import NavBarSocial from './NavBarSocial'
+import NavItem from '@components/Nav/NavItem'
 
 const meta: Meta = {
     title: 'Components/NavBar',
@@ -14,30 +15,20 @@ const meta: Meta = {
 
 export default meta
 
-const menu: NavProps = {
-    menu: [
-        {
-            text: 'Item 1',
-            link: '#',
-            menu: [
-                {
-                    text: 'Item 1.1',
-                    link: '#',
-                    className: 'test-menu-item',
-                },
-            ],
-        },
-        {
-            text: 'Item 2',
-            link: '#',
-        },
-        {
-            text: 'Item 3',
-            link: '#',
-        },
-    ],
-    className: 'test',
-}
+const navBarItems = [
+    {
+        text: 'Item 1',
+        href: '#',
+    },
+    {
+        text: 'Item 2',
+        href: '#',
+    },
+    {
+        text: 'Item 3',
+        href: '#',
+    },
+]
 
 export const Top = (args: any) => (
     <NavBar>
@@ -50,7 +41,14 @@ export const Top = (args: any) => (
             </a>
         </NavBarBrand>
         <NavBarContent>
-            <Nav {...menu} />
+            <Nav>
+                {navBarItems.map((item, index) => (
+                    <NavItem key={index}>
+                        <a href={item.href}>{item.text}</a>
+                    </NavItem>
+                ))}
+            </Nav>
+
             <Button isLink url='#'>
                 Button
             </Button>
@@ -70,7 +68,13 @@ export const Bottom = (args: any) => (
             </NavBarBrand>
             <NavBarSocial>Social</NavBarSocial>
             <NavBarContent>
-                <Nav {...menu} variant='bottom' />
+                <Nav>
+                    {navBarItems.map((item, index) => (
+                        <NavItem key={index} accent>
+                            <a href={item.href}>{item.text}</a>
+                        </NavItem>
+                    ))}
+                </Nav>
             </NavBarContent>
         </NavBar>
     </Footer>
