@@ -1,8 +1,12 @@
+import globalStyles from '@styles/GlobalStyles'
+
 export interface stylesProps {
     [index: string]: string
 }
 const styles: stylesProps = {
-    container: `flex items-center gap-8`,
+    container: `nav flex items-center gap-8`,
+    item: `${globalStyles.link}`,
+    itemAccent: `nav__item--accent ${globalStyles.linkWhite}`,
 }
 
 export default styles

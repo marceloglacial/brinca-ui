@@ -1,36 +1,19 @@
 import { FC } from 'react'
-import { NavVariant } from './Nav'
-import styles from './NavItemStyles'
-
+import styles from './NavStyles'
 export interface NavItemProps {
-    text: string
-    link: string
-    target?: string
     className?: string
-    variant?: NavVariant
-    menu?: NavItemProps[]
+    accent?: boolean
 }
 const NavItem: FC<NavItemProps> = ({
     className = '',
-    link,
-    target,
-    text,
-    menu,
-    variant = 'top',
+    children,
+    accent,
 }): JSX.Element => {
+    const itemClassName = accent ? styles.itemAccent : styles.item
     return (
-        <li className={`${styles.container} ${className}`}>
-            <a href={link} target={target} className={styles[variant].link}>
-                {text}
-            </a>
-            {menu && (
-                <ul className={styles.menu}>
-                    {menu.map((item, index) => (
-                        <NavItem key={index} {...item} />
-                    ))}
-                </ul>
-            )}
-        </li>
+        <div className={`nav__item ${itemClassName} ${className}`}>
+            {children}
+        </div>
     )
 }
 

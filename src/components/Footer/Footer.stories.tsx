@@ -1,5 +1,6 @@
 import Footer from '@components/Footer/Footer'
 import Nav from '@components/Nav/Nav'
+import NavItem from '@components/Nav/NavItem'
 import { Meta } from '@storybook/react'
 
 const meta: Meta = {
@@ -9,31 +10,18 @@ const meta: Meta = {
 
 export default meta
 
-const menu = {
-    menu: [
-        {
-            text: 'Item 1',
-            link: '#',
-            menu: [
-                {
-                    text: 'Item 1.1',
-                    link: '#',
-                },
-            ],
-        },
-        {
-            text: 'Item 2',
-            link: '#',
-        },
-        {
-            text: 'Item 3',
-            link: '#',
-        },
-    ],
-}
-
 export const Base = (args: any) => (
     <Footer>
-        <Nav variant={'bottom'} className='test' {...menu} />
+        <Nav className='test'>
+            <NavItem accent>
+                <a href='#'>Item 1</a>
+            </NavItem>
+            <NavItem accent>
+                <a href='#'>Item 2</a>
+            </NavItem>
+            <NavItem accent>
+                <a href='#'>Item 3</a>
+            </NavItem>
+        </Nav>
     </Footer>
 )

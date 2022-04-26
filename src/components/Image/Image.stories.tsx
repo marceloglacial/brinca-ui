@@ -18,5 +18,5 @@ const image = {
 export const Base = (args: any) => (
     <Image {...image} onClick={() => alert('click')} />
 )
-export const Rounded = (args: any) => <Image {...image} />
+export const Rounded = (args: any) => <Image {...image} rounded />
 export const WithShadow = (args: any) => <Image {...image} rounded shadow />
