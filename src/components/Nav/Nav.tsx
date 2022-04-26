@@ -16,13 +16,13 @@ const Nav: FC<NavProps> = ({
     variant = 'top',
 }): JSX.Element => {
     return (
-        <nav className={`nav ${`nav--${variant}`} ${className}`}>
+        <div className={`nav ${`nav--${variant}`} ${className}`}>
             <ul className={`nav__list ${styles.container}`}>
                 {menu.map((item, index) => {
                     return <NavItem key={index} variant={variant} {...item} />
                 })}
             </ul>
-        </nav>
+        </div>
     )
 }
 export default Nav
