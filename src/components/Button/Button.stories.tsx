@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import Button from './Button'
 
 const meta: Meta = {
@@ -8,32 +8,15 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<any> = (args) => <Button {...args} />
+export const Primary = (args: any) => (
+    <Button onClick={() => alert('click')}>Primary Button</Button>
+)
 
-export const Primary = Template.bind({})
-Primary.args = {
-    variant: 'primary',
-    children: 'Primary Button',
-    onClick: () => alert('click'),
-}
+export const Secondary = (args: any) => (
+    <Button variant='secondary' onClick={() => alert('click')}>
+        Secondary Button
+    </Button>
+)
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-    variant: 'secondary',
-    children: 'Secondary Button',
-}
-
-export const AsLink = Template.bind({})
-AsLink.args = {
-    isLink: true,
-    variant: 'primary',
-    children: 'Full Width',
-    full: true,
-}
-
-export const FullWidth = Template.bind({})
-FullWidth.args = {
-    variant: 'primary',
-    children: 'Full Width',
-    full: true,
-}
+export const AsLink = (args: any) => <Button isLink>As Link</Button>
+export const FullWidth = (args: any) => <Button full>Full Width</Button>

@@ -32,7 +32,7 @@ const menu = {
     ],
 }
 
-export const Base = () => (
+export const Base = (args: any) => (
     <Footer>
         <Nav variant={'bottom'} className='test' {...menu} />
     </Footer>

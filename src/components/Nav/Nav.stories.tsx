@@ -1,5 +1,5 @@
 import Footer from '@components/Footer/Footer'
-import { Meta, Story } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import Nav, { NavProps } from './Nav'
 
 const meta: Meta = {
@@ -8,8 +8,6 @@ const meta: Meta = {
 }
 
 export default meta
-
-const Template: Story<NavProps> = (args) => <Nav {...args} />
 
 const menu: NavProps = {
     menu: [
@@ -36,10 +34,12 @@ const menu: NavProps = {
     className: 'test',
 }
 
-export const Top = Template.bind({})
-Top.args = menu
-
-export const Bottom = () => (
+export const Top = (args: any) => (
+    <Footer>
+        <Nav {...menu} />
+    </Footer>
+)
+export const Bottom = (args: any) => (
     <Footer>
         <Nav variant={'bottom'} {...menu} />
     </Footer>
