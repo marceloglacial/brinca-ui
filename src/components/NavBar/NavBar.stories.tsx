@@ -49,9 +49,7 @@ export const Top = (args: any) => (
                 ))}
             </Nav>
 
-            <Button isLink url='#'>
-                Button
-            </Button>
+            <Button href='#'>Button</Button>
         </NavBarContent>
     </NavBar>
 )

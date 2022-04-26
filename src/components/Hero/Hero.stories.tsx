@@ -28,9 +28,7 @@ export const Base = (args: any) => (
                     Reprehenderit laborum commodo tempor velit.
                 </p>
             </HeroContent>
-            <HeroButton isLink variant='secondary'>
-                Button
-            </HeroButton>
+            <HeroButton variant='secondary'>Button</HeroButton>
         </HeroBody>
         <HeroImage
             image={{
@@ -55,9 +53,7 @@ export const Reversed = (args: any) => (
                     Reprehenderit laborum commodo tempor velit.
                 </p>
             </HeroContent>
-            <HeroButton isLink variant='secondary'>
-                Button
-            </HeroButton>
+            <HeroButton variant='secondary'>Button</HeroButton>
         </HeroBody>
         <HeroImage
             image={{

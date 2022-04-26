@@ -18,5 +18,9 @@ export const Secondary = (args: any) => (
     </Button>
 )
 
-export const AsLink = (args: any) => <Button isLink>As Link</Button>
-export const FullWidth = (args: any) => <Button full>Full Width</Button>
+export const AsLink = (args: any) => <Button href='#'>As Link</Button>
+export const FullWidth = (args: any) => (
+    <Button href='#' full>
+        Full Width
+    </Button>
+)
