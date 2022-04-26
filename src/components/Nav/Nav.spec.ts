@@ -19,13 +19,8 @@ const testClassName = () => {
 }
 
 const testMenu = () => {
-    it(`Should render menu`, () => {
-        cy.get('.nav ul').should('exist')
-        cy.get('.nav li').should('exist')
-        cy.get('.nav__list').should('exist')
+    it(`Should render menu item`, () => {
         cy.get('.nav__item').should('exist')
-        cy.get('.nav__item a').should('exist')
-        cy.get('.nav__item.test-menu-item').should('exist')
     })
 }
 

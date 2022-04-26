@@ -11,7 +11,7 @@ const meta: Meta = {
 export default meta
 
 export const Top = (args: any) => (
-    <Nav>
+    <Nav className='test'>
         <NavItem>
             <a href='#'>Item 1</a>
         </NavItem>
@@ -25,7 +25,7 @@ export const Top = (args: any) => (
 )
 export const Bottom = (args: any) => (
     <Footer>
-        <Nav>
+        <Nav className='test'>
             <NavItem accent>
                 <a href='#'>Item 1</a>
             </NavItem>

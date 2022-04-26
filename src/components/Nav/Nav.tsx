@@ -7,7 +7,7 @@ export interface NavProps {
 
 const Nav: FC<NavProps> = ({ className = '', children }): JSX.Element => {
     return (
-        <div className={`nav ${styles.container} ${className}`}>{children}</div>
+        <nav className={`nav ${styles.container} ${className}`}>{children}</nav>
     )
 }
 export default Nav
