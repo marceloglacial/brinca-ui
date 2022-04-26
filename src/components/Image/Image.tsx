@@ -28,7 +28,7 @@ const Image: FC<ImageProps> = ({
             alt={alt}
             height={height}
             width={width}
-            className={`image ${styles.image} ${rounded && styles.rounded} ${
+            className={`image ${rounded && styles.rounded} ${
                 shadow && styles.shadow
             } ${className}`}
             onClick={onClick}

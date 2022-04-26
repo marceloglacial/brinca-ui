@@ -2,53 +2,53 @@
 
 @layer base {
     body {
-      @apply font-thin mb-8 text-lg leading-8;
+        @apply font-thin mb-8 text-lg leading-8;
     }
 
     h1 {
-      @apply text-4xl mb-8 font-bold;
+        @apply text-4xl mb-8 font-bold;
     }
 
     h2 {
-      @apply text-3xl mb-8 font-bold;
+        @apply text-3xl mb-8 font-bold;
     }
 
     h3 {
-      @apply text-2xl mb-8 font-bold;
+        @apply text-2xl mb-8 font-bold;
     }
 
     a {
-      @apply hover:text-green-600 font-bold underline;
-    }    
+        @apply hover:text-green-600 font-bold underline;
+    }
 
     p {
-      @apply mb-8;
-    }    
+        @apply mb-8;
+    }
 
     ul {
-      @apply mb-8 list-disc pl-12;
+        @apply mb-8 list-disc pl-12;
     }
-    
+
     ol {
-      @apply mb-8 list-decimal pl-12;
+        @apply mb-8 list-decimal pl-12;
     }
 
     blockquote {
-        @apply mb-8 italic text-xl p-8 bg-gray-100 rounded-lg
+        @apply mb-8 italic text-xl p-8 bg-gray-100 rounded-lg;
     }
     table {
-        @apply mb-8 w-full border scroll-auto
+        @apply mb-8 w-full border scroll-auto;
     }
     tr {
-        @apply border
+        @apply border;
     }
     th {
-        @apply border p-4 bg-gray-50
+        @apply border p-4 bg-gray-50;
     }
     td {
-        @apply border p-4
+        @apply border p-4;
     }
-  }
+}
 
 @tailwind components;
 @tailwind utilities;
