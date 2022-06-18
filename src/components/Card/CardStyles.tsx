@@ -6,7 +6,7 @@ const styles: stylesProps = {
     figure: 'card__figure rounded-2xl',
     image: 'card__image w-full h-full object-cover',
     body: 'card__body p-8',
-    header: 'card__header pb-4 text-xl',
+    header: 'card__header pb-4 text-xl font-bold',
     content: 'card__content font-light',
     footer: 'card__footer pt-8',
 }

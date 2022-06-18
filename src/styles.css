@@ -17,9 +17,6 @@
         @apply text-2xl mb-8 font-bold;
     }
 
-    a {
-        @apply hover:text-green-600 font-bold underline;
-    }
 
     p {
         @apply mb-8;
