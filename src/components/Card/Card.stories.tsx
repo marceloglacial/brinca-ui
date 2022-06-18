@@ -57,3 +57,13 @@ export const WithButton = (args: any) => (
         </CardBody>
     </Card>
 )
+
+export const NoShadow = (args: any) => (
+    <Card noShadow>
+        <CardImage {...data.image} />
+        <CardBody>
+            <CardHeader>{data.header}</CardHeader>
+            <CardContent>{data.content}</CardContent>
+        </CardBody>
+    </Card>
+)

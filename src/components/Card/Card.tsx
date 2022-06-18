@@ -1,6 +1,16 @@
 import React, { FC } from 'react'
 import styles from './CardStyles'
-const Card: FC = ({ children }): JSX.Element => {
-    return <div className={styles.container}>{children}</div>
+
+export interface CardProps {
+    noShadow?: boolean
+}
+
+const Card: FC<CardProps> = ({ children, noShadow = false }): JSX.Element => {
+    const shadowClassName = noShadow ? styles.noShadow : ``
+    return (
+        <div className={`${styles.container} ${shadowClassName}`}>
+            {children}
+        </div>
+    )
 }
 export default Card
