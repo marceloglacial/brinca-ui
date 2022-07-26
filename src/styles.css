@@ -2,7 +2,7 @@
 
 @layer base {
     body {
-        @apply font-thin mb-8 text-lg leading-8;
+        @apply font-thin mb-8 lg:text-lg lg:leading-8;
     }
 
     h1 {
