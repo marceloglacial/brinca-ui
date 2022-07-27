@@ -1,8 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styles from './CardStyles'
 
 export interface CardProps {
     noShadow?: boolean
+    children: ReactNode
 }
 
 const Card: FC<CardProps> = ({ children, noShadow = false }): JSX.Element => {

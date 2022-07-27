@@ -1,6 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styles from './CardStyles'
-const CardBody: FC = ({ children }): JSX.Element => {
+
+export interface CardBodyProps {
+    children: ReactNode
+}
+
+const CardBody: FC<CardBodyProps> = ({ children }): JSX.Element => {
     return <div className={styles.body}>{children}</div>
 }
 export default CardBody
