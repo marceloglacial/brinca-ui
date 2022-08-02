@@ -1,8 +1,9 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import styles from './SectionStyles'
 
 export interface SectionProps {
     className?: string
+    children: ReactNode
 }
 
 const Section: FC<SectionProps> = ({
