@@ -1,8 +1,9 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import styles from './HeroStyles'
 
 export interface HeroContentProps {
     className?: string
+    children: ReactNode
 }
 
 const HeroContent: FC<HeroContentProps> = ({
