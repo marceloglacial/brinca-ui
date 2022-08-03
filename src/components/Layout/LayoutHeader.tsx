@@ -24,13 +24,15 @@ const LayoutHeader: FC<LayoutHeaderProps> = ({ menu }) => {
                 </a>
             </NavBarBrand>
             <NavBarContent>
-                {menu?.map((item, index) => (
+                {menu && (
                     <Nav>
-                        <NavItem key={index}>
-                            <a href={item.href}>{item.text}</a>
-                        </NavItem>
+                        {menu.map((item, index) => (
+                            <NavItem key={index}>
+                                <a href={item.href}>{item.text}</a>
+                            </NavItem>
+                        ))}
                     </Nav>
-                ))}
+                )}
                 <Button href='#'>Button</Button>
             </NavBarContent>
         </NavBar>

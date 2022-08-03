@@ -27,13 +27,15 @@ const LayoutFooter: FC<LayoutFooterProps> = ({ menu }) => {
                 </NavBarBrand>
                 <NavBarSocial>Social</NavBarSocial>
                 <NavBarContent>
-                    {menu?.map((item, index) => (
+                    {menu && (
                         <Nav>
-                            <NavItem key={index} accent>
-                                <a href={item.href}>{item.text}</a>
-                            </NavItem>
+                            {menu.map((item, index) => (
+                                <NavItem key={index} accent>
+                                    <a href={item.href}>{item.text}</a>
+                                </NavItem>
+                            ))}
                         </Nav>
-                    ))}
+                    )}
                 </NavBarContent>
             </NavBar>
         </Footer>
