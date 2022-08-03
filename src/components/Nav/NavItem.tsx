@@ -1,8 +1,9 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import styles from './NavStyles'
 export interface NavItemProps {
     className?: string
     accent?: boolean
+    children: ReactNode
 }
 const NavItem: FC<NavItemProps> = ({
     className = '',

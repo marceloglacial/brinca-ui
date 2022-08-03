@@ -1,9 +1,10 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import styles from './NavBarStyles'
 
 export interface NavBarProps {
     className?: string
     variant?: 'top' | 'footer'
+    children: ReactNode
 }
 
 const NavBar: FC<NavBarProps> = ({
