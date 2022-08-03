@@ -14,7 +14,7 @@ const meta: Meta = {
 
 export default meta
 
-export const navBarItems = [
+const navBarItems = [
     {
         text: 'Item 1',
         href: '#',

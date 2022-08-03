@@ -13,9 +13,9 @@ const NavBar: FC<NavBarProps> = ({
     children,
 }): JSX.Element => {
     return (
-        <nav className={`${styles.container} ${styles[variant]} ${className}`}>
+        <div className={`${styles.container} ${styles[variant]} ${className}`}>
             {children}
-        </nav>
+        </div>
     )
 }
 

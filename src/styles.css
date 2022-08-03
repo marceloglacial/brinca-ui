@@ -21,6 +21,7 @@
         @apply mb-4 lg:mb-8;
     }
 
+    
     ul {
         @apply mb-8 list-disc pl-12;
     }
@@ -44,6 +45,11 @@
     td {
         @apply border p-4;
     }
+
+    *:last-child {
+        @apply m-0 p-0
+    }
+
 }
 
 @tailwind components;
