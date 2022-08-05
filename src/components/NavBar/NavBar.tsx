@@ -1,12 +1,22 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import styles from './NavBarStyles'
 
 export interface NavBarProps {
     className?: string
+    variant?: 'top' | 'footer'
+    children: ReactNode
 }
 
-const NavBar: FC<NavBarProps> = ({ className = '', children }): JSX.Element => {
-    return <nav className={`${styles.container} ${className}`}>{children}</nav>
+const NavBar: FC<NavBarProps> = ({
+    className = '',
+    variant = 'top',
+    children,
+}): JSX.Element => {
+    return (
+        <div className={`${styles.container} ${styles[variant]} ${className}`}>
+            {children}
+        </div>
+    )
 }
 
 export default NavBar

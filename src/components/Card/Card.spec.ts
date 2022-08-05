@@ -41,6 +41,11 @@ const testFooter = () => {
         cy.get('.card__footer').should('exist').should('not.be.empty')
     })
 }
+const testShadow = () => {
+    it(`Should render no shadow`, () => {
+        cy.get('.shadow-none.border').should('exist')
+    })
+}
 
 describe('Card - Base', () => {
     testBaseUrl('card--base')
@@ -67,4 +72,14 @@ describe('Card - With Button', () => {
     testContent()
     testImage()
     testFooter()
+})
+
+describe('Card - No Shadow', () => {
+    testBaseUrl('card--no-shadow')
+    testContainer()
+    testHeader()
+    testBody()
+    testContent()
+    testImage()
+    testShadow()
 })
