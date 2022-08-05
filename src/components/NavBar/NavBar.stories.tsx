@@ -42,7 +42,7 @@ const navBarItems = [
 ]
 
 export const Top = (args: any) => (
-    <NavBar>
+    <NavBar className='test'>
         <NavBarBrand>
             <a href='#'>
                 <img
