@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import React from 'react'
 import Hero from './Hero'
 import HeroBody from './HeroBody'
@@ -14,11 +14,8 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<any> = (args) => <React.Fragment {...args} />
-
-export const Base = Template.bind({})
-Base.args = {
-    children: (
+export const Base = (args: any) => (
+    <div className='max-w-screen-lg'>
         <Hero>
             <HeroBody>
                 <HeroHeader>Hero Base</HeroHeader>
@@ -32,9 +29,7 @@ Base.args = {
                         minim. Reprehenderit laborum commodo tempor velit.
                     </p>
                 </HeroContent>
-                <HeroButton isLink variant='secondary'>
-                    Button
-                </HeroButton>
+                <HeroButton variant='secondary'>Button</HeroButton>
             </HeroBody>
             <HeroImage
                 image={{
@@ -44,12 +39,10 @@ Base.args = {
                 }}
             />
         </Hero>
-    ),
-}
-
-export const Reversed = Template.bind({})
-Reversed.args = {
-    children: (
+    </div>
+)
+export const Reversed = (args: any) => (
+    <div className='max-w-screen-lg'>
         <Hero variant='reversed'>
             <HeroBody>
                 <HeroHeader>Hero Base</HeroHeader>
@@ -63,9 +56,7 @@ Reversed.args = {
                         minim. Reprehenderit laborum commodo tempor velit.
                     </p>
                 </HeroContent>
-                <HeroButton isLink variant='secondary'>
-                    Button
-                </HeroButton>
+                <HeroButton variant='secondary'>Button</HeroButton>
             </HeroBody>
             <HeroImage
                 image={{
@@ -75,5 +66,5 @@ Reversed.args = {
                 }}
             />
         </Hero>
-    ),
-}
+    </div>
+)

@@ -1,42 +1,34 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styles from './ButtonStyles'
 
 export interface ButtonProps {
     variant?: 'primary' | 'secondary'
     full?: boolean | ''
-    isLink?: boolean
-    url?: string
+    href?: string
     onClick?: (e: unknown) => void
+    children: ReactNode
 }
 
 const Button: FC<ButtonProps> = ({
     variant = 'primary',
     children,
     full = '',
-    isLink,
-    url = '#',
+    href,
     onClick,
 }): JSX.Element => {
-    if (isLink)
+    const linkClassName = !full ? styles.link : ``
+    const fullClassName = full && styles.full
+    const buttonClassName = `${styles.container} ${styles[variant]} ${linkClassName} ${fullClassName}`
+
+    if (href)
         return (
-            <a
-                className={`${styles.container} ${styles.link} ${
-                    styles[variant]
-                } ${full && styles.full}`}
-                href={url}
-            >
+            <a className={buttonClassName} href={href}>
                 {children}
             </a>
         )
 
     return (
-        <button
-            className={`${styles.container} ${styles[variant]} ${
-                full && styles.full
-            }`}
-            type='button'
-            onClick={onClick}
-        >
+        <button className={buttonClassName} type='button' onClick={onClick}>
             {children}
         </button>
     )
