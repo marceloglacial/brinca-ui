@@ -1,9 +1,8 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import styles from './NavBarStyles'
 
 export interface NavBarSocialProps {
     className?: string
-    children: ReactNode
 }
 
 const NavBarSocial: FC<NavBarSocialProps> = ({

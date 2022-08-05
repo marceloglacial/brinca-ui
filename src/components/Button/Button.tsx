@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 import styles from './ButtonStyles'
 
 export interface ButtonProps {
@@ -6,7 +6,6 @@ export interface ButtonProps {
     full?: boolean | ''
     href?: string
     onClick?: (e: unknown) => void
-    children: ReactNode
 }
 
 const Button: FC<ButtonProps> = ({

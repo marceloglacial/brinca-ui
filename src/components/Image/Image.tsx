@@ -4,8 +4,8 @@ import styles from './ImageStyles'
 export interface ImageProps {
     src: string
     alt?: string
-    width?: string
-    height?: string
+    width?: number
+    height?: number
     shadow?: boolean | ''
     rounded?: boolean | ''
     className?: string
@@ -15,8 +15,8 @@ export interface ImageProps {
 const Image: FC<ImageProps> = ({
     src,
     alt = '',
-    height = 'auto',
-    width = '100%',
+    height,
+    width,
     shadow = '',
     rounded = '',
     className = '',

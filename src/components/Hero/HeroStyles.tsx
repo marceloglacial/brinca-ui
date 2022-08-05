@@ -1,11 +1,11 @@
 const styles = {
-    container: `hero  gap-8`,
-    base: 'flex flex-col lg:flex-row',
-    reversed: 'hero--reversed flex flex-col lg:flex-row-reverse',
-    body: 'hero__body flex flex-col justify-center lg:w-1/2 gap-4',
-    header: 'hero__header mb-0',
-    content: 'hero__content lg:text-xl font-light lg:leading-8',
-    image: 'hero__image lg:w-1/2 h-full',
-    buttom: 'hero__button',
+    container: `hero`,
+    base: 'flex gap-12',
+    reversed: 'hero--reversed flex gap-12 flex-row-reverse',
+    body: 'hero__body flex flex-col justify-center ',
+    header: 'hero__header text-4xl font-bold pb-8',
+    content: 'hero__content text-xl font-light leading-8',
+    image: 'hero__image',
+    buttom: 'hero__button pt-8',
 }
 export default styles

@@ -15,56 +15,52 @@ const meta: Meta = {
 export default meta
 
 export const Base = (args: any) => (
-    <div className='max-w-screen-lg'>
-        <Hero>
-            <HeroBody>
-                <HeroHeader>Hero Base</HeroHeader>
-                <HeroContent>
-                    <p>
-                        Esse aliquip voluptate officia ad nisi et ullamco nisi
-                        deserunt irure tempor aliquip. Lorem voluptate duis
-                        cupidatat eiusmod aliqua sunt labore aliquip excepteur
-                        consequat officia. Id incididunt aliqua minim deserunt
-                        ea enim aliquip dolore dolor ex est esse consectetur
-                        minim. Reprehenderit laborum commodo tempor velit.
-                    </p>
-                </HeroContent>
-                <HeroButton variant='secondary'>Button</HeroButton>
-            </HeroBody>
-            <HeroImage
-                image={{
-                    src: 'https://res.cloudinary.com/dw2wjwhuv/image/upload/v1596053649/brinca/rafaela-biazi-0mfj0jJt0dY-unsplash_xwfifn.jpg',
-                    rounded: true,
-                    shadow: true,
-                }}
-            />
-        </Hero>
-    </div>
+    <Hero>
+        <HeroBody>
+            <HeroHeader>Hero Base</HeroHeader>
+            <HeroContent>
+                <p>
+                    Esse aliquip voluptate officia ad nisi et ullamco nisi
+                    deserunt irure tempor aliquip. Lorem voluptate duis
+                    cupidatat eiusmod aliqua sunt labore aliquip excepteur
+                    consequat officia. Id incididunt aliqua minim deserunt ea
+                    enim aliquip dolore dolor ex est esse consectetur minim.
+                    Reprehenderit laborum commodo tempor velit.
+                </p>
+            </HeroContent>
+            <HeroButton variant='secondary'>Button</HeroButton>
+        </HeroBody>
+        <HeroImage
+            image={{
+                src: 'https://res.cloudinary.com/dw2wjwhuv/image/upload/v1596053649/brinca/rafaela-biazi-0mfj0jJt0dY-unsplash_xwfifn.jpg',
+                rounded: true,
+                shadow: true,
+            }}
+        />
+    </Hero>
 )
 export const Reversed = (args: any) => (
-    <div className='max-w-screen-lg'>
-        <Hero variant='reversed'>
-            <HeroBody>
-                <HeroHeader>Hero Base</HeroHeader>
-                <HeroContent>
-                    <p>
-                        Esse aliquip voluptate officia ad nisi et ullamco nisi
-                        deserunt irure tempor aliquip. Lorem voluptate duis
-                        cupidatat eiusmod aliqua sunt labore aliquip excepteur
-                        consequat officia. Id incididunt aliqua minim deserunt
-                        ea enim aliquip dolore dolor ex est esse consectetur
-                        minim. Reprehenderit laborum commodo tempor velit.
-                    </p>
-                </HeroContent>
-                <HeroButton variant='secondary'>Button</HeroButton>
-            </HeroBody>
-            <HeroImage
-                image={{
-                    src: 'https://res.cloudinary.com/dw2wjwhuv/image/upload/v1596053649/brinca/rafaela-biazi-0mfj0jJt0dY-unsplash_xwfifn.jpg',
-                    rounded: true,
-                    shadow: true,
-                }}
-            />
-        </Hero>
-    </div>
+    <Hero variant='reversed'>
+        <HeroBody>
+            <HeroHeader>Hero Base</HeroHeader>
+            <HeroContent>
+                <p>
+                    Esse aliquip voluptate officia ad nisi et ullamco nisi
+                    deserunt irure tempor aliquip. Lorem voluptate duis
+                    cupidatat eiusmod aliqua sunt labore aliquip excepteur
+                    consequat officia. Id incididunt aliqua minim deserunt ea
+                    enim aliquip dolore dolor ex est esse consectetur minim.
+                    Reprehenderit laborum commodo tempor velit.
+                </p>
+            </HeroContent>
+            <HeroButton variant='secondary'>Button</HeroButton>
+        </HeroBody>
+        <HeroImage
+            image={{
+                src: 'https://res.cloudinary.com/dw2wjwhuv/image/upload/v1596053649/brinca/rafaela-biazi-0mfj0jJt0dY-unsplash_xwfifn.jpg',
+                rounded: true,
+                shadow: true,
+            }}
+        />
+    </Hero>
 )

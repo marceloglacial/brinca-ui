@@ -5,8 +5,8 @@ import styles from './CardStyles'
 const CardImage: FC<ImageProps> = ({
     src,
     alt = '',
-    width = '200',
-    height = '200',
+    width = 200,
+    height = 200,
     className = '',
 }): JSX.Element => {
     return (

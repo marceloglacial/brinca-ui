@@ -1,11 +1,6 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 import styles from './CardStyles'
-
-export interface CardFooterProps {
-    children: ReactNode
-}
-
-const CardFooter: FC<CardFooterProps> = ({ children }): JSX.Element => {
+const CardFooter: FC = ({ children }): JSX.Element => {
     return <div className={styles.footer}>{children}</div>
 }
 export default CardFooter

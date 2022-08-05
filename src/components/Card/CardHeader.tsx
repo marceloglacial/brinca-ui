@@ -1,11 +1,6 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 import styles from './CardStyles'
-
-export interface CardHeaderProps {
-    children: ReactNode
-}
-
-const CardHeader: FC<CardHeaderProps> = ({ children }): JSX.Element => {
+const CardHeader: FC = ({ children }): JSX.Element => {
     return <div className={styles.header}>{children}</div>
 }
 export default CardHeader

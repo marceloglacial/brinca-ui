@@ -1,10 +1,9 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 import styles from './HeroStyles'
 
 export interface HeroProps {
     className?: string
     variant?: 'base' | 'reversed'
-    children: ReactNode
 }
 
 const Hero: FC<HeroProps> = ({
