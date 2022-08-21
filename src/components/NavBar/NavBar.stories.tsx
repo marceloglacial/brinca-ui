@@ -6,6 +6,7 @@ import NavBar from './NavBar'
 import Button from '@components/Button/Button'
 import NavBarSocial from './NavBarSocial'
 import NavItem from '@components/Nav/NavItem'
+import { useState } from 'react'
 
 const meta: Meta = {
     title: 'Components/NavBar',
@@ -41,29 +42,43 @@ const navBarItems = [
     },
 ]
 
-export const Top = (args: any) => (
-    <NavBar className='test'>
-        <NavBarBrand>
-            <a href='#'>
-                <img
-                    src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75'
-                    width={230}
-                />
-            </a>
-        </NavBarBrand>
-        <NavBarContent>
-            <Nav>
-                {navBarItems.map((item, index) => (
-                    <NavItem key={index}>
-                        <a href={item.href}>{item.text}</a>
-                    </NavItem>
-                ))}
-            </Nav>
+export const Top = (args: any) => {
+    const [isOpen, setIsOpen] = useState(false)
+    const mobileMenuClassName = !isOpen ? 'hidden' : ''
+    return (
+        <>
+            <NavBar className='test'>
+                <NavBarBrand>
+                    <a href='#'>
+                        <img
+                            src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75'
+                            width={230}
+                        />
+                    </a>
+                </NavBarBrand>
+                <NavBarContent>
+                    <Nav className='hidden lg:flex'>
+                        {navBarItems.map((item, index) => (
+                            <NavItem key={index}>
+                                <a href={item.href}>{item.text}</a>
+                            </NavItem>
+                        ))}
+                        <Button href='#'>Button</Button>
+                    </Nav>
+                    <Button
+                        variant='primary'
+                        className='lg:hidden'
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        Mobile
+                    </Button>
+                </NavBarContent>
+            </NavBar>
+            <div className={mobileMenuClassName}>Mobile Menu</div>
+        </>
+    )
+}
 
-            <Button href='#'>Button</Button>
-        </NavBarContent>
-    </NavBar>
-)
 export const Bottom = (args: any) => (
     <NavBar variant='footer'>
         <NavBarBrand>
