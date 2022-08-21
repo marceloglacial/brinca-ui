@@ -72,7 +72,7 @@ export const Top = (args: any) => {
                     </Button>
                 </div>
             </NavBarContent>
-        </NavBar >
+        </NavBar>
     )
 }
 
