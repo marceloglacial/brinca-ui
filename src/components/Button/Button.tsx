@@ -7,6 +7,7 @@ export interface ButtonProps {
     href?: string
     onClick?: (e: unknown) => void
     children: ReactNode
+    className?: string
 }
 
 const Button: FC<ButtonProps> = ({
@@ -15,10 +16,11 @@ const Button: FC<ButtonProps> = ({
     full = '',
     href,
     onClick,
+    className = '',
 }): JSX.Element => {
     const linkClassName = !full ? styles.link : ``
     const fullClassName = full && styles.full
-    const buttonClassName = `${styles.container} ${styles[variant]} ${linkClassName} ${fullClassName}`
+    const buttonClassName = `${styles.container} ${styles[variant]} ${linkClassName} ${fullClassName} ${className}`
 
     if (href)
         return (

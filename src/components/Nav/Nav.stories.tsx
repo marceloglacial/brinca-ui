@@ -10,33 +10,52 @@ const meta: Meta = {
 
 export default meta
 
+const items = [
+    {
+        title: 'Item 1',
+        href: '#',
+    },
+    {
+        title: 'Item 2',
+        href: '#',
+    },
+    {
+        title: 'Item 3',
+        href: '#',
+    },
+    {
+        title: 'Item 4',
+        href: '#',
+    },
+    {
+        title: 'Item 5',
+        href: '#',
+    },
+    {
+        title: 'Item 6',
+        href: '#',
+    },
+]
+
 export const Top = (args: any) => (
     <NavBar>
         <Nav className='test'>
-            <NavItem>
-                <a href='#'>Item 1</a>
-            </NavItem>
-            <NavItem>
-                <a href='#'>Item 3</a>
-            </NavItem>
-            <NavItem>
-                <a href='#'>Item 3</a>
-            </NavItem>
+            {items.map((item, index) => (
+                <NavItem key={index}>
+                    <a href={item.href}>{item.title}</a>
+                </NavItem>
+            ))}
         </Nav>
     </NavBar>
 )
 export const Bottom = (args: any) => (
     <NavBar variant='footer'>
         <Nav className='test'>
-            <NavItem accent>
-                <a href='#'>Item 1</a>
-            </NavItem>
-            <NavItem accent>
-                <a href='#'>Item 2</a>
-            </NavItem>
-            <NavItem accent>
-                <a href='#'>Item 3</a>
-            </NavItem>
+            {items.map((item, index) => (
+                <NavItem key={index}>
+                    <a href={item.href}>{item.title}</a>
+                </NavItem>
+            ))}
         </Nav>
     </NavBar>
 )
