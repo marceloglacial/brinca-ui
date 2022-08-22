@@ -7,7 +7,7 @@ export interface BusinessCarContentProps {
 }
 
 const BusinessCarContent: FC<BusinessCarContentProps> = ({
-    className,
+    className = '',
     children,
 }) => {
     return <div className={`${styles.content} ${className}`}>{children}</div>

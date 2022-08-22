@@ -7,7 +7,7 @@ export interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ children, noShadow = false }): JSX.Element => {
-    const shadowClassName = noShadow ? styles.noShadow : ``
+    const shadowClassName = noShadow ? styles.noShadow : styles.shadow
     return (
         <div className={`${styles.container} ${shadowClassName}`}>
             {children}

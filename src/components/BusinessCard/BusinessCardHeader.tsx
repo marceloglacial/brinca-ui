@@ -10,6 +10,6 @@ const BusinessCardHeader: FC<BusinessCardHeaderProps> = ({
     className,
     children,
 }) => {
-    return <h3 className={`${styles.header} ${className}`}>{children}</h3>
+    return <div className={`${styles.header} ${className}`}>{children}</div>
 }
 export default BusinessCardHeader

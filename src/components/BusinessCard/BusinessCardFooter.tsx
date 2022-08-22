@@ -7,7 +7,7 @@ export interface BusinessCarFooterProps {
 }
 
 const BusinessCarFooter: FC<BusinessCarFooterProps> = ({
-    className,
+    className = '',
     children,
 }) => {
     return <h3 className={`${styles.footer} ${className}`}>{children}</h3>
