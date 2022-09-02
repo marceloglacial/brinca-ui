@@ -17,6 +17,10 @@
         @apply text-2xl lg:text-3xl mb-4 lg:mb-8 font-bold;
     }
 
+    h4 {
+        @apply text-xl lg:text-2xl mb-4 lg:mb-8 font-bold;
+    }
+
     p {
         @apply mb-4 lg:mb-8;
     }
@@ -32,21 +36,33 @@
     blockquote {
         @apply mb-8 italic text-xl p-8 bg-gray-100 rounded-lg;
     }
+    
     table {
         @apply mb-8 w-full border scroll-auto;
     }
+    
     tr {
         @apply border;
     }
+    
     th {
         @apply border p-4 bg-gray-50;
     }
+    
     td {
         @apply border p-4;
     }
 
     *:last-child {
         @apply m-0 p-0;
+    }
+
+    /* TODO: Make it scopped */
+    .brinca-ui-business-card * {
+        @apply  m-0 p-0
+    }
+    .brinca-ui-business-card a {
+        @apply text-green-600 font-normal underline hover:text-black;
     }
 }
 
