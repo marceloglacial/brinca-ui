@@ -2,7 +2,8 @@ export interface stylesProps {
     [index: string]: string
 }
 const styles: stylesProps = {
-    container: `card rounded-xl lg:rounded-2xl shadow-xl lg:shadow-2xl overflow-hidden`,
+    container: `card rounded-xl lg:rounded-2xl overflow-hidden`,
+    shadow: `shadow-xl lg:shadow-2xl`,
     noShadow: `shadow-none border`,
     figure: 'card__figure rounded-2xl',
     image: 'card__image w-full h-full min-h-[200px] object-cover',

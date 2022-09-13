@@ -1,5 +1,6 @@
 import './styles.css'
 import Button from '@components/Button/Button'
+import BusinessCard from '@components/BusinessCard/BusinessCard'
 import Card from '@components/Card/Card'
 import CardBody from '@components/Card/CardBody'
 import CardContent from '@components/Card/CardContent'
@@ -22,6 +23,7 @@ import NavBarContent from '@components/NavBar/NavBarContent'
 
 export {
     Button,
+    BusinessCard,
     Card,
     CardBody,
     CardContent,
