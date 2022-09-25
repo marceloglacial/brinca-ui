@@ -18,17 +18,32 @@ const testClassName = (classname: string) => {
     })
 }
 
-describe('Image - Container', () => {
+describe('Logo - Container', () => {
     testBaseUrl('logo')
     testContainer()
 })
 
-describe('Image - Color Variant', () => {
+describe('Logo - Color Variant', () => {
     testBaseUrl('logo')
     testClassName('.logo--color')
 })
 
-describe('Image - White Variant', () => {
+describe('Logo - White Variant', () => {
     testBaseUrl('logo--white')
     testClassName('.logo--white')
+})
+
+describe('Logo - Small', () => {
+    testBaseUrl('logo--small')
+    testClassName('.logo--xs')
+})
+
+describe('Logo - Default (meidum)', () => {
+    testBaseUrl('logo--default')
+    testClassName('.logo--md')
+})
+
+describe('Logo - Large', () => {
+    testBaseUrl('logo--large')
+    testClassName('.logo--lg')
 })

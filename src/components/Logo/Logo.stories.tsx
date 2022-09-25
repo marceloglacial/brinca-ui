@@ -14,3 +14,6 @@ export const White = (args: any) => (
         <Logo variant='white' />
     </span>
 )
+export const Small = (args: any) => <Logo size='xs' />
+export const Default = (args: any) => <Logo size='md' />
+export const Large = (args: any) => <Logo size='lg' />
