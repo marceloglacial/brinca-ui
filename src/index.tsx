@@ -15,6 +15,7 @@ import HeroContent from '@components/Hero/HeroContent'
 import HeroHeader from '@components/Hero/HeroHeader'
 import HeroImage from '@components/Hero/HeroImage'
 import Image from '@components/Image/Image'
+import Logo from '@components/Logo/Logo'
 import Nav from '@components/Nav/Nav'
 import NavItem from '@components/Nav/NavItem'
 import NavBarBrand from '@components/NavBar/NavBarBrand'
@@ -33,6 +34,7 @@ export {
     Footer,
     Hero,
     Image,
+    Logo,
     HeroBody,
     HeroButton,
     HeroContent,

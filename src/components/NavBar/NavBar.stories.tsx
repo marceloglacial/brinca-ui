@@ -7,6 +7,7 @@ import Button from '@components/Button/Button'
 import NavBarSocial from './NavBarSocial'
 import NavItem from '@components/Nav/NavItem'
 import { useState } from 'react'
+import Logo from '@components/Logo/Logo'
 
 const meta: Meta = {
     title: 'Components/NavBar',
@@ -48,10 +49,7 @@ export const Top = (args: any) => {
         <NavBar className='test'>
             <NavBarBrand>
                 <a href='#'>
-                    <img
-                        src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75'
-                        width={230}
-                    />
+                    <Logo />
                 </a>
             </NavBarBrand>
             <NavBarContent>
@@ -80,10 +78,7 @@ export const Bottom = (args: any) => (
     <NavBar variant='footer'>
         <NavBarBrand>
             <a href='#'>
-                <img
-                    src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo-white.png&w=384&q=75'
-                    width={150}
-                />
+                <Logo variant='white' size='xs' />
             </a>
         </NavBarBrand>
         <NavBarSocial>Social</NavBarSocial>
