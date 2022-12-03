@@ -41,6 +41,25 @@ WithCTA.args = {
     footer: content.footer,
 }
 
+export const NoShadow = Template.bind({})
+NoShadow.args = {
+    title: content.title,
+    description: content.description,
+    image: content.image,
+    footer: content.footer,
+    shadow: false,
+}
+
+export const NoRounded = Template.bind({})
+NoRounded.args = {
+    title: content.title,
+    description: content.description,
+    image: content.image,
+    footer: content.footer,
+    shadow: false,
+    rounded: false,
+}
+
 export const Reversed = Template.bind({})
 Reversed.args = {
     title: content.title,
