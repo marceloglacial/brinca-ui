@@ -18,24 +18,8 @@ exports.Button = void 0;
 const react_1 = __importDefault(require("react"));
 const Button = (_a) => {
     var { variant = 'primary' } = _a, props = __rest(_a, ["variant"]);
-    const { children, style } = props;
-    const _style = style || {};
-    switch (variant) {
-        case 'primary':
-            _style.backgroundColor = '#006E7F';
-            _style.color = '#fff';
-            break;
-        case 'secondary':
-            _style.backgroundColor = '#F8CB2E';
-            _style.color = '#000';
-            break;
-        case 'danger':
-            _style.backgroundColor = '#B22727';
-            _style.color = '#fff';
-            break;
-    }
-    _style.padding = '5px 10px';
-    return (react_1.default.createElement("button", Object.assign({ style: _style }, props), children));
+    const { children } = props;
+    return (react_1.default.createElement("button", Object.assign({ className: 'bg-green-600 p-4 text-white rounded-lg' }, props), children));
 };
 exports.Button = Button;
 //# sourceMappingURL=Button.js.map

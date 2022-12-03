@@ -12,23 +12,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 export const Button = (_a) => {
     var { variant = 'primary' } = _a, props = __rest(_a, ["variant"]);
-    const { children, style } = props;
-    const _style = style || {};
-    switch (variant) {
-        case 'primary':
-            _style.backgroundColor = '#006E7F';
-            _style.color = '#fff';
-            break;
-        case 'secondary':
-            _style.backgroundColor = '#F8CB2E';
-            _style.color = '#000';
-            break;
-        case 'danger':
-            _style.backgroundColor = '#B22727';
-            _style.color = '#fff';
-            break;
-    }
-    _style.padding = '5px 10px';
-    return (React.createElement("button", Object.assign({ style: _style }, props), children));
+    const { children } = props;
+    return (React.createElement("button", Object.assign({ className: 'bg-green-600 p-4 text-white rounded-lg' }, props), children));
 };
 //# sourceMappingURL=Button.js.map
