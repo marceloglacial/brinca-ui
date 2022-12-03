@@ -18,3 +18,8 @@ Secondary.args = {
     children: 'Button Secondary',
     variant: 'secondary',
 }
+export const FullWidth = Template.bind({})
+FullWidth.args = {
+    children: 'Button Full',
+    full: true,
+}
