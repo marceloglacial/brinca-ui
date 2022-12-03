@@ -12,29 +12,9 @@ export const Button: React.FC<ButtonProps> = ({
     variant = 'primary',
     ...props
 }) => {
-    const { children, style } = props
-
-    const _style: React.CSSProperties = style || {}
-
-    switch (variant) {
-        case 'primary':
-            _style.backgroundColor = '#006E7F'
-            _style.color = '#fff'
-            break
-        case 'secondary':
-            _style.backgroundColor = '#F8CB2E'
-            _style.color = '#000'
-            break
-        case 'danger':
-            _style.backgroundColor = '#B22727'
-            _style.color = '#fff'
-            break
-    }
-
-    _style.padding = '5px 10px'
-
+    const { children } = props
     return (
-        <button style={_style} {...props}>
+        <button className='bg-green-600 p-4 text-white rounded-lg' {...props}>
             {children}
         </button>
     )

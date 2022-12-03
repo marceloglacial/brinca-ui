@@ -1,23 +1,23 @@
-import { Button } from '../src';
+import { Button } from '../src'
 
 export default {
-  title: 'My Component/Button',
-  component: Button,
-};
+    title: 'My Component/Button',
+    component: Button,
+}
 
 const Template = (args) => ({
-  //👇 Your template goes here
-});
+    //👇 Your template goes here
+})
 
-const PrimaryButton = Template.bind({});
+const PrimaryButton = Template.bind({})
 
 PrimaryButton.args = {
-  variant: 'primary',
-};
+    variant: 'primary',
+}
 
 export const Primary = {
-  args: {
-    variant: 'primary',
-    children: 'My First Button',
-  },
-};
+    args: {
+        variant: 'primary',
+        children: 'My First Button',
+    },
+}
