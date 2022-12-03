@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './ButtonStyles'
 
 export interface ButtonProps
     extends React.DetailedHTMLProps<
@@ -6,17 +7,18 @@ export interface ButtonProps
         HTMLButtonElement
     > {
     variant?: 'primary' | 'secondary' | 'danger'
+    full?: boolean
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-    const { variant = 'primary', children } = props
-    const styles = {
-        button: `py-2 px-8 rounded-full`,
-        primary: `border border-green-600 bg-green-600 text-white`,
-        secondary: `border border-green-600 text-green-600`,
-    }
+    const { variant = 'primary', children, full } = props
     return (
-        <button className={`${styles.button} ${styles[variant]}`} {...props}>
+        <button
+            className={`${styles.button} ${styles[variant]} ${
+                full && styles.full
+            }`}
+            {...props}
+        >
             {children}
         </button>
     )

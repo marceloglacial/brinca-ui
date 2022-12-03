@@ -1,40 +1,46 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
 export interface CardProps {
-    title: string
-    description?: string
-    image?: React.DetailedHTMLProps<
-        React.ImgHTMLAttributes<HTMLImageElement>,
-        HTMLImageElement
-    >
+    title: ReactNode
+    description?: ReactNode
+    image?: ReactNode
+    footer?: ReactNode
+    shadow?: boolean
+    rounded?: boolean
 }
 
-const Card: FC<CardProps> = ({ title, description, image }): JSX.Element => {
+const Card: FC<CardProps> = ({
+    title,
+    description,
+    image,
+    footer,
+    shadow = true,
+    rounded = true,
+}): JSX.Element => {
+    const shadowStyles = shadow ? styles.shadow : ''
+    const roundedStyles = rounded ? styles.rounded : ''
     return (
-        <div className={styles.card}>
-            {image && (
-                <figure className={styles.figure}>
-                    <img
-                        src={image.src}
-                        alt={image?.alt}
-                        className={styles.image}
-                        {...image}
-                    />
-                </figure>
-            )}
+        <div className={`${styles.card} ${shadowStyles} ${roundedStyles}`}>
+            {image && <figure className={styles.figure}>{image}</figure>}
             <div className={styles.body}>
-                <h3 className={styles.title}>{title}</h3>
-                {description && <p>{description}</p>}
+                <div className={styles.title}>{title}</div>
+                {description && (
+                    <div className={styles.description}>{description}</div>
+                )}
             </div>
+            {footer && <div className={styles.footer}>{footer}</div>}
         </div>
     )
 }
 export default Card
 
 const styles = {
-    card: `card  border rounded-lg shadow-xl flex flex-col overflow-hidden transition-transform hover:scale-95 hover:cursor-pointer`,
+    card: `card border flex flex-col overflow-hidden transition-transform hover:scale-95 hover:cursor-pointer`,
     figure: `card__image overflow-hidden aspect-video`,
-    image: `w-full h-full object-cover`,
     body: `card__body p-6`,
-    title: `font-bold text-2xl`,
+    title: `card__title font-bold text-2xl`,
+    description: `card__description`,
+    footer: `card__footer px-6 pb-6`,
+    shadow: `card--shadow shadow-xl`,
+    rounded: `card--rounded rounded-lg`,
 }
