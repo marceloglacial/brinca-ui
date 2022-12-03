@@ -7,11 +7,7 @@ export default {
     component: Hero,
 }
 
-const Template = (args) => (
-    <div className='max-w-screen-md'>
-        <Hero {...args} />
-    </div>
-)
+const Template = (args) => <Hero {...args} />
 const content: HeroProps = {
     title: 'Hero',
     description:

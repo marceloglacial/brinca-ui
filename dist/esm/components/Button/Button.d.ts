@@ -1,5 +1,7 @@
 import React from 'react';
 export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     variant?: 'primary' | 'secondary' | 'danger';
+    full?: boolean;
 }
-export declare const Button: React.FC<ButtonProps>;
+declare const Button: React.FC<ButtonProps>;
+export default Button;

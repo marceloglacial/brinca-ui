@@ -50,3 +50,21 @@ WithButton.args = {
     image: content.image,
     footer: content.footer,
 }
+
+export const NoShadow = Template.bind({})
+NoShadow.args = {
+    title: content.title,
+    description: content.description,
+    image: content.image,
+    footer: content.footer,
+    shadow: false,
+}
+
+export const NoRoundend = Template.bind({})
+NoRoundend.args = {
+    title: content.title,
+    description: content.description,
+    image: content.image,
+    footer: content.footer,
+    rounded: false,
+}
