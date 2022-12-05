@@ -4,7 +4,7 @@ import styles from './HeroStyles'
 export interface HeroProps {
     title: ReactNode
     description?: ReactNode
-    image?: ReactNode
+    image: ReactNode
     footer?: ReactNode
     shadow?: boolean
     rounded?: boolean

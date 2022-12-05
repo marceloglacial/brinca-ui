@@ -6,7 +6,7 @@ export interface ButtonProps
         React.ButtonHTMLAttributes<HTMLButtonElement>,
         HTMLButtonElement
     > {
-    variant?: 'primary' | 'secondary' | 'danger'
+    variant?: 'primary' | 'secondary'
     full?: boolean
 }
 
