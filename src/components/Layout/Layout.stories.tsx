@@ -4,6 +4,7 @@ import Hero from '../Hero/Hero'
 import Button from '../Button/Button'
 import Card from '../Card/Card'
 import Heading from '../Heading/Heading'
+import Main from '../Main/Main'
 
 export default {
     title: 'Components/Layout',
@@ -15,7 +16,7 @@ const Template = (args) => <Layout {...args} />
 export const Home = Template.bind({})
 Home.args = {
     children: (
-        <div className='flex flex-col gap-24'>
+        <Main spacing='xl'>
             <Hero
                 title={'Reprehenderit quis consequat'}
                 description='Proident proident nostrud velit culpa proident eiusmod pariatur. Aliqua adipisicing culpa fugiat voluptate eiusmod non laboris esse non veniam. Id eu duis sint ad ullamco proident nostrud ad excepteur sint minim eu proident.'
@@ -127,14 +128,14 @@ Home.args = {
                     <Button>Minim Labore</Button>
                 </div>
             </div>
-        </div>
+        </Main>
     ),
 }
 
 export const Page = Template.bind({})
 Page.args = {
     children: (
-        <div className='flex flex-col gap-8'>
+        <Main>
             <Heading className='mb-4'>Page Title</Heading>
             <p>
                 Et non amet ullamco exercitation. Anim sint excepteur
@@ -280,6 +281,6 @@ Page.args = {
                 laboris deserunt non. Sunt Lorem amet sit do et Lorem culpa
                 minim aliqua laboris ullamco non proident sit.
             </p>
-        </div>
+        </Main>
     ),
 }
