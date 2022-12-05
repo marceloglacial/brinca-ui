@@ -40,7 +40,7 @@ Default.args = {
                 }
                 footer={<Button variant='secondary'>Learn More</Button>}
             />
-            <div className='grid gap-8 grid-cols-3'>
+            <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
                 <a href='#'>
                     <Card
                         title='Officia duis id veniam minim '

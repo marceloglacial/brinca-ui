@@ -8,7 +8,7 @@ export default {
 }
 
 const Template = (args) => (
-    <div className='max-w-xs'>
+    <div className='max-w-md'>
         <Card {...args} />
     </div>
 )

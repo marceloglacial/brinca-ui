@@ -1,6 +1,6 @@
 const styles = {
-    card: `card border flex flex-col overflow-hidden transition-transform hover:scale-95`,
-    figure: `card__image overflow-hidden aspect-4/3 max-h-[255px]`,
+    card: `card border flex flex-col overflow-hidden transition-transform hover:scale-95 h-full`,
+    figure: `card__image overflow-hidden aspect-4/3 h-56 md:h-64`,
     body: `card__body p-8`,
     title: `card__title font-bold text-xl pb-2`,
     description: `card__description text-lg`,
