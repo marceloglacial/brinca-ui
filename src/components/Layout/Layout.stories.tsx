@@ -4,7 +4,7 @@ import Hero from '../Hero/Hero'
 import Button from '../Button/Button'
 import Card from '../Card/Card'
 import Heading from '../Heading/Heading'
-import Main from '../Main/Main'
+import VStack from '../VStack/VStack'
 
 export default {
     title: 'Components/Layout',
@@ -16,7 +16,7 @@ const Template = (args) => <Layout {...args} />
 export const Home = Template.bind({})
 Home.args = {
     children: (
-        <Main spacing='xl'>
+        <VStack spacing='xl'>
             <Hero
                 title={'Reprehenderit quis consequat'}
                 description='Proident proident nostrud velit culpa proident eiusmod pariatur. Aliqua adipisicing culpa fugiat voluptate eiusmod non laboris esse non veniam. Id eu duis sint ad ullamco proident nostrud ad excepteur sint minim eu proident.'
@@ -42,7 +42,7 @@ Home.args = {
                 }
                 footer={<Button variant='secondary'>Voluptate minim</Button>}
             />
-            <div className='flex flex-col gap-12'>
+            <VStack spacing='l'>
                 <Heading>Excepteur est enim</Heading>
                 <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
                     <a href='#'>
@@ -127,15 +127,15 @@ Home.args = {
                 <div className='text-center'>
                     <Button>Minim Labore</Button>
                 </div>
-            </div>
-        </Main>
+            </VStack>
+        </VStack>
     ),
 }
 
 export const Page = Template.bind({})
 Page.args = {
     children: (
-        <Main>
+        <VStack>
             <Heading className='mb-4'>Page Title</Heading>
             <p>
                 Et non amet ullamco exercitation. Anim sint excepteur
@@ -281,6 +281,6 @@ Page.args = {
                 laboris deserunt non. Sunt Lorem amet sit do et Lorem culpa
                 minim aliqua laboris ullamco non proident sit.
             </p>
-        </Main>
+        </VStack>
     ),
 }

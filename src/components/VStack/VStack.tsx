@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'
-import styles from './MainStyles'
+import styles from './VStackStyles'
 
 export interface MainProps {
     children?: ReactNode
@@ -7,7 +7,7 @@ export interface MainProps {
     spacing?: 's' | 'm' | 'l' | 'xl'
 }
 
-const Main: FC<MainProps> = ({
+const VStack: FC<MainProps> = ({
     children,
     className = '',
     spacing = 'm',
@@ -18,4 +18,4 @@ const Main: FC<MainProps> = ({
         </main>
     )
 }
-export default Main
+export default VStack
