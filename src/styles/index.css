@@ -1,9 +1,66 @@
 @tailwind base;
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap');
+    body {
+        font-family: 'Mulish', sans-serif;
+        font-weight: 200;
+    }
+
+    h1 {
+        @apply text-4xl lg:text-5xl font-bold;
+    }
+
+    h2 {
+        @apply text-3xl lg:text-4xl font-bold;
+    }
+
+    h3 {
+        @apply text-2xl lg:text-3xl font-bold;
+    }
+    
+    h4 {
+        @apply text-xl lg:text-2xl font-bold;
+    }
+    
+    h5 {
+        @apply text-lg lg:text-xl font-bold;
+    }
+    
+    h6 {
+        @apply lg:text-lg font-bold;
+    }
+
+    p { 
+        @apply lg:text-xl lg:leading-8;
+    }
+
+    ul {
+        @apply lg:text-xl lg:leading-8 list-disc pl-8 md:pl-12;
+    }
+
+    ol {
+        @apply lg:text-xl lg:leading-8 list-decimal pl-8 md:pl-12;
+    }
+
+    blockquote {
+        @apply lg:text-xl lg:leading-8 italic text-xl bg-gray-100 rounded-lg p-4 md:p-8;
+    }
+
+    table {
+        @apply w-full border scroll-auto;
+    }
+
+    tr {
+        @apply border;
+    }
+
+    th {
+        @apply border bg-gray-50;
+    }
+
+    td {
+        @apply border;
+    }
+}
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap');
-
-body {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 200;
-}

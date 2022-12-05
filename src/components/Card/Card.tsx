@@ -8,6 +8,7 @@ export interface CardProps {
     footer?: ReactNode
     shadow?: boolean
     rounded?: boolean
+    className?: string
 }
 
 const Card: FC<CardProps> = ({
@@ -17,11 +18,14 @@ const Card: FC<CardProps> = ({
     footer,
     shadow = true,
     rounded = true,
+    className = '',
 }): JSX.Element => {
     const shadowStyles = shadow ? styles.shadow : ''
     const roundedStyles = rounded ? styles.rounded : ''
     return (
-        <div className={`${styles.card} ${shadowStyles} ${roundedStyles}`}>
+        <div
+            className={`${styles.card} ${shadowStyles} ${roundedStyles} ${className}`}
+        >
             {image && <figure className={styles.figure}>{image}</figure>}
             <div className={styles.body}>
                 <div className={styles.title}>{title}</div>

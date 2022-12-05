@@ -9,6 +9,7 @@ export interface HeroProps {
     shadow?: boolean
     rounded?: boolean
     reversed?: boolean
+    className?: string
 }
 
 const Hero: FC<HeroProps> = ({
@@ -19,6 +20,7 @@ const Hero: FC<HeroProps> = ({
     shadow = true,
     rounded = true,
     reversed,
+    className = '',
 }): JSX.Element => {
     const shadowStyles = shadow ? styles.shadow : ''
     const roundedStyles = rounded ? styles.rounded : ''
@@ -27,7 +29,7 @@ const Hero: FC<HeroProps> = ({
         <div className={`${styles.hero} ${reverSedStyles}`}>
             {image && (
                 <figure
-                    className={`${styles.figure} ${shadowStyles} ${roundedStyles}`}
+                    className={`${styles.figure} ${shadowStyles} ${roundedStyles} ${className}`}
                 >
                     {image}
                 </figure>

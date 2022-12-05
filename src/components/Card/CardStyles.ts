@@ -1,8 +1,8 @@
 const styles = {
     card: `card border flex flex-col overflow-hidden transition-transform hover:scale-95 h-full`,
     figure: `card__image overflow-hidden aspect-4/3 h-56 md:h-64`,
-    body: `card__body p-8`,
-    title: `card__title font-bold text-xl pb-2`,
+    body: `card__body p-8 flex flex-col gap-2`,
+    title: `card__title font-bold text-xl`,
     description: `card__description text-lg`,
     footer: `card__footer px-8 pb-8`,
     shadow: `card--shadow shadow-2xl`,
