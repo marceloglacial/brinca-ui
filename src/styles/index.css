@@ -17,20 +17,20 @@
     h3 {
         @apply text-2xl lg:text-3xl font-bold;
     }
-    
+
     h4 {
         @apply text-xl lg:text-2xl font-bold;
     }
-    
+
     h5 {
         @apply text-lg lg:text-xl font-bold;
     }
-    
+
     h6 {
         @apply lg:text-lg font-bold;
     }
 
-    p { 
+    p {
         @apply lg:text-xl lg:leading-8;
     }
 

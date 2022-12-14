@@ -1,7 +1,13 @@
+import * as buttonStyles from '../Button/ButtonStyles'
+
 const styles = {
-    button: `button py-3 px-10 rounded-full transition-all border-2 border-green-600 font-normal`,
-    primary: `button--primary bg-green-600 text-white hover:bg-white hover:text-green-600`,
-    secondary: `button--secondary text-green-600 hover:bg-green-600 hover:text-white`,
-    full: `button--full w-full`,
+    ...buttonStyles.default,
+    default: `font-normal hover:text-green-600 relative
+           after:w-0 after:absolute after:block after:bg-green-600 after:h-[3px] after:rounded-full
+           hover:after:w-full after:transition-all ease-in-out`,
+    dark: `hover:text-white relative
+           after:w-0 after:absolute after:block after:bg-white after:h-[1px] after:rounded-full
+           hover:after:w-full after:transition-all ease-in-out`,
+    full: `${buttonStyles.default.full} inline-block text-center`,
 }
 export default styles

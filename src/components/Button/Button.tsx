@@ -12,11 +12,10 @@ export interface ButtonProps
 
 const Button: React.FC<ButtonProps> = (props) => {
     const { variant = 'primary', children, full } = props
+    const fullClassName = full ? styles.full : ''
     return (
         <button
-            className={`${styles.button} ${styles[variant]} ${
-                full && styles.full
-            }`}
+            className={`${styles.button} ${styles[variant]} ${fullClassName}`}
             {...props}
         >
             {children}
