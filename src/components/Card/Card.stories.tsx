@@ -9,6 +9,36 @@ export default {
 
 export const Base = (props: CardProps) => (
     <Card {...props}>
+        <Card.Body>
+            <h4>CardTitle</h4>
+            <p>
+                Officia exercitation labore proident nisi qui nisi sint fugiat
+                in. Sit culpa in eiusmod velit proident veniam elit aute aute
+                velit aute officia commodo irure. Reprehenderit do do sunt qui
+                magna sit.
+            </p>
+        </Card.Body>
+    </Card>
+)
+
+export const WithLink = (props: CardProps) => (
+    <Card {...props}>
+        <Card.Body>
+            <h4>CardTitle</h4>
+            <p>
+                Officia exercitation labore proident nisi qui nisi sint fugiat
+                in. Sit culpa in eiusmod velit proident veniam elit aute aute
+                velit aute officia commodo irure. Reprehenderit do do sunt qui
+                magna sit.
+            </p>
+            <Link href='#' variant='primary'>
+                Link
+            </Link>
+        </Card.Body>
+    </Card>
+)
+export const WithImage = (props: CardProps) => (
+    <Card {...props}>
         <Card.Image>
             <img
                 src={`https://images.unsplash.com/photo-1600887876365-f7dcf0e5e985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9ydGFsZXphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60`}
@@ -40,6 +70,7 @@ export const NoShadow = (props: CardProps) => (
                 className='w-full h-full object-cover'
             />
         </Card.Image>
+
         <Card.Body>
             <h4>CardTitle</h4>
             <p>

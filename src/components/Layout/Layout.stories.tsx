@@ -46,7 +46,7 @@ Home.args = {
                 <Heading>Excepteur est enim</Heading>
                 <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
                     <a href='#'>
-                        <Card>
+                        <Card className='transition-transform hover:scale-95'>
                             <Card.Image>
                                 <img
                                     src={`https://images.unsplash.com/photo-1593995863951-57c27e518295?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJyYXppbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60`}
@@ -66,7 +66,7 @@ Home.args = {
                         </Card>
                     </a>
                     <a href='#'>
-                        <Card>
+                        <Card className='transition-transform hover:scale-95'>
                             <Card.Image>
                                 <img
                                     src={`https://images.unsplash.com/photo-1543957568-897d11ea3926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzZ8fGJyYXppbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60`}
@@ -86,7 +86,7 @@ Home.args = {
                         </Card>
                     </a>
                     <a href='#'>
-                        <Card>
+                        <Card className='transition-transform hover:scale-95'>
                             <Card.Image>
                                 <img
                                     src={`https://images.unsplash.com/photo-1634484850417-b8f44ae25cb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGZvcnRhbGV6YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60`}
@@ -106,7 +106,7 @@ Home.args = {
                         </Card>
                     </a>
                     <a href='#'>
-                        <Card>
+                        <Card className='transition-transform hover:scale-95'>
                             <Card.Image>
                                 <img
                                     src={`https://images.unsplash.com/photo-1552035264-b9ad6e681ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGJyYXppbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60`}
@@ -126,7 +126,7 @@ Home.args = {
                         </Card>
                     </a>
                     <a href='#'>
-                        <Card>
+                        <Card className='transition-transform hover:scale-95'>
                             <Card.Image>
                                 <img
                                     src={`https://images.unsplash.com/photo-1566925068640-79b2cdba4491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGJyYXppbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60`}
@@ -146,7 +146,7 @@ Home.args = {
                         </Card>
                     </a>
                     <a href='#'>
-                        <Card>
+                        <Card className='transition-transform hover:scale-95'>
                             <Card.Image>
                                 <img
                                     src={`https://images.unsplash.com/photo-1550574364-d19c7a455f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80`}
