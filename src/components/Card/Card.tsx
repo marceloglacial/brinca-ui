@@ -1,40 +1,35 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
+import CardBody from './CardBody'
+import CardFooter from './CardFooter'
+import CardImage from './CardImage'
 import styles from './CardStyles'
 
 export interface CardProps {
-    title: ReactNode
-    description?: ReactNode
-    image?: ReactNode
-    footer?: ReactNode
-    shadow?: boolean
-    rounded?: boolean
+    noShadown?: boolean
+    square?: boolean
     className?: string
+    children: ReactNode
 }
 
-const Card: FC<CardProps> = ({
-    title,
-    description,
-    image,
-    footer,
-    shadow = true,
-    rounded = true,
+const Card = ({
+    noShadown,
+    square,
     className = '',
-}): JSX.Element => {
-    const shadowStyles = shadow ? styles.shadow : ''
-    const roundedStyles = rounded ? styles.rounded : ''
+    children,
+}: CardProps): JSX.Element => {
+    const noShadownStyles = noShadown ? '' : styles.shadow
+    const squareStyles = square ? '' : styles.rounded
     return (
         <div
-            className={`${styles.card} ${shadowStyles} ${roundedStyles} ${className}`}
+            className={`${styles.container} ${noShadownStyles} ${squareStyles} ${className}`}
         >
-            {image && <figure className={styles.figure}>{image}</figure>}
-            <div className={styles.body}>
-                <div className={styles.title}>{title}</div>
-                {description && (
-                    <div className={styles.description}>{description}</div>
-                )}
-            </div>
-            {footer && <div className={styles.footer}>{footer}</div>}
+            {children}
         </div>
     )
 }
+
+Card.Image = CardImage
+Card.Body = CardBody
+Card.Footer = CardFooter
+
 export default Card
