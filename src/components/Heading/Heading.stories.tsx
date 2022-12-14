@@ -11,4 +11,5 @@ const Template = (args) => <Heading {...args} />
 export const Default = Template.bind({})
 Default.args = {
     children: 'Heading Primary',
+    id: 'test',
 }

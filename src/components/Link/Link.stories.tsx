@@ -1,25 +1,25 @@
 import React from 'react'
-import Button from './Button'
+import Link from './Link'
 
 export default {
-    title: 'Components/Button',
-    component: Button,
+    title: 'Components/Link',
+    component: Link,
 }
 
-const Template = (args) => <Button {...args} />
+const Template = (args) => <Link {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-    children: 'Button Primary',
+    children: 'Link Primary',
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
-    children: 'Button Secondary',
+    children: 'Link Secondary',
     variant: 'secondary',
 }
 export const FullWidth = Template.bind({})
 FullWidth.args = {
-    children: 'Button Full',
+    children: 'Link Full',
     full: true,
 }

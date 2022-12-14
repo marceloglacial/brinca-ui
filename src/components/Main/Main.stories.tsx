@@ -1,12 +1,12 @@
 import React from 'react'
-import VStack from './VStack'
+import Main from './Main'
 
 export default {
-    title: 'Components/VStack',
-    component: VStack,
+    title: 'Components/Main',
+    component: Main,
 }
 
-const Template = (args) => <VStack {...args} />
+const Template = (args) => <Main {...args} />
 
 const content = (
     <p>
@@ -22,47 +22,47 @@ const content = (
 export const SmallSpacing = Template.bind({})
 SmallSpacing.args = {
     children: (
-        <VStack spacing='s'>
+        <Main spacing='s'>
             <h3>Small Spacing</h3>
             {content}
             {content}
             {content}
-        </VStack>
+        </Main>
     ),
 }
 
 export const DefaultSpacing = Template.bind({})
 DefaultSpacing.args = {
     children: (
-        <VStack>
+        <Main>
             <h3>Default Spacing</h3>
             {content}
             {content}
             {content}
-        </VStack>
+        </Main>
     ),
 }
 
 export const LargeSpacing = Template.bind({})
 LargeSpacing.args = {
     children: (
-        <VStack spacing='l'>
+        <Main spacing='l'>
             <h3>Large Spacing</h3>
             {content}
             {content}
             {content}
-        </VStack>
+        </Main>
     ),
 }
 
 export const ExtraLargeSpacing = Template.bind({})
 ExtraLargeSpacing.args = {
     children: (
-        <VStack spacing='xl'>
+        <Main spacing='xl'>
             <h3>Extra Large Spacing</h3>
             {content}
             {content}
             {content}
-        </VStack>
+        </Main>
     ),
 }

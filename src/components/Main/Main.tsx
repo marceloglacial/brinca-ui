@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'
-import styles from './VStackStyles'
+import styles from './MainStyles'
 
 export interface MainProps {
     children?: ReactNode

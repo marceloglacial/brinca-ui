@@ -7,11 +7,7 @@ export default {
     component: Card,
 }
 
-const Template = (args) => (
-    <div className='max-w-md'>
-        <Card {...args} />
-    </div>
-)
+const Template = (args) => <Card {...args} />
 const content: CardProps = {
     title: 'Card',
     description:
