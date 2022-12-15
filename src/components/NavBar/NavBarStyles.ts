@@ -6,7 +6,6 @@ const styles = {
             lg:static 
             z-40
             overflow-scroll
-            lg:overflow-none
             scroll-smooth 
             top-0 
             py-16
