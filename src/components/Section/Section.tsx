@@ -1,13 +1,13 @@
 import React, { FC, ReactNode } from 'react'
-import styles from './MainStyles'
+import styles from './SectionStyles'
 
-export interface MainProps {
+export interface SectionProps {
     children?: ReactNode
     className?: string
     spacing?: 's' | 'm' | 'l' | 'xl'
 }
 
-const VStack: FC<MainProps> = ({
+const VStack: FC<SectionProps> = ({
     children,
     className = '',
     spacing = 'm',

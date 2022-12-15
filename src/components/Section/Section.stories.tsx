@@ -1,12 +1,12 @@
 import React from 'react'
-import Main from './Main'
+import Section from './Section'
 
 export default {
-    title: 'Components/Main',
-    component: Main,
+    title: 'Components/Section',
+    component: Section,
 }
 
-const Template = (args) => <Main {...args} />
+const Template = (args) => <Section {...args} />
 
 const content = (
     <p>
@@ -22,47 +22,47 @@ const content = (
 export const SmallSpacing = Template.bind({})
 SmallSpacing.args = {
     children: (
-        <Main spacing='s'>
+        <Section spacing='s'>
             <h3>Small Spacing</h3>
             {content}
             {content}
             {content}
-        </Main>
+        </Section>
     ),
 }
 
 export const DefaultSpacing = Template.bind({})
 DefaultSpacing.args = {
     children: (
-        <Main>
+        <Section>
             <h3>Default Spacing</h3>
             {content}
             {content}
             {content}
-        </Main>
+        </Section>
     ),
 }
 
 export const LargeSpacing = Template.bind({})
 LargeSpacing.args = {
     children: (
-        <Main spacing='l'>
+        <Section spacing='l'>
             <h3>Large Spacing</h3>
             {content}
             {content}
             {content}
-        </Main>
+        </Section>
     ),
 }
 
 export const ExtraLargeSpacing = Template.bind({})
 ExtraLargeSpacing.args = {
     children: (
-        <Main spacing='xl'>
+        <Section spacing='xl'>
             <h3>Extra Large Spacing</h3>
             {content}
             {content}
             {content}
-        </Main>
+        </Section>
     ),
 }

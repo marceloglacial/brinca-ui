@@ -1,47 +1,28 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
+import HeroBody from './HeroBody'
+import HeroImage from './HeroImage'
 import styles from './HeroStyles'
 
 export interface HeroProps {
-    title: ReactNode
-    description?: ReactNode
-    image: ReactNode
-    footer?: ReactNode
-    shadow?: boolean
-    rounded?: boolean
-    reversed?: boolean
     className?: string
+    children: ReactNode
+    reversed?: boolean
 }
 
-const Hero: FC<HeroProps> = ({
-    title,
-    description,
-    image,
-    footer,
-    shadow = true,
-    rounded = true,
-    reversed,
+const Hero = ({
     className = '',
-}): JSX.Element => {
-    const shadowStyles = shadow ? styles.shadow : ''
-    const roundedStyles = rounded ? styles.rounded : ''
-    const reverSedStyles = reversed ? styles.reversed : ''
+    children,
+    reversed,
+}: HeroProps): JSX.Element => {
+    const isReversedClassName = reversed ? styles.reversed : ''
     return (
-        <div className={`${styles.hero} ${reverSedStyles}`}>
-            {image && (
-                <figure
-                    className={`${styles.figure} ${shadowStyles} ${roundedStyles} ${className}`}
-                >
-                    {image}
-                </figure>
-            )}
-            <div className={styles.body}>
-                <div className={styles.title}>{title}</div>
-                {description && (
-                    <div className={styles.description}>{description}</div>
-                )}
-                {footer && <div className={styles.footer}>{footer}</div>}
-            </div>
+        <div className={`${styles.hero} ${isReversedClassName} ${className}`}>
+            {children}
         </div>
     )
 }
+
+Hero.Image = HeroImage
+Hero.Body = HeroBody
+
 export default Hero

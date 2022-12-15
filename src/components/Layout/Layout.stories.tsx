@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from './Layout'
 import Hero from '../Hero/Hero'
-import Button from '../Button/Button'
+import Link from '../Link/Link'
 import Card from '../Card/Card'
 import Heading from '../Heading/Heading'
-import Main from '../Main/Main'
+import Section from '../Section/Section'
 
 export default {
     title: 'Components/Layout',
@@ -16,33 +16,52 @@ const Template = (args) => <Layout {...args} />
 export const Home = Template.bind({})
 Home.args = {
     children: (
-        <Main spacing='xl'>
-            <Hero
-                title={'Reprehenderit quis consequat'}
-                description='Proident proident nostrud velit culpa proident eiusmod pariatur. Aliqua adipisicing culpa fugiat voluptate eiusmod non laboris esse non veniam. Id eu duis sint ad ullamco proident nostrud ad excepteur sint minim eu proident.'
-                image={
+        <Section spacing='xl'>
+            <Hero reversed>
+                <Hero.Image>
                     <img
                         src={`https://images.unsplash.com/photo-1600887876365-f7dcf0e5e985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9ydGFsZXphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60`}
                         alt={`Hero Image`}
                         className='w-full h-full object-cover'
                     />
-                }
-                footer={<Button variant='secondary'>Voluptate minim</Button>}
-                reversed
-            />
-            <Hero
-                title={'Irure quis consequat sunt ullamco'}
-                description='Proident proident nostrud velit culpa proident eiusmod pariatur. Aliqua adipisicing culpa fugiat voluptate eiusmod non laboris esse non veniam. Id eu duis sint ad ullamco proident nostrud ad excepteur sint minim eu proident.'
-                image={
+                </Hero.Image>
+                <Hero.Body>
+                    <h1>Reprehenderit quis consequat</h1>
+                    <p>
+                        Proident proident nostrud velit culpa proident eiusmod
+                        pariatur. Aliqua adipisicing culpa fugiat voluptate
+                        eiusmod non laboris esse non veniam. Id eu duis sint ad
+                        ullamco proident nostrud ad excepteur sint minim eu
+                        proident.
+                    </p>
+                    <Link href='#' variant='secondary'>
+                        Voluptate minim
+                    </Link>
+                </Hero.Body>
+            </Hero>
+            <Hero>
+                <Hero.Image>
                     <img
                         src={`https://images.unsplash.com/photo-1518896286368-849011d27f4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fGJyYXppbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60`}
                         alt={`Hero Image`}
                         className='w-full h-full object-cover'
                     />
-                }
-                footer={<Button variant='secondary'>Voluptate minim</Button>}
-            />
-            <Main spacing='l'>
+                </Hero.Image>
+                <Hero.Body>
+                    <h1>Reprehenderit quis consequat</h1>
+                    <p>
+                        Proident proident nostrud velit culpa proident eiusmod
+                        pariatur. Aliqua adipisicing culpa fugiat voluptate
+                        eiusmod non laboris esse non veniam. Id eu duis sint ad
+                        ullamco proident nostrud ad excepteur sint minim eu
+                        proident.
+                    </p>
+                    <Link href='#' variant='secondary'>
+                        Voluptate minim
+                    </Link>
+                </Hero.Body>
+            </Hero>
+            <Section spacing='l'>
                 <Heading>Excepteur est enim</Heading>
                 <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
                     <a href='#'>
@@ -167,17 +186,19 @@ Home.args = {
                     </a>
                 </div>
                 <div className='text-center'>
-                    <Button>Minim Labore</Button>
+                    <Link href='#' variant='primary'>
+                        Minim Labore
+                    </Link>
                 </div>
-            </Main>
-        </Main>
+            </Section>
+        </Section>
     ),
 }
 
 export const Page = Template.bind({})
 Page.args = {
     children: (
-        <Main>
+        <Section>
             <Heading className='mb-4'>Page Title</Heading>
             <p>
                 Et non amet ullamco exercitation. Anim sint excepteur
@@ -323,6 +344,6 @@ Page.args = {
                 laboris deserunt non. Sunt Lorem amet sit do et Lorem culpa
                 minim aliqua laboris ullamco non proident sit.
             </p>
-        </Main>
+        </Section>
     ),
 }

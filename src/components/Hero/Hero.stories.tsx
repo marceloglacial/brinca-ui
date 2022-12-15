@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero, { HeroProps } from './Hero'
+import Hero from './Hero'
 import Button from '../Button/Button'
 
 export default {
@@ -7,8 +7,7 @@ export default {
     component: Hero,
 }
 
-const Template = (args) => <Hero {...args} />
-const content: HeroProps = {
+const content = {
     title: 'Hero',
     description:
         'DescrAd mollit cillum velit fugiat ipsum nulla nulla consequat amet. Ex deserunt commodo pariatur mollit non enim officia nulla ad mollit ex. Amet pariatur consequat ea adipisicing nulla nostrud incididunt Lorem sunt adipisicing.iption',
@@ -22,45 +21,51 @@ const content: HeroProps = {
     footer: <Button variant='secondary'>Button</Button>,
 }
 
-export const Default = Template.bind({})
-Default.args = {
-    title: content.title,
-    description: content.description,
-    image: content.image,
+export const Base = (props) => {
+    return (
+        <Hero {...props}>
+            <Hero.Image>{content.image}</Hero.Image>
+            <Hero.Body>
+                <h1>{content.title}</h1>
+                <p>{content.description}</p>
+            </Hero.Body>
+        </Hero>
+    )
 }
 
-export const WithCTA = Template.bind({})
-WithCTA.args = {
-    title: content.title,
-    description: content.description,
-    image: content.image,
-    footer: content.footer,
+export const NoShadow = (props) => {
+    return (
+        <Hero {...props}>
+            <Hero.Image noShadow>{content.image}</Hero.Image>
+            <Hero.Body>
+                <h1>{content.title}</h1>
+                <p>{content.description}</p>
+            </Hero.Body>
+        </Hero>
+    )
+}
+export const Squared = (props) => {
+    return (
+        <Hero {...props}>
+            <Hero.Image squared noShadow>
+                {content.image}
+            </Hero.Image>
+            <Hero.Body>
+                <h1>{content.title}</h1>
+                <p>{content.description}</p>
+            </Hero.Body>
+        </Hero>
+    )
 }
 
-export const NoShadow = Template.bind({})
-NoShadow.args = {
-    title: content.title,
-    description: content.description,
-    image: content.image,
-    footer: content.footer,
-    shadow: false,
-}
-
-export const NoRounded = Template.bind({})
-NoRounded.args = {
-    title: content.title,
-    description: content.description,
-    image: content.image,
-    footer: content.footer,
-    shadow: false,
-    rounded: false,
-}
-
-export const Reversed = Template.bind({})
-Reversed.args = {
-    title: content.title,
-    description: content.description,
-    image: content.image,
-    footer: content.footer,
-    reversed: true,
+export const Reversed = (props) => {
+    return (
+        <Hero {...props} reversed>
+            <Hero.Image>{content.image}</Hero.Image>
+            <Hero.Body>
+                <h1>{content.title}</h1>
+                <p>{content.description}</p>
+            </Hero.Body>
+        </Hero>
+    )
 }

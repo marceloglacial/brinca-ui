@@ -6,22 +6,22 @@ import styles from './CardStyles'
 
 export interface CardProps {
     noShadown?: boolean
-    square?: boolean
+    squared?: boolean
     className?: string
     children: ReactNode
 }
 
 const Card = ({
     noShadown,
-    square,
+    squared,
     className = '',
     children,
 }: CardProps): JSX.Element => {
     const noShadownStyles = noShadown ? '' : styles.shadow
-    const squareStyles = square ? '' : styles.rounded
+    const squaredStyles = squared ? '' : styles.rounded
     return (
         <div
-            className={`${styles.container} ${noShadownStyles} ${squareStyles} ${className}`}
+            className={`${styles.container} ${noShadownStyles} ${squaredStyles} ${className}`}
         >
             {children}
         </div>
