@@ -16,6 +16,7 @@
         "build-storybook": "build-storybook",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.ts*",
+        "husky-actions": "npm run format && npm run lint",
         "prepare": "husky install"
     },
     "repository": {
