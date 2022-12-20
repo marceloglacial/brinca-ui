@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavBar } from './NavBar'
-import Link from '../Link/Link'
+import { Link } from '../Link/Link'
 
 export default {
     title: 'Components/NavBar',
