@@ -7,7 +7,7 @@ export interface SectionProps {
     spacing?: 's' | 'm' | 'l' | 'xl'
 }
 
-const VStack: FC<SectionProps> = ({
+const Section: FC<SectionProps> = ({
     children,
     className = '',
     spacing = 'm',
@@ -18,4 +18,4 @@ const VStack: FC<SectionProps> = ({
         </main>
     )
 }
-export default VStack
+export default Section

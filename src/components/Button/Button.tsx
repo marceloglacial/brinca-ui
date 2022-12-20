@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './ButtonStyles'
 
+export type ButtonTypes = 'primary' | 'secondary'
 export interface ButtonProps
     extends React.DetailedHTMLProps<
         React.ButtonHTMLAttributes<HTMLButtonElement>,
         HTMLButtonElement
     > {
-    variant?: 'primary' | 'secondary'
+    variant?: ButtonTypes
     full?: boolean
 }
 

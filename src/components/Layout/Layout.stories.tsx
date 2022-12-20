@@ -1,20 +1,79 @@
 import React from 'react'
-import Layout from './Layout'
+import Layout, { LayoutProps } from './Layout'
 import Hero from '../Hero/Hero'
 import Link from '../Link/Link'
 import Card from '../Card/Card'
 import Heading from '../Heading/Heading'
 import Section from '../Section/Section'
+import NavBar from '../NavBar/NavBar'
 
 export default {
     title: 'Components/Layout',
     component: Layout,
 }
 
-const Template = (args) => <Layout {...args} />
+const Template = (args: LayoutProps) => <Layout {...args} />
+
+const header = (
+    <NavBar>
+        <NavBar.Brand>
+            <a href='#'>
+                <img
+                    src='https://res.cloudinary.com/brinca/image/upload/v1664060764/brinca-ui/image_qcfpyy.png'
+                    alt=''
+                    className='w-[160px] h-[65px] md:w-[230px] md:h-[95px] object-contain'
+                />
+            </a>
+        </NavBar.Brand>
+        <NavBar.Items>
+            <Link href='#'>Item 1</Link>
+            <Link href='#'>Item 1</Link>
+            <Link href='#'>Item 1</Link>
+            <Link href='#'>Item 1</Link>
+            <Link href='#'>Item 1</Link>
+            <Link href='#'>Item 1</Link>
+            <Link href='#' variant='primary'>
+                Item 1
+            </Link>
+        </NavBar.Items>
+    </NavBar>
+)
+
+const footer = (
+    <NavBar variant='bottom'>
+        <NavBar.Brand>
+            <a href='#'>
+                <img
+                    src='https://res.cloudinary.com/brinca/image/upload/v1664060777/brinca-ui/image_yfpt9t.png'
+                    alt=''
+                    className='w-[150px] h-[60px] object-contain'
+                />
+            </a>
+        </NavBar.Brand>
+        <NavBar.Items variant='bottom'>
+            <Link href='#' variant='white'>
+                Item
+            </Link>
+            <Link href='#' variant='white'>
+                Item
+            </Link>
+            <Link href='#' variant='white'>
+                Item
+            </Link>
+            <Link href='#' variant='white'>
+                Item
+            </Link>
+            <Link href='#' variant='white'>
+                Item
+            </Link>
+        </NavBar.Items>
+    </NavBar>
+)
 
 export const Home = Template.bind({})
 Home.args = {
+    header,
+    footer,
     children: (
         <Section spacing='xl'>
             <Hero reversed>
@@ -197,6 +256,8 @@ Home.args = {
 
 export const Page = Template.bind({})
 Page.args = {
+    header,
+    footer,
     children: (
         <Section>
             <Heading className='mb-4'>Page Title</Heading>

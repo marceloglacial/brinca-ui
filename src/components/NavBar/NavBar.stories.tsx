@@ -21,13 +21,45 @@ export const Top = (props) => {
             </NavBar.Brand>
             <NavBar.Items>
                 <Link href='#'>Item 1</Link>
-                <Link href='#'>Item 1</Link>
-                <Link href='#'>Item 1</Link>
-                <Link href='#'>Item 1</Link>
-                <Link href='#'>Item 1</Link>
-                <Link href='#'>Item 1</Link>
+                <Link href='#'>Item 2</Link>
+                <Link href='#'>Item 3</Link>
+                <Link href='#'>Item 4</Link>
+                <Link href='#'>Item 5</Link>
+                <Link href='#'>Item 6</Link>
                 <Link href='#' variant='primary'>
-                    Item 1
+                    Item 7
+                </Link>
+            </NavBar.Items>
+        </NavBar>
+    )
+}
+export const Bottom = (props) => {
+    return (
+        <NavBar variant='bottom' {...props}>
+            <NavBar.Brand>
+                <a href='#'>
+                    <img
+                        src='https://res.cloudinary.com/brinca/image/upload/v1664060777/brinca-ui/image_yfpt9t.png'
+                        alt=''
+                        className='w-[150px] h-[60px] object-contain'
+                    />
+                </a>
+            </NavBar.Brand>
+            <NavBar.Items variant='bottom'>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+                <Link href='#' variant='white'>
+                    Item
                 </Link>
             </NavBar.Items>
         </NavBar>

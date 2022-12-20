@@ -1,8 +1,18 @@
 const styles = {
     container: `navbar flex gap-8`,
-    brand: `navbar__brand flex items-center mr-auto`,
-    items: `navbar__items 
-            fixed
+    top: `navbar--top`,
+    bottom: `navbar--bottom bg-green-600 px-8 py-4 rounded-2xl flex-col lg:flex-row`,
+    brand: `navbar__brand flex items-center justify-center lg:justify-left`,
+    items: {
+        container: `navbar__items
+                    flex 
+                    flex-col 
+                    lg:flex-row 
+                    gap-8 
+                    items-center
+                    ml-0
+                    lg:ml-auto`,
+        top: `fixed
             lg:static 
             z-40
             overflow-scroll
@@ -12,6 +22,7 @@ const styles = {
             px-8 
             lg:p-0
             bg-white 
+            lg:bg-transparent
             w-screen 
             md:w-1/2
             md:shadow-2xl
@@ -19,14 +30,11 @@ const styles = {
             lg:w-auto
             h-screen 
             lg:h-auto
-            flex 
-            flex-col 
-            lg:flex-row 
-            gap-8 
-            items-center
             transition-all
             ease-in-out
             `,
+        bottom: ``,
+    },
     isOpen: `left-0 md:left-1/2`,
     isClose: `left-full`,
     buttonContainer: `absolute z-50 top-8 right-8 flex lg:hidden`,

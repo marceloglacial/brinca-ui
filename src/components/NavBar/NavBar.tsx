@@ -3,13 +3,23 @@ import NavBarBrand from './NavBarBrand'
 import NavBarItems from './NavBarItems'
 import styles from './NavBarStyles'
 
+export type NavBarTypes = 'top' | 'bottom'
 export interface NavBarProps {
+    variant?: NavBarTypes
     className?: string
     children: ReactNode
 }
 
-const NavBar = ({ className = '', children }: NavBarProps): JSX.Element => {
-    return <div className={`${styles.container} ${className}`}>{children}</div>
+const NavBar = ({
+    variant = 'top',
+    className = '',
+    children,
+}: NavBarProps): JSX.Element => {
+    return (
+        <div className={`${styles.container} ${styles[variant]} ${className}`}>
+            {children}
+        </div>
+    )
 }
 
 NavBar.Brand = NavBarBrand
