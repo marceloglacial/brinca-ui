@@ -11,7 +11,7 @@ export interface ButtonProps
     full?: boolean
 }
 
-const Button: React.FC<ButtonProps> = (props) => {
+export const Button: React.FC<ButtonProps> = (props) => {
     const { variant = 'primary', children, full } = props
     const fullClassName = full ? styles.full : ''
     return (
@@ -23,4 +23,3 @@ const Button: React.FC<ButtonProps> = (props) => {
         </button>
     )
 }
-export default Button

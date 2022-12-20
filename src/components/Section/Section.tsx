@@ -7,7 +7,7 @@ export interface SectionProps {
     spacing?: 's' | 'm' | 'l' | 'xl'
 }
 
-const Section: FC<SectionProps> = ({
+export const Section: FC<SectionProps> = ({
     children,
     className = '',
     spacing = 'm',
@@ -18,4 +18,3 @@ const Section: FC<SectionProps> = ({
         </main>
     )
 }
-export default Section

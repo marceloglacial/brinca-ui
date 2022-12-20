@@ -8,7 +8,7 @@ export interface LayoutProps {
     className?: string
 }
 
-const Layout: FC<LayoutProps> = ({
+export const Layout: FC<LayoutProps> = ({
     header,
     footer,
     children,
@@ -22,4 +22,3 @@ const Layout: FC<LayoutProps> = ({
         </div>
     )
 }
-export default Layout

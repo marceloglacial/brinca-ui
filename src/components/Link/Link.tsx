@@ -8,7 +8,7 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     children: ReactNode
 }
 
-const Link: React.FC<LinkProps> = (props) => {
+export const Link: React.FC<LinkProps> = (props) => {
     const { variant = 'default', children, full } = props
     const isFullClassName = full ? styles.full : ''
     return (
@@ -17,4 +17,3 @@ const Link: React.FC<LinkProps> = (props) => {
         </a>
     )
 }
-export default Link

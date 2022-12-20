@@ -5,9 +5,8 @@ export interface HeadingProps {
     children?: ReactNode
 }
 
-const Heading: FC<HeadingProps & JSX.IntrinsicElements['div']> = ({
+export const Heading: FC<HeadingProps & JSX.IntrinsicElements['div']> = ({
     children,
 }): JSX.Element => {
     return <div className={`${styles.container}`}>{children}</div>
 }
-export default Heading

@@ -16,6 +16,7 @@ const styles = {
             lg:static 
             z-40
             overflow-scroll
+            lg:overflow-auto
             scroll-smooth 
             top-0 
             py-16
@@ -37,7 +38,7 @@ const styles = {
     },
     isOpen: `left-0 md:left-1/2`,
     isClose: `left-full`,
-    buttonContainer: `absolute z-50 top-8 right-8 flex lg:hidden`,
+    buttonContainer: `absolute z-50 top-8 right-6 flex lg:hidden`,
     closeButton: `bg-green-600 text-white py-2 px-4 rounded-full`,
     openButton: `p-2`,
 }
