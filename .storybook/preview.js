@@ -7,4 +7,9 @@ export const parameters = {
             date: /Date$/,
         },
     },
+    previewTabs: {
+        'storybook/docs/panel': {
+            hidden: true,
+        },
+    },
 }
