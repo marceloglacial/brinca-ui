@@ -4,6 +4,7 @@ export const parameters = {
         storySort: {
             order: ['Pages', 'Components'],
         },
+        showPanel: false,
     },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
