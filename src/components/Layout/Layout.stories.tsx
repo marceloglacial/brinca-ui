@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout, { LayoutProps } from './Layout'
-import Hero from '../Hero/Hero'
+import { Hero } from '../Hero/Hero'
 import Link from '../Link/Link'
-import Card from '../Card/Card'
+import { Card } from '../Card/Card'
 import Heading from '../Heading/Heading'
 import Section from '../Section/Section'
-import NavBar from '../NavBar/NavBar'
+import { NavBar } from '../NavBar/NavBar'
 
 export default {
     title: 'Components/Layout',

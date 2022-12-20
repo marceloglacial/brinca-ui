@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react'
+import React, { FC, ReactNode, useState } from 'react'
 import { NavBarTypes } from './NavBar'
 import NavBarButton from './NavBarButton'
 import styles from './NavBarStyles'
@@ -9,11 +9,11 @@ export interface NavBarItemsProps {
     children: ReactNode
 }
 
-const NavBarItems = ({
+const NavBarItems: FC<NavBarItemsProps> = ({
     variant = 'top',
     className = '',
     children,
-}: NavBarItemsProps): JSX.Element => {
+}): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const hasButton = variant === 'top'
     const isOpenClassName = isOpen ? styles.isOpen : styles.isClose

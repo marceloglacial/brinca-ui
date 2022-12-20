@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styles from './NavBarStyles'
 
 export interface NavBarBrandProps {
@@ -6,10 +6,10 @@ export interface NavBarBrandProps {
     children: ReactNode
 }
 
-const NavBarBrand = ({
+const NavBarBrand: FC<NavBarBrandProps> = ({
     className = '',
     children,
-}: NavBarBrandProps): JSX.Element => {
+}): JSX.Element => {
     return <div className={`${styles.brand} ${className}`}>{children}</div>
 }
 

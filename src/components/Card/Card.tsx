@@ -11,7 +11,7 @@ export interface CardProps {
     children: ReactNode
 }
 
-const Card = ({
+const CardContainer = ({
     noShadown,
     squared,
     className = '',
@@ -28,8 +28,13 @@ const Card = ({
     )
 }
 
-Card.Image = CardImage
-Card.Body = CardBody
-Card.Footer = CardFooter
+export const Card = Object.assign(CardContainer, {
+    Image: CardImage,
+    Body: CardBody,
+    Footer: CardFooter,
+})
 
-export default Card
+CardContainer.displayName = 'Card'
+CardImage.displayName = 'Card.Image'
+CardBody.displayName = 'Card.Body'
+CardFooter.displayName = 'Card.Footer'

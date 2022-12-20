@@ -9,7 +9,7 @@ export interface HeroProps {
     reversed?: boolean
 }
 
-const Hero = ({
+const HeroContainer = ({
     className = '',
     children,
     reversed,
@@ -22,7 +22,11 @@ const Hero = ({
     )
 }
 
-Hero.Image = HeroImage
-Hero.Body = HeroBody
+export const Hero = Object.assign(HeroContainer, {
+    Image: HeroImage,
+    Body: HeroBody,
+})
 
-export default Hero
+HeroContainer.displayName = 'Hero'
+HeroImage.displayName = 'Hero.Image'
+HeroBody.displayName = 'Hero.Body'

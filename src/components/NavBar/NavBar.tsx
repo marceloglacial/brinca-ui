@@ -10,7 +10,7 @@ export interface NavBarProps {
     children: ReactNode
 }
 
-const NavBar = ({
+const NavBarContainer = ({
     variant = 'top',
     className = '',
     children,
@@ -22,7 +22,11 @@ const NavBar = ({
     )
 }
 
-NavBar.Brand = NavBarBrand
-NavBar.Items = NavBarItems
+export const NavBar = Object.assign(NavBarContainer, {
+    Brand: NavBarBrand,
+    Items: NavBarItems,
+})
 
-export default NavBar
+NavBarContainer.displayName = 'NavBar'
+NavBarBrand.displayName = 'NavBar.Brand'
+NavBarItems.displayName = 'NavBar.Items'

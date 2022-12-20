@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from '../Link/Link'
-import Card, { CardProps } from './Card'
+import { Card, CardProps } from './Card'
 
 export default {
     title: 'Components/Card',
