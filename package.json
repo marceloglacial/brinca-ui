@@ -9,7 +9,7 @@
     ],
     "scripts": {
         "dev": "npm run storybook",
-        "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
+        "build": "npm run format && npm run lint && rm -rf /dist && npm run build:esm && npm run build:cjs && build-storybook -o docs",
         "build:esm": "tsc",
         "build:cjs": "tsc --module commonjs --outDir dist/cjs",
         "storybook": "start-storybook -p 6006",
