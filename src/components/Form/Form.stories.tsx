@@ -128,7 +128,7 @@ export const Group = (props) => {
 }
 
 export const Text = (props) => {
-    return <Form.Input {...props} placeholder='input text' className='test' />
+    return <Form.Input {...props} placeholder='input text' />
 }
 
 export const InputFullWidth = (props) => {

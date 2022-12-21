@@ -25,5 +25,6 @@ const styles = {
             after:bg-white
             ${afterLine}`,
     full: `${button.full} inline-block text-center`,
+    size: button.size,
 }
 export default styles
