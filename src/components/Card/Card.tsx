@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import CardBody from './CardBody'
 import CardFooter from './CardFooter'
 import CardImage from './CardImage'
@@ -11,12 +11,12 @@ export interface CardProps {
     children: ReactNode
 }
 
-const CardContainer = ({
+const CardContainer: FC<CardProps> = ({
     noShadown,
     squared,
     className = '',
     children,
-}: CardProps): JSX.Element => {
+}): JSX.Element => {
     const noShadownStyles = noShadown ? '' : styles.shadow
     const squaredStyles = squared ? '' : styles.rounded
     return (

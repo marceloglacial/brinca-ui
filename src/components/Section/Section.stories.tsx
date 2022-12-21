@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section } from './Section'
+import { Section } from '..'
 
 export default {
     title: 'Components/Section',

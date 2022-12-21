@@ -1,6 +1,5 @@
 import React from 'react'
-import { Hero } from './Hero'
-import { Button } from '../Button/Button'
+import { Button, Hero } from '..'
 
 export default {
     title: 'Components/Hero',

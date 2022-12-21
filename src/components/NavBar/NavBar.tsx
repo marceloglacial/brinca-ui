@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import NavBarBrand from './NavBarBrand'
 import NavBarItems from './NavBarItems'
 import styles from './NavBarStyles'
@@ -10,11 +10,11 @@ export interface NavBarProps {
     children: ReactNode
 }
 
-const NavBarContainer = ({
+const NavBarContainer: FC<NavBarProps> = ({
     variant = 'top',
     className = '',
     children,
-}: NavBarProps): JSX.Element => {
+}): JSX.Element => {
     return (
         <div className={`${styles.container} ${styles[variant]} ${className}`}>
             {children}
