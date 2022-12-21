@@ -32,6 +32,28 @@ const styles = {
                 before:bg-no-repeat
                 before:bg-cover
                 `,
+    radio: `appearance-none 
+                relative
+                hover:cursor-pointer
+                after:block
+                after:w-6
+                after:h-6
+                after:checked:bg-green-600
+                after:rounded-full
+                after:border-2
+                after:border-green-600
+                focus:ring-green-500
+                focus:ring-2
+                before:absolute
+                before:top-[7px]
+                before:left-[7px]
+                before:z-10
+                before:rounded-full
+                before:checked:block
+                before:w-[10px]
+                before:h-[10px]
+                before:bg-white
+                `,
 }
 
 export default styles
