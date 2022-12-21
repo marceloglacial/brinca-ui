@@ -14,17 +14,19 @@ const afterLine = `after:w-0
                 `
 
 const styles = {
-    primary: `${button.button} ${button.primary}`,
-    secondary: `${button.button} ${button.secondary}`,
-    default: `font-normal
-              hover:text-green-600 
-              after:bg-green-600
-              ${afterLine}`,
-    white: `font-normal
+    primary: `link link--primary ${button.button} ${button.primary}`,
+    secondary: `link link--secondary ${button.button} ${button.secondary}`,
+    default: `link
+                font-normal
+                hover:text-green-600 
+                after:bg-green-600
+                ${afterLine}`,
+    white: `link--white 
+            font-normal
             text-white
             after:bg-white
             ${afterLine}`,
-    full: `${button.full} inline-block text-center`,
+    full: `link--full ${button.full} inline-block text-center`,
     size: button.size,
 }
 export default styles
