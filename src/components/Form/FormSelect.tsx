@@ -12,15 +12,19 @@ export interface FormSelectProps
         HTMLSelectElement
     > {
     full?: boolean
+    className?: string
     options: OptionsType[]
 }
 
 const FormSelect: FC<FormSelectProps> = (props): JSX.Element => {
-    const { full, options } = props
+    const { full, options, className = '' } = props
     const fullClassName = full ? styles.inputFull : ''
     return (
         <div className={`${styles.selectContainer} ${fullClassName}`}>
-            <select className={`${styles.select} ${fullClassName}`} {...props}>
+            <select
+                {...props}
+                className={`${styles.select} ${fullClassName} ${className}`}
+            >
                 {options.map((option, index) => (
                     <option key={index} value={option.value}>
                         {option.label}

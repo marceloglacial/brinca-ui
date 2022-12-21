@@ -7,15 +7,18 @@ export interface FormInputProps
         HTMLInputElement
     > {
     full?: boolean
+    className?: string
 }
 
 const FormInput: FC<FormInputProps> = (props): JSX.Element => {
-    const { full, type = 'text' } = props
+    const { full, type = 'text', className = '' } = props
     const fullClassName = full ? styles.inputFull : ''
     return (
         <input
-            className={`${styles[type] || styles.text} ${fullClassName}`}
             {...props}
+            className={`${
+                styles[type] || styles.text
+            } ${fullClassName} ${className}`}
         />
     )
 }

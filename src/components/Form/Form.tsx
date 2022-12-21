@@ -18,7 +18,7 @@ export interface FormProps
 const FormContainer: FC<FormProps> = (props): JSX.Element => {
     const { className = '', children } = props
     return (
-        <form className={`${styles.form} ${className}`} {...props}>
+        <form {...props} className={`${styles.form} ${className}`}>
             {children}
         </form>
     )

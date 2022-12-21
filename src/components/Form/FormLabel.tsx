@@ -8,14 +8,18 @@ export interface FormLabelProps
     > {
     children?: ReactNode
     full?: boolean
+    className?: string
 }
 
 const FormLabel: FC<FormLabelProps> = (props): JSX.Element => {
-    const { children, full } = props
+    const { children, full, className = '' } = props
     const fullClassName = full ? styles.inputFull : ''
 
     return (
-        <label className={`${styles.label} ${fullClassName}`} {...props}>
+        <label
+            {...props}
+            className={`${styles.label} ${fullClassName} ${className}`}
+        >
             {children}
         </label>
     )

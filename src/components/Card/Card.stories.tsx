@@ -97,3 +97,49 @@ export const WithFooter = (props: CardProps) => (
         <Card.Footer className='bg-gray-100'>{content.footer}</Card.Footer>
     </Card>
 )
+export const CardGrid = (props: CardProps) => (
+    <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl'>
+        <Card {...props}>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
+                {content.title}
+                {content.description}
+            </Card.Body>
+        </Card>
+        <Card {...props}>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
+                {content.title}
+                {content.description}
+            </Card.Body>
+        </Card>
+        <Card {...props}>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
+                {content.title}
+                {content.description}
+            </Card.Body>
+        </Card>
+        <Card {...props}>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
+                {content.title}
+                {content.description}
+            </Card.Body>
+        </Card>
+        <Card {...props}>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
+                {content.title}
+                {content.description}
+            </Card.Body>
+        </Card>
+        <Card {...props}>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
+                {content.title}
+                {content.description}
+            </Card.Body>
+        </Card>
+    </div>
+)

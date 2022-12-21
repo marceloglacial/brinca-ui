@@ -9,15 +9,16 @@ export interface ButtonProps
     > {
     variant?: ButtonTypes
     full?: boolean
+    className?: string
 }
 
 export const Button: React.FC<ButtonProps> = (props) => {
-    const { variant = 'primary', children, full } = props
+    const { variant = 'primary', children, full, className = '' } = props
     const fullClassName = full ? styles.full : ''
     return (
         <button
-            className={`${styles.button} ${styles[variant]} ${fullClassName}`}
             {...props}
+            className={`${styles.button} ${styles[variant]} ${fullClassName} ${className}`}
         >
             {children}
         </button>

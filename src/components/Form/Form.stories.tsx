@@ -127,8 +127,8 @@ export const Group = (props) => {
     return <Form.Group {...props}>content</Form.Group>
 }
 
-export const Input = (props) => {
-    return <Form.Input {...props} placeholder='input text' />
+export const Text = (props) => {
+    return <Form.Input {...props} placeholder='input text' className='test' />
 }
 
 export const InputFullWidth = (props) => {

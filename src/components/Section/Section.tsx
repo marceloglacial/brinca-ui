@@ -13,8 +13,10 @@ export const Section: FC<SectionProps> = ({
     spacing = 'm',
 }): JSX.Element => {
     return (
-        <main className={`${styles.container} ${styles[spacing]} ${className}`}>
+        <section
+            className={`${styles.container} ${styles[spacing]} ${className}`}
+        >
             {children}
-        </main>
+        </section>
     )
 }

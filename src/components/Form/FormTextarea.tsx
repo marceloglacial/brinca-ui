@@ -7,15 +7,19 @@ export interface FormTextareaProps
         HTMLTextAreaElement
     > {
     children?: ReactNode
+    className?: string
     full?: boolean
 }
 
 const FormTextarea: FC<FormTextareaProps> = (props): JSX.Element => {
-    const { children, full } = props
+    const { children, full, className = '' } = props
     const fullClassName = full ? styles.inputFull : ''
 
     return (
-        <textarea className={`${styles.textarea} ${fullClassName}`} {...props}>
+        <textarea
+            {...props}
+            className={`${styles.textarea} ${fullClassName} ${className}`}
+        >
             {children}
         </textarea>
     )
