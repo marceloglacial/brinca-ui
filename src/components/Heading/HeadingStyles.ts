@@ -1,6 +1,5 @@
 const styles = {
-    container: `
-                heading
+    container: `heading
                 pb-2
                 md:pb-4
                 text-center 
