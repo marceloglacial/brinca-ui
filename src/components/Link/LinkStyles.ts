@@ -16,7 +16,7 @@ const afterLine = `after:w-0
 const styles = {
     primary: `${button.button} ${button.primary}`,
     secondary: `${button.button} ${button.secondary}`,
-    default: `font-normal 
+    default: `font-normal
               hover:text-green-600 
               after:bg-green-600
               ${afterLine}`,

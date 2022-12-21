@@ -61,6 +61,11 @@
     td {
         @apply border;
     }
+
+    article a,
+    address a {
+        @apply font-normal text-green-600 hover:underline
+    }
 }
 @tailwind components;
 @tailwind utilities;
