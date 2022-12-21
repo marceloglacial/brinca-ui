@@ -1,56 +1,50 @@
 /// <reference types="cypress" />
 
-const testCardUrl = (page) => {
-    beforeEach(() => {
-        cy.visit(`iframe.html?id=components-card--${page}`)
+import {
+    shouldRenderElements,
+    shouldNotRenderElements,
+    testUrl,
+} from '../../tests/global'
+
+const types = [
+    {
+        title: 'Card - Base',
+        url: 'card--base',
+        tags: ['.card', '.card__body'],
+    },
+    {
+        title: 'Card - With Link',
+        url: 'card--with-link',
+        tags: ['.card', '.card__body', 'a'],
+    },
+    {
+        title: 'Card - With Image',
+        url: 'card--with-image',
+        tags: ['.card', '.card__body', '.card__image', 'a'],
+    },
+    {
+        title: 'Card - No Shadow',
+        url: 'card--no-shadow',
+        tags: ['.card', '.card__body', '.card__image', 'a'],
+        notShow: ['.card--shadow'],
+    },
+    {
+        title: 'Card - Square',
+        url: 'card--square',
+        tags: ['.card', '.card__body', '.card__image', 'a'],
+        notShow: ['.card--rounded'],
+    },
+    {
+        title: 'Card - With Footer',
+        url: 'card--with-footer',
+        tags: ['.card', '.card__body', '.card__image', '.card__footer'],
+    },
+]
+
+types.map((type) => {
+    describe(type.title, () => {
+        testUrl(type.url)
+        shouldRenderElements(type.tags)
+        shouldNotRenderElements(type.notShow)
     })
-}
-const testCardElement = (element) => {
-    it(`should render ${element}`, () => {
-        cy.get(`[data-testid='card-${element}']`).should('exist')
-    })
-}
-
-describe(`Card - Base`, () => {
-    testCardUrl('base')
-    testCardElement('body')
-})
-
-describe(`Card - With Link`, () => {
-    testCardUrl('with-link')
-    testCardElement('body')
-})
-
-describe(`Card - With Image`, () => {
-    testCardUrl('with-image')
-    testCardElement('body')
-    testCardElement('image')
-})
-
-describe(`Card - No Shadow`, () => {
-    testCardUrl('no-shadow')
-    testCardElement('body')
-    it(`should not display a shadow`, () => {
-        cy.get(`.card--shadow`).should('not.exist')
-    })
-})
-
-describe(`Card - Square`, () => {
-    testCardUrl('square')
-    testCardElement('body')
-    it(`should not display a rounded border`, () => {
-        cy.get(`.card--rounded`).should('not.exist')
-    })
-})
-
-describe(`Card - With Footer`, () => {
-    testCardUrl('with-footer')
-    testCardElement('body')
-    testCardElement('image')
-    testCardElement('footer')
-})
-
-describe(`Card - Business Card`, () => {
-    testCardUrl('business-card')
-    testCardElement('-business-card')
 })

@@ -96,7 +96,11 @@ export const KitchenSink = (props) => (
 )
 
 export const Container = (props) => {
-    return <Form {...props}>Form Container</Form>
+    return (
+        <Form {...props} data-testid='form-container'>
+            Form Container
+        </Form>
+    )
 }
 
 export const Checkbox = (props) => {
@@ -131,7 +135,7 @@ export const Text = (props) => {
     return <Form.Input {...props} placeholder='input text' />
 }
 
-export const InputFullWidth = (props) => {
+export const TextFullWidth = (props) => {
     return <Form.Input {...props} placeholder='input text full' full />
 }
 
@@ -162,5 +166,5 @@ export const Select = (props) => {
 }
 
 export const Textarea = (props) => {
-    return <Form.Textarea {...props} />
+    return <Form.Textarea {...props}>Textarea</Form.Textarea>
 }

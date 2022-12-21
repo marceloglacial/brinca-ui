@@ -1,22 +1,28 @@
 /// <reference types="cypress" />
 
-const testButton = (dataTestId) => {
-    const element = `[data-testid='${dataTestId}']`
-    describe(`Button - ${dataTestId}`, () => {
-        beforeEach(() => {
-            cy.visit(`iframe.html?id=components-${dataTestId}`)
-        })
+import { shouldRenderElements, testUrl } from '../../tests/global'
 
-        it(`should render ${dataTestId} element`, () => {
-            cy.get(element).should('exist')
-        })
+const buttonTypes = [
+    {
+        title: 'Button - Primary',
+        url: 'button--primary',
+        tags: ['.button', '.button--primary'],
+    },
+    {
+        title: 'Button - Secondary',
+        url: 'button--secondary',
+        tags: ['.button', '.button--secondary'],
+    },
+    {
+        title: 'Button - Full Width',
+        url: 'button--full-width',
+        tags: ['.button', '.button--full-width'],
+    },
+]
 
-        it(`should have ${dataTestId} text`, () => {
-            cy.get(element).should('not.be.empty')
-        })
+buttonTypes.map((type) => {
+    describe(type.title, () => {
+        testUrl(type.url)
+        shouldRenderElements(type.tags)
     })
-}
-
-testButton('button--primary')
-testButton('button--secondary')
-testButton('button--full-width')
+})

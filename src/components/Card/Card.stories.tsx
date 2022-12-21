@@ -36,8 +36,8 @@ const content = {
 }
 
 export const Base = (props: CardProps) => (
-    <Card {...props} data-testid='card--base'>
-        <Card.Body data-testid='card-body'>
+    <Card {...props}>
+        <Card.Body>
             {content.title}
             {content.description}
         </Card.Body>
@@ -45,8 +45,8 @@ export const Base = (props: CardProps) => (
 )
 
 export const WithLink = (props: CardProps) => (
-    <Card {...props} data-testid='card--with-link'>
-        <Card.Body data-testid='card-body'>
+    <Card {...props}>
+        <Card.Body>
             {content.title}
             {content.description}
             {content.link}
@@ -54,9 +54,9 @@ export const WithLink = (props: CardProps) => (
     </Card>
 )
 export const WithImage = (props: CardProps) => (
-    <Card {...props} data-testid='card--with-image'>
-        <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-        <Card.Body data-testid='card-body'>
+    <Card {...props}>
+        <Card.Image>{content.image}</Card.Image>
+        <Card.Body>
             {content.title}
             {content.description}
             {content.link}
@@ -65,10 +65,10 @@ export const WithImage = (props: CardProps) => (
 )
 
 export const NoShadow = (props: CardProps) => (
-    <Card noShadown {...props} data-testid='card--no-shadow'>
-        <Card.Image data-testid='card-image'>{content.image}</Card.Image>
+    <Card noShadown {...props}>
+        <Card.Image>{content.image}</Card.Image>
 
-        <Card.Body data-testid='card-body'>
+        <Card.Body>
             {content.title}
             {content.description}
             {content.link}
@@ -77,9 +77,9 @@ export const NoShadow = (props: CardProps) => (
 )
 
 export const Square = (props: CardProps) => (
-    <Card squared {...props} data-testid='card--square'>
-        <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-        <Card.Body data-testid='card-body'>
+    <Card squared {...props}>
+        <Card.Image>{content.image}</Card.Image>
+        <Card.Body>
             {content.title}
             {content.description}
             {content.link}
@@ -88,21 +88,19 @@ export const Square = (props: CardProps) => (
 )
 
 export const WithFooter = (props: CardProps) => (
-    <Card {...props} data-testid='card--with-footer'>
-        <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-        <Card.Body data-testid='card-body'>
+    <Card {...props}>
+        <Card.Image>{content.image}</Card.Image>
+        <Card.Body>
             {content.title}
             {content.description}
         </Card.Body>
-        <Card.Footer data-testid='card-footer' className='bg-gray-100'>
-            {content.footer}
-        </Card.Footer>
+        <Card.Footer className='bg-gray-100'>{content.footer}</Card.Footer>
     </Card>
 )
 
 export const BusinessCard = (props: CardProps) => {
     return (
-        <Card {...props} squared data-testid='card--business-card'>
+        <Card {...props} squared>
             <Card.Body className='text-center lg:text-left'>
                 <div className='flex flex-wrap lg:flex-nowrap gap-8 justify-center lg:justify-start'>
                     <figure className='w-[200px]'>
@@ -190,44 +188,44 @@ export const BusinessCard = (props: CardProps) => {
 
 export const CardGrid = (props: CardProps) => (
     <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl'>
-        <Card {...props} data-testid='card--grid'>
-            <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-            <Card.Body data-testid='card-body'>
+        <Card {...props}>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
                 {content.title}
                 {content.description}
             </Card.Body>
         </Card>
         <Card {...props}>
-            <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-            <Card.Body data-testid='card-body'>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
                 {content.title}
                 {content.description}
             </Card.Body>
         </Card>
         <Card {...props}>
-            <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-            <Card.Body data-testid='card-body'>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
                 {content.title}
                 {content.description}
             </Card.Body>
         </Card>
         <Card {...props}>
-            <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-            <Card.Body data-testid='card-body'>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
                 {content.title}
                 {content.description}
             </Card.Body>
         </Card>
         <Card {...props}>
-            <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-            <Card.Body data-testid='card-body'>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
                 {content.title}
                 {content.description}
             </Card.Body>
         </Card>
         <Card {...props}>
-            <Card.Image data-testid='card-image'>{content.image}</Card.Image>
-            <Card.Body data-testid='card-body'>
+            <Card.Image>{content.image}</Card.Image>
+            <Card.Body>
                 {content.title}
                 {content.description}
             </Card.Body>

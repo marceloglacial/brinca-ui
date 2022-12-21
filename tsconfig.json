@@ -14,6 +14,9 @@
       "@styles/*": [
         "styles/*"
       ],
+      "@tests/*": [
+        "tests/*"
+      ],
     },
     "allowSyntheticDefaultImports": true,
     "declaration": true,
