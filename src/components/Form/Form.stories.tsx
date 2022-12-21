@@ -31,6 +31,27 @@ export const KitchenSink = (props) => (
             <Form.Input type='text' id='inputText4' placeholder='Text Input' />
         </Form.Group>
         <Form.Group>
+            <Form.Label full>Select / Dropdown</Form.Label>
+            <Form.Select
+                full
+                options={[
+                    {
+                        label: 'Option 1',
+                        value: '1',
+                    },
+                    {
+                        label: 'Option 2',
+                        value: '2',
+                    },
+                    {
+                        label: 'Option 3',
+                        value: '3',
+                    },
+                ]}
+                {...props}
+            />
+        </Form.Group>
+        <Form.Group>
             <Form.Label full>Checkbox</Form.Label>
             <Form.Input
                 type='checkbox'
@@ -74,28 +95,8 @@ export const KitchenSink = (props) => (
     </Form>
 )
 
-export const FormWrapper = (props) => {
-    return <Form {...props}>Form Wrapper</Form>
-}
-
-export const Group = (props) => {
-    return <Form.Group {...props}>content</Form.Group>
-}
-
-export const Label = (props) => {
-    return <Form.Label {...props}>Label</Form.Label>
-}
-
-export const Input = (props) => {
-    return <Form.Input {...props} placeholder='input text' />
-}
-
-export const InputFullWidth = (props) => {
-    return <Form.Input {...props} placeholder='input text full' full />
-}
-
-export const Textarea = (props) => {
-    return <Form.Textarea {...props} />
+export const Container = (props) => {
+    return <Form {...props}>Form Container</Form>
 }
 
 export const Checkbox = (props) => {
@@ -113,15 +114,53 @@ export const Checkbox = (props) => {
 
 export const RadioButton = (props) => {
     return (
-        <>
-            <Form.Group {...props} full>
-                <Form.Input type='radio' id='radio1' name='radio' />
-                <Form.Label htmlFor='radio1'>checkbox</Form.Label>
-            </Form.Group>
-            <Form.Group {...props} full>
-                <Form.Input type='radio' id='radio2' name='radio' />
-                <Form.Label htmlFor='radio2'>checkbox</Form.Label>
-            </Form.Group>
-        </>
+        <Form.Group {...props} full>
+            <Form.Input type='radio' id='radio1' name='radio' />
+            <Form.Label htmlFor='radio1'>radio</Form.Label>
+            <Form.Input type='radio' id='radio2' name='radio' />
+            <Form.Label htmlFor='radio2'>radio</Form.Label>
+        </Form.Group>
     )
+}
+
+export const Group = (props) => {
+    return <Form.Group {...props}>content</Form.Group>
+}
+
+export const Input = (props) => {
+    return <Form.Input {...props} placeholder='input text' />
+}
+
+export const InputFullWidth = (props) => {
+    return <Form.Input {...props} placeholder='input text full' full />
+}
+
+export const Label = (props) => {
+    return <Form.Label {...props}>Label</Form.Label>
+}
+
+export const Select = (props) => {
+    return (
+        <Form.Select
+            options={[
+                {
+                    label: 'Option 1',
+                    value: '1',
+                },
+                {
+                    label: 'Option 2',
+                    value: '2',
+                },
+                {
+                    label: 'Option 3',
+                    value: '3',
+                },
+            ]}
+            {...props}
+        />
+    )
+}
+
+export const Textarea = (props) => {
+    return <Form.Textarea {...props} />
 }
