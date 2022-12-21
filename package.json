@@ -17,7 +17,10 @@
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.ts*",
         "husky-actions": "npm run format && npm run lint",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "start": "start-storybook -p 6006 --ci --quiet",
+        "test": "concurrently \"yarn dev\" \"yarn run cypress open\"",
+        "test:ci": "concurrently \"yarn start\" \"cypress run --headless\""
     },
     "repository": {
         "type": "git",
@@ -62,6 +65,8 @@
         "@typescript-eslint/eslint-plugin": "^5.47.0",
         "@typescript-eslint/parser": "^5.47.0",
         "babel-loader": "^9.1.0",
+        "concurrently": "^7.6.0",
+        "cypress": "^12.2.0",
         "eslint": "^8.30.0",
         "eslint-config-standard-with-typescript": "^24.0.0",
         "eslint-plugin-import": "^2.25.2",

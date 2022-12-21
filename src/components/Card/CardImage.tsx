@@ -1,17 +1,21 @@
 import React, { FC, ReactNode } from 'react'
 import styles from './CardStyles'
 
-export interface CardImageProps {
+export interface CardImageProps
+    extends React.DetailedHTMLProps<
+        React.HtmlHTMLAttributes<HTMLElement>,
+        HTMLElement
+    > {
     className?: string
     children: ReactNode
 }
 
-const CardImage: FC<CardImageProps> = ({
-    className = '',
-    children,
-}): JSX.Element => {
+const CardImage: FC<CardImageProps> = (props): JSX.Element => {
+    const { className = '', children } = props
     return (
-        <figure className={`${styles.figure} ${className}`}>{children}</figure>
+        <figure {...props} className={`${styles.figure} ${className}`}>
+            {children}
+        </figure>
     )
 }
 export default CardImage
