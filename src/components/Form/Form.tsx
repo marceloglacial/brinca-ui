@@ -3,6 +3,7 @@ import FormGroup from './FormGroup'
 import FormInput from './FormInput'
 import FormLabel from './FormLabel'
 import styles from './FormStyles'
+import FormTextarea from './FormTextarea'
 
 export interface FormProps
     extends React.DetailedHTMLProps<
@@ -26,9 +27,11 @@ export const Form = Object.assign(FormContainer, {
     Label: FormLabel,
     Group: FormGroup,
     Input: FormInput,
+    Textarea: FormTextarea,
 })
 
 FormContainer.displayName = 'Form'
 FormGroup.displayName = 'Form.Group'
 FormLabel.displayName = 'Form.Label'
 FormInput.displayName = 'Form.Input'
+FormTextarea.displayName = 'Form.Textarea'

@@ -6,6 +6,7 @@ const styles = {
     group: `form__group flex flex-wrap gap-4 items-center`,
     label: `form__label font-bold`,
     text: `form__input rounded-2xl border-2 border-green-600 py-4 px-6`,
+    textarea: `form__textarea rounded-2xl border-2 border-green-600 py-4 px-6`,
     inputFull: `w-full`,
     button: `${buttonClass.button} ${buttonClass.primary} hover:cursor-pointer`,
     checkbox: `appearance-none 

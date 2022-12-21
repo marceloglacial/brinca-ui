@@ -1,6 +1,5 @@
 import React from 'react'
 import { Form } from '..'
-import FormInput from './FormInput'
 
 export default {
     title: 'Components/Form',
@@ -32,15 +31,24 @@ export const KitchenSink = (props) => (
             <Form.Input type='text' id='inputText4' placeholder='Text Input' />
         </Form.Group>
         <Form.Group>
-            <Form.Label htmlFor='inputText5' full>
-                Label
-            </Form.Label>
+            <Form.Label full>Label</Form.Label>
             <Form.Input
                 type='checkbox'
-                id='inputText5'
+                id='checkbox'
                 placeholder='Text Input'
             />
-            <Form.Label htmlFor='inputText5'>checkbox</Form.Label>
+            <Form.Label htmlFor='checkbox'>checkbox</Form.Label>
+        </Form.Group>
+        <Form.Group>
+            <Form.Label htmlFor='textarea' full>
+                Text Area
+            </Form.Label>
+            <Form.Textarea
+                id='textarea'
+                placeholder='Text area placeholder'
+                full
+                rows={10}
+            />
         </Form.Group>
         <Form.Group>
             <Form.Input
@@ -64,9 +72,24 @@ export const Label = (props) => {
     return <Form.Label {...props}>Label</Form.Label>
 }
 export const Input = (props) => {
-    return <FormInput {...props} />
+    return <Form.Input {...props} placeholder='input text' />
+}
+export const InputFullWidth = (props) => {
+    return <Form.Input {...props} placeholder='input text full' full />
+}
+export const Checkbox = (props) => {
+    return (
+        <Form.Group {...props}>
+            <Form.Input
+                type='checkbox'
+                id='checkbox'
+                placeholder='Text Input'
+            />
+            <Form.Label htmlFor='checkbox'>checkbox</Form.Label>
+        </Form.Group>
+    )
 }
 
-export const InputFullWidth = (props) => {
-    return <FormInput {...props} full />
+export const Textarea = (props) => {
+    return <Form.Textarea {...props} />
 }
