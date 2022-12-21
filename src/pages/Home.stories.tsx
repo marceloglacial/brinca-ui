@@ -55,7 +55,9 @@ export const Home = (props) => (
                 </Hero.Body>
             </Hero>
             <Section spacing='l'>
-                <Heading>Excepteur est enim</Heading>
+                <Heading>
+                    <h2>Excepteur est enim</h2>
+                </Heading>
                 <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
                     <a href='#'>
                         <Card className='transition-transform hover:scale-95'>

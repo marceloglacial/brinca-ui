@@ -3,8 +3,6 @@ const styles = {
                 heading
                 pb-2
                 md:pb-4
-                text-2xl 
-                md:text-5xl 
                 text-center 
                 font-bold 
                 relative 

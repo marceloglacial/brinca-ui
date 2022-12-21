@@ -10,7 +10,9 @@ export default {
 export const Single = (props) => (
     <Layout header={<PageHeader />} footer={<PageFooter />} {...props}>
         <Section>
-            <Heading className='mb-4'>Page Title</Heading>
+            <Heading className='mb-4'>
+                <h1>Page Title</h1>
+            </Heading>
             <p>
                 Et non amet ullamco exercitation. Anim sint excepteur
                 exercitation dolore dolore aliquip dolore veniam laborum dolore

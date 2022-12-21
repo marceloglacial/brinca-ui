@@ -2,7 +2,7 @@ import '../src/styles/index.css'
 export const parameters = {
     options: {
         storySort: {
-            order: ['Pages', 'Components'],
+            order: ['Pages', ['Home', 'Single'], 'Components'],
         },
         showPanel: false,
     },

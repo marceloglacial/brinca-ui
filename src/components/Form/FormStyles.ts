@@ -38,6 +38,7 @@ const styles = {
                 z-10
             `,
     button: `form__button ${buttonClass.button} ${buttonClass.primary} hover:cursor-pointer`,
+    submit: `form__button ${buttonClass.button} ${buttonClass.primary} hover:cursor-pointer`,
     checkbox: `form__checkbox
                 appearance-none 
                 relative

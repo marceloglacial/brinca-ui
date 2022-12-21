@@ -10,6 +10,6 @@ const Template = (args) => <Heading {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-    children: 'Heading Primary',
+    children: <h1>Heading</h1>,
     id: 'test',
 }
