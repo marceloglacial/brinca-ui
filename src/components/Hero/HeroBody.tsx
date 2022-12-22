@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styles from './HeroStyles'
 
 export interface HeroBodyProps {
@@ -7,9 +7,9 @@ export interface HeroBodyProps {
 }
 
 const HeroBody: FC<HeroBodyProps> = ({
-    children,
     className = '',
+    children,
 }): JSX.Element => {
-    return <div className={`${styles.body} ${className}`}>{children}</div>
+    return <figure className={`${styles.body} ${className}`}>{children}</figure>
 }
 export default HeroBody

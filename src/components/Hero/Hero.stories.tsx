@@ -1,70 +1,70 @@
-import { Meta } from '@storybook/react'
 import React from 'react'
-import Hero from './Hero'
-import HeroBody from './HeroBody'
-import HeroButton from './HeroButton'
-import HeroContent from './HeroContent'
-import HeroHeader from './HeroHeader'
-import HeroImage from './HeroImage'
+import { Button, Hero } from '..'
 
-const meta: Meta = {
+export default {
     title: 'Components/Hero',
     component: Hero,
 }
 
-export default meta
+const content = {
+    title: 'Hero',
+    description:
+        'DescrAd mollit cillum velit fugiat ipsum nulla nulla consequat amet. Ex deserunt commodo pariatur mollit non enim officia nulla ad mollit ex. Amet pariatur consequat ea adipisicing nulla nostrud incididunt Lorem sunt adipisicing.iption',
+    image: (
+        <img
+            src={`https://images.unsplash.com/photo-1527374071603-76de89807336?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YnJhemlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60`}
+            alt={`Hero Image`}
+            className='w-full h-full object-cover'
+        />
+    ),
+    footer: <Button variant='secondary'>Button</Button>,
+}
 
-export const Base = (args: any) => (
-    <div className='max-w-screen-lg'>
-        <Hero>
-            <HeroBody>
-                <HeroHeader>Hero Base</HeroHeader>
-                <HeroContent>
-                    <p>
-                        Esse aliquip voluptate officia ad nisi et ullamco nisi
-                        deserunt irure tempor aliquip. Lorem voluptate duis
-                        cupidatat eiusmod aliqua sunt labore aliquip excepteur
-                        consequat officia. Id incididunt aliqua minim deserunt
-                        ea enim aliquip dolore dolor ex est esse consectetur
-                        minim. Reprehenderit laborum commodo tempor velit.
-                    </p>
-                </HeroContent>
-                <HeroButton variant='secondary'>Button</HeroButton>
-            </HeroBody>
-            <HeroImage
-                image={{
-                    src: 'https://res.cloudinary.com/dw2wjwhuv/image/upload/v1596053649/brinca/rafaela-biazi-0mfj0jJt0dY-unsplash_xwfifn.jpg',
-                    rounded: true,
-                    shadow: true,
-                }}
-            />
+export const Base = (props) => {
+    return (
+        <Hero {...props}>
+            <Hero.Image>{content.image}</Hero.Image>
+            <Hero.Body>
+                <h1>{content.title}</h1>
+                <p>{content.description}</p>
+            </Hero.Body>
         </Hero>
-    </div>
-)
-export const Reversed = (args: any) => (
-    <div className='max-w-screen-lg'>
-        <Hero variant='reversed'>
-            <HeroBody>
-                <HeroHeader>Hero Base</HeroHeader>
-                <HeroContent>
-                    <p>
-                        Esse aliquip voluptate officia ad nisi et ullamco nisi
-                        deserunt irure tempor aliquip. Lorem voluptate duis
-                        cupidatat eiusmod aliqua sunt labore aliquip excepteur
-                        consequat officia. Id incididunt aliqua minim deserunt
-                        ea enim aliquip dolore dolor ex est esse consectetur
-                        minim. Reprehenderit laborum commodo tempor velit.
-                    </p>
-                </HeroContent>
-                <HeroButton variant='secondary'>Button</HeroButton>
-            </HeroBody>
-            <HeroImage
-                image={{
-                    src: 'https://res.cloudinary.com/dw2wjwhuv/image/upload/v1596053649/brinca/rafaela-biazi-0mfj0jJt0dY-unsplash_xwfifn.jpg',
-                    rounded: true,
-                    shadow: true,
-                }}
-            />
+    )
+}
+
+export const NoShadow = (props) => {
+    return (
+        <Hero {...props}>
+            <Hero.Image noShadow>{content.image}</Hero.Image>
+            <Hero.Body>
+                <h1>{content.title}</h1>
+                <p>{content.description}</p>
+            </Hero.Body>
         </Hero>
-    </div>
-)
+    )
+}
+export const Squared = (props) => {
+    return (
+        <Hero {...props}>
+            <Hero.Image squared noShadow>
+                {content.image}
+            </Hero.Image>
+            <Hero.Body>
+                <h1>{content.title}</h1>
+                <p>{content.description}</p>
+            </Hero.Body>
+        </Hero>
+    )
+}
+
+export const Reversed = (props) => {
+    return (
+        <Hero {...props} reversed>
+            <Hero.Image>{content.image}</Hero.Image>
+            <Hero.Body>
+                <h1>{content.title}</h1>
+                <p>{content.description}</p>
+            </Hero.Body>
+        </Hero>
+    )
+}

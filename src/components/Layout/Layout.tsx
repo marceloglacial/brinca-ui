@@ -1,28 +1,24 @@
-import { FC, ReactNode } from 'react'
-import LayoutFooter from './LayoutFooter'
-import LayoutHeader, { LayoutHeaderProps } from './LayoutHeader'
+import React, { FC, ReactNode } from 'react'
 import styles from './LayoutStyles'
 
 export interface LayoutProps {
-    children: ReactNode
-    header: LayoutHeaderProps
-    footer?: {
-        menu?: MenuItems[]
-    }
+    header: ReactNode
+    footer: ReactNode
+    children?: ReactNode
+    className?: string
 }
 
-export interface MenuItems {
-    href: string
-    text: string
-}
-
-const Layout: FC<LayoutProps> = ({ children, header, footer }) => {
+export const Layout: FC<LayoutProps> = ({
+    header,
+    footer,
+    children,
+    className = '',
+}): JSX.Element => {
     return (
-        <div className={styles.container}>
-            <LayoutHeader {...header} />
+        <div className={`${styles.container} ${className}`}>
+            <header>{header}</header>
             <main>{children}</main>
-            <LayoutFooter {...footer} />
+            <footer>{footer}</footer>
         </div>
     )
 }
-export default Layout

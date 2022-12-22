@@ -1,65 +1,81 @@
 {
     "name": "@marceloglacial/brinca-ui",
-    "version": "0.12.0",
+    "version": "0.13.5",
     "author": "Marcelo Glacial",
-    "types": "dist/index.d.ts",
-    "module": "dist/brinca-ui.esm.js",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
     "files": [
         "dist"
     ],
-    "exports": {
-        ".": {
-            "import": "./dist/brinca-ui.es.js",
-            "require": "./dist/brinca-ui.esm.js"
-        }
-    },
     "scripts": {
-        "dev": "yarn storybook",
-        "build": "rm -rf dist && yarn lint && yarn format && tsc && vite build",
+        "dev": "npm run storybook",
+        "build": "npm run format && npm run lint && rm -rf /dist && npm run build:esbuild",
         "build:docs": "build-storybook -o docs",
-        "serve": "vite preview",
-        "storybook": "start-storybook -p 6006 --modern",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+        "build:esbuild": "node esbuild.js && tsc --emitDeclarationOnly --outDir dist/esm && tsc --emitDeclarationOnly --outDir dist/cjs",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.ts*",
+        "husky-actions": "npm run format && npm run lint",
+        "prepare": "husky install",
         "start": "start-storybook -p 6006 --ci --quiet",
         "test": "concurrently \"yarn dev\" \"yarn run cypress open\"",
         "test:ci": "concurrently \"yarn start\" \"cypress run --headless\"",
         "prerelease": "yarn build && yarn build:docs && yarn test:ci"
     },
-    "dependencies": {
-        "concurrently": "^7.6.0",
-        "prettier": "^2.7.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "styled-components": "^5.3.6"
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marceloglacial/brinca-ui.git"
     },
-    "devDependencies": {
-        "@babel/core": "^7.20.2",
-        "@mdx-js/react": "^2.1.5",
-        "@rollup/plugin-typescript": "^9.0.2",
-        "@storybook/addon-actions": "^6.5.13",
-        "@storybook/addon-docs": "^6.5.13",
-        "@storybook/addon-essentials": "^6.5.13",
-        "@storybook/addon-links": "^6.5.13",
-        "@storybook/builder-vite": "^0.2.5",
-        "@storybook/react": "^6.5.13",
-        "@tailwindcss/jit": "^0.1.18",
-        "@types/react": "^18.0.25",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/marceloglacial/brinca-ui/issues"
+    },
+    "homepage": "https://github.com/marceloglacial/brinca-ui#readme",
+    "dependencies": {
+        "@types/node": "^18.11.17",
+        "@types/react": "^18.0.26",
         "@types/react-dom": "^18.0.9",
-        "@types/styled-components": "^5.1.26",
-        "@typescript-eslint/eslint-plugin": "^5.44.0",
-        "@typescript-eslint/parser": "^5.44.0",
-        "@vitejs/plugin-react": "^2.2.0",
         "autoprefixer": "^10.4.13",
-        "babel-loader": "^9.1.0",
-        "cypress": "^11.2.0",
-        "eslint": "^8.28.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-storybook": "^0.6.7",
-        "postcss": "^8.4.19",
+        "eslint-plugin-react": "^7.31.11",
+        "postcss": "^8.4.20",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "tailwindcss": "^3.2.4",
-        "typescript": "^4.9.3",
-        "vite": "^3.2.4"
+        "typescript": "4.9.4"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.20.5",
+        "@storybook/addon-actions": "^6.5.15",
+        "@storybook/addon-essentials": "^6.5.15",
+        "@storybook/addon-interactions": "^6.5.15",
+        "@storybook/addon-links": "^6.5.15",
+        "@storybook/addon-postcss": "^2.0.0",
+        "@storybook/addons": "^6.5.15",
+        "@storybook/builder-webpack4": "^6.5.15",
+        "@storybook/manager-webpack4": "^6.5.15",
+        "@storybook/react": "^6.5.15",
+        "@storybook/testing-library": "^0.0.13",
+        "@storybook/theming": "^6.5.15",
+        "@typescript-eslint/eslint-plugin": "^5.47.0",
+        "@typescript-eslint/parser": "^5.47.0",
+        "babel-loader": "^9.1.0",
+        "concurrently": "^7.6.0",
+        "cypress": "^12.2.0",
+        "esbuild": "^0.16.10",
+        "eslint": "^8.30.0",
+        "eslint-config-standard-with-typescript": "^24.0.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-n": "^15.6.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "husky": "^8.0.0"
     }
 }

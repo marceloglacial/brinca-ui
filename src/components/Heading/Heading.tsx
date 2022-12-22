@@ -1,11 +1,14 @@
-import { FC, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styles from './HeadingStyles'
 
 export interface HeadingProps {
-    children: ReactNode
+    children?: ReactNode
+    className?: string
 }
 
-const Heading: FC<HeadingProps> = ({ children }): JSX.Element => {
-    return <div className={styles.container}>{children}</div>
+export const Heading: FC<HeadingProps & JSX.IntrinsicElements['div']> = ({
+    children,
+    className = '',
+}): JSX.Element => {
+    return <div className={`${styles.container} ${className}`}>{children}</div>
 }
-export default Heading

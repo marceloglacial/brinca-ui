@@ -1,26 +1,25 @@
-import { Meta } from '@storybook/react'
-import Button from './Button'
+import React from 'react'
+import { Button } from '..'
 
-const meta: Meta = {
+export default {
     title: 'Components/Button',
     component: Button,
 }
 
-export default meta
+const Template = (args) => <Button {...args} />
 
-export const Primary = (args: any) => (
-    <Button onClick={() => alert('click')}>Primary Button</Button>
-)
+export const Primary = Template.bind({})
+Primary.args = {
+    children: 'Button Primary',
+}
 
-export const Secondary = (args: any) => (
-    <Button variant='secondary' onClick={() => alert('click')}>
-        Secondary Button
-    </Button>
-)
-
-export const AsLink = (args: any) => <Button href='#'>As Link</Button>
-export const FullWidth = (args: any) => (
-    <Button href='#' full>
-        Full Width
-    </Button>
-)
+export const Secondary = Template.bind({})
+Secondary.args = {
+    children: 'Button Secondary',
+    variant: 'secondary',
+}
+export const FullWidth = Template.bind({})
+FullWidth.args = {
+    children: 'Button Full',
+    full: true,
+}

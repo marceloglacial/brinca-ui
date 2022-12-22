@@ -14,31 +14,41 @@
       "@styles/*": [
         "styles/*"
       ],
+      "@tests/*": [
+        "tests/*"
+      ],
     },
-    "target": "ESNext",
-    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react",
     "lib": [
+      "ES5",
+      "ES2015",
+      "ES2016",
       "DOM",
-      "DOM.Iterable",
       "ESNext"
     ],
     "types": [
-      "cypress"
+      "node"
     ],
-    "allowJs": false,
-    "skipLibCheck": false,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "outDir": "dist/esm",
+    "sourceMap": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "target": "ES6"
   },
   "include": [
-    "./src"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
+  "exclude": [
+    "src/**/*.stories.*",
+    "src/**/*.cy.*",
+    "src/pages/**/*.*",
+    "src/tests/**/*.*",
+  ]
 }

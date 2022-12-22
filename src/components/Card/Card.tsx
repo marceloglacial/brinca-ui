@@ -1,17 +1,41 @@
 import React, { FC, ReactNode } from 'react'
+import CardBody from './CardBody'
+import CardFooter from './CardFooter'
+import CardImage from './CardImage'
 import styles from './CardStyles'
 
-export interface CardProps {
-    noShadow?: boolean
+export interface CardProps
+    extends React.DetailedHTMLProps<
+        React.HtmlHTMLAttributes<HTMLDivElement>,
+        HTMLDivElement
+    > {
+    noShadown?: boolean
+    squared?: boolean
+    className?: string
     children: ReactNode
 }
 
-const Card: FC<CardProps> = ({ children, noShadow = false }): JSX.Element => {
-    const shadowClassName = noShadow ? styles.noShadow : styles.shadow
+const CardContainer: FC<CardProps> = (props): JSX.Element => {
+    const { noShadown, squared, className = '', children } = props
+    const noShadownStyles = noShadown ? '' : styles.shadow
+    const squaredStyles = squared ? '' : styles.rounded
     return (
-        <div className={`${styles.container} ${shadowClassName}`}>
+        <div
+            {...props}
+            className={`${styles.container} ${noShadownStyles} ${squaredStyles} ${className}`}
+        >
             {children}
         </div>
     )
 }
-export default Card
+
+export const Card = Object.assign(CardContainer, {
+    Image: CardImage,
+    Body: CardBody,
+    Footer: CardFooter,
+})
+
+CardContainer.displayName = 'Card'
+CardImage.displayName = 'Card.Image'
+CardBody.displayName = 'Card.Body'
+CardFooter.displayName = 'Card.Footer'

@@ -1,23 +1,20 @@
-import Image, { ImageProps } from '@components/Image/Image'
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styles from './CardStyles'
 
-const CardImage: FC<ImageProps> = ({
-    src,
-    alt = '',
-    width = '200',
-    height = '200',
-    className = '',
-}): JSX.Element => {
+export interface CardImageProps
+    extends React.DetailedHTMLProps<
+        React.HtmlHTMLAttributes<HTMLElement>,
+        HTMLElement
+    > {
+    className?: string
+    children: ReactNode
+}
+
+const CardImage: FC<CardImageProps> = (props): JSX.Element => {
+    const { className = '', children } = props
     return (
-        <figure className={styles.figure}>
-            <Image
-                src={src}
-                alt={alt}
-                width={width}
-                height={height}
-                className={`${styles.image} ${className}`}
-            />
+        <figure {...props} className={`${styles.figure} ${className}`}>
+            {children}
         </figure>
     )
 }
