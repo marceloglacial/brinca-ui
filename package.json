@@ -9,10 +9,11 @@
     ],
     "scripts": {
         "dev": "npm run storybook",
-        "build": "npm run format && npm run lint && rm -rf dist && node esbuild.js && tsc --emitDeclarationOnly --outDir dist",
+        "build": "npm run format && npm run lint && rm -rf /dist && npm run build:esbuild",
         "build:docs": "build-storybook -o docs",
         "build:esm": "tsc",
         "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+        "build:esbuild": "node esbuild.js && tsc --emitDeclarationOnly --outDir dist/esm && tsc --emitDeclarationOnly --outDir dist/cjs",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
         "format": "prettier -w src",
