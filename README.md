@@ -16,24 +16,25 @@ The library is built with:
 -   [Storybook](https://storybook.js.org/)
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [Cypress](https://www.cypress.io)
+-   [Esbuild](https://esbuild.github.io)
 
 ## Get Started
 
 Install all the dependencies
 
-```terminal
+```shell
 yarn install
 ```
 
 Start the project
 
-```terminal
+```shell
 yarn dev
 ```
 
 Build
 
-```terminal
+```shell
 yarn build
 ```
 
@@ -41,7 +42,36 @@ yarn build
 
 This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.com/package/@marceloglacial/brinca-ui) and to build the docs.
 
+## How to use in a project
+
+Install the package using the following command:
+
+```shell
+yarn add @marceloglacial/brinca-ui
+```
+
+Import the css file using:
+
+```css
+@import '@marceloglacial/brinca/ui/dist/index.css';
+```
+
+Update your [Tailwind config file](https://tailwindcss.com/docs/configuration):
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  content: [
+    ...
+    './node_modules/@marceloglacial/brinca-ui/**/*.{js,ts,jsx,tsx}',
+    ...
+  ],
+  ...
+};
+```
+
 ## References
 
 -   [Build a React Component Library Using TypeScript & StoryBook](https://javascript.plainenglish.io/build-a-react-component-library-using-typescript-storybook-86d3562aa53a)
 -   [Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app)
+-   [Build and Package an NPM Component with esbuild, React and TypeScript](https://javascript.plainenglish.io/develop-and-publish-a-react-component-with-esbuild-and-typescript-3eb756adda6e)

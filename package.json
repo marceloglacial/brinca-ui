@@ -9,7 +9,7 @@
     ],
     "scripts": {
         "dev": "npm run storybook",
-        "build": "npm run format && npm run lint && rm -rf /dist && npm run build:esm && npm run build:cjs",
+        "build": "npm run format && npm run lint && rm -rf dist && node esbuild.js && tsc --emitDeclarationOnly --outDir dist",
         "build:docs": "build-storybook -o docs",
         "build:esm": "tsc",
         "build:cjs": "tsc --module commonjs --outDir dist/cjs",
@@ -69,6 +69,7 @@
         "babel-loader": "^9.1.0",
         "concurrently": "^7.6.0",
         "cypress": "^12.2.0",
+        "esbuild": "^0.16.10",
         "eslint": "^8.30.0",
         "eslint-config-standard-with-typescript": "^24.0.0",
         "eslint-plugin-import": "^2.25.2",
