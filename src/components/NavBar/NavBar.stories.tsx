@@ -1,100 +1,66 @@
-import Nav from '@components/Nav/Nav'
-import { Meta } from '@storybook/react'
-import NavBarBrand from './NavBarBrand'
-import NavBarContent from './NavBarContent'
-import NavBar from './NavBar'
-import Button from '@components/Button/Button'
-import NavBarSocial from './NavBarSocial'
-import NavItem from '@components/Nav/NavItem'
-import { useState } from 'react'
+import React from 'react'
+import { Link, NavBar } from '..'
 
-const meta: Meta = {
+export default {
     title: 'Components/NavBar',
     component: NavBar,
 }
 
-export default meta
-
-const navBarItems = [
-    {
-        text: 'Item 1',
-        href: '#',
-    },
-    {
-        text: 'Item 2',
-        href: '#',
-    },
-    {
-        text: 'Item 3',
-        href: '#',
-    },
-    {
-        text: 'Item 4',
-        href: '#',
-    },
-    {
-        text: 'Item 5',
-        href: '#',
-    },
-    {
-        text: 'Item 6',
-        href: '#',
-    },
-]
-
-export const Top = (args: any) => {
-    const [isOpen, setIsOpen] = useState(false)
+export const Top = (props) => {
     return (
-        <NavBar className='test'>
-            <NavBarBrand>
+        <NavBar {...props}>
+            <NavBar.Brand>
                 <a href='#'>
                     <img
-                        src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo.png&w=640&q=75'
-                        width={230}
+                        src='https://res.cloudinary.com/brinca/image/upload/v1664060764/brinca-ui/image_qcfpyy.png'
+                        alt=''
+                        className='w-[160px] h-[65px] md:w-[230px] md:h-[95px] object-contain'
                     />
                 </a>
-            </NavBarBrand>
-            <NavBarContent>
-                <Nav className='hidden lg:flex'>
-                    {navBarItems.map((item, index) => (
-                        <NavItem key={index}>
-                            <a href={item.href}>{item.text}</a>
-                        </NavItem>
-                    ))}
-                    <Button href='#'>Button</Button>
-                </Nav>
-                <div className='lg:hidden flex justify-end flex-grow'>
-                    <Button
-                        variant='primary'
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        Mobile
-                    </Button>
-                </div>
-            </NavBarContent>
+            </NavBar.Brand>
+            <NavBar.Items>
+                <Link href='#'>Item 1</Link>
+                <Link href='#'>Item 2</Link>
+                <Link href='#'>Item 3</Link>
+                <Link href='#'>Item 4</Link>
+                <Link href='#'>Item 5</Link>
+                <Link href='#'>Item 6</Link>
+                <Link href='#' variant='primary'>
+                    Item 7
+                </Link>
+            </NavBar.Items>
         </NavBar>
     )
 }
-
-export const Bottom = (args: any) => (
-    <NavBar variant='footer'>
-        <NavBarBrand>
-            <a href='#'>
-                <img
-                    src='https://www.brinca.ca/_next/image?url=%2Fimages%2Flogo-white.png&w=384&q=75'
-                    width={150}
-                />
-            </a>
-        </NavBarBrand>
-        <NavBarSocial>Social</NavBarSocial>
-        <NavBarContent>
-            <Nav>
-                {navBarItems.map((item, index) => (
-                    <NavItem key={index} accent>
-                        <a href={item.href}>{item.text}</a>
-                    </NavItem>
-                ))}
-            </Nav>
-        </NavBarContent>
-    </NavBar>
-)
+export const Bottom = (props) => {
+    return (
+        <NavBar variant='bottom' {...props}>
+            <NavBar.Brand>
+                <a href='#'>
+                    <img
+                        src='https://res.cloudinary.com/brinca/image/upload/v1664060777/brinca-ui/image_yfpt9t.png'
+                        alt=''
+                        className='w-[150px] h-[60px] object-contain'
+                    />
+                </a>
+            </NavBar.Brand>
+            <NavBar.Items variant='bottom'>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+                <Link href='#' variant='white'>
+                    Item
+                </Link>
+            </NavBar.Items>
+        </NavBar>
+    )
+}

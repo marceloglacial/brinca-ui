@@ -17,7 +17,7 @@ jobs:
               run: yarn build:docs
 
             - name: 🚀 deploy
-              uses: JamesIves/github-pages-deploy-action@v4.2.5
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
                   branch: docs
                   folder: docs
