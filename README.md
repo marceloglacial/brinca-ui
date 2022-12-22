@@ -44,31 +44,56 @@ This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.c
 
 ## How to use in a project
 
-Install the package using the following command:
+1. Install the package using the following command:
 
-```shell
-yarn add @marceloglacial/brinca-ui
-```
+    ```shell
+    yarn add @marceloglacial/brinca-ui
+    ```
 
-Import the css file using:
+1. Import the css file using:
 
-```css
-@import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
-```
+    ```css
+    /* yourmaincssfile.css */
+    @import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
+    ```
 
-Update your [Tailwind config file](https://tailwindcss.com/docs/configuration):
+    ### Important (troubleshooting):
 
-```javascript
-// tailwind.config.js
-module.exports = {
-  content: [
+    This is a Tailwind project and the initial CSS is already built-in on `brinca-ui` css. If you are facing CSS issues, remove initial Tailwind's @ markup.
+
+    E.g.:
+
+    ```css
+    /*
+    /* yourmaincssfile.css
+    /* BEFORE:
+    */
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
     ...
-    './node_modules/@marceloglacial/brinca-ui/**/*.{js,ts,jsx,tsx}',
+
+    /* AFTER: */
+    @import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
+
     ...
-  ],
-  ...
-};
-```
+    ```
+
+1. Update your [Tailwind config file](https://tailwindcss.com/docs/configuration):
+
+    ```javascript
+    // tailwind.config.js
+    module.exports = {
+      content: [
+        ...
+        './node_modules/@marceloglacial/brinca-ui/**/*.{js,ts,jsx,tsx}',
+        ...
+      ],
+      ...
+    };
+    ```
 
 ## References
 
