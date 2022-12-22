@@ -53,7 +53,7 @@ yarn add @marceloglacial/brinca-ui
 Import the css file using:
 
 ```css
-@import '@marceloglacial/brinca/ui/dist/index.css';
+@import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
 ```
 
 Update your [Tailwind config file](https://tailwindcss.com/docs/configuration):
