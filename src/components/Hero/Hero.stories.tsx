@@ -23,7 +23,9 @@ const content = {
 export const Base = (props) => {
     return (
         <Hero {...props}>
-            <Hero.Image>{content.image}</Hero.Image>
+            <Hero.Image shadow rounded>
+                {content.image}
+            </Hero.Image>
             <Hero.Body>
                 <h1>{content.title}</h1>
                 <p>{content.description}</p>
@@ -35,7 +37,7 @@ export const Base = (props) => {
 export const NoShadow = (props) => {
     return (
         <Hero {...props}>
-            <Hero.Image noShadow>{content.image}</Hero.Image>
+            <Hero.Image rounded>{content.image}</Hero.Image>
             <Hero.Body>
                 <h1>{content.title}</h1>
                 <p>{content.description}</p>
@@ -46,9 +48,7 @@ export const NoShadow = (props) => {
 export const Squared = (props) => {
     return (
         <Hero {...props}>
-            <Hero.Image squared noShadow>
-                {content.image}
-            </Hero.Image>
+            <Hero.Image>{content.image}</Hero.Image>
             <Hero.Body>
                 <h1>{content.title}</h1>
                 <p>{content.description}</p>
@@ -60,7 +60,9 @@ export const Squared = (props) => {
 export const Reversed = (props) => {
     return (
         <Hero {...props} reversed>
-            <Hero.Image>{content.image}</Hero.Image>
+            <Hero.Image rounded shadow>
+                {content.image}
+            </Hero.Image>
             <Hero.Body>
                 <h1>{content.title}</h1>
                 <p>{content.description}</p>
