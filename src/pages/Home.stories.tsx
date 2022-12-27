@@ -11,7 +11,7 @@ export const Home = (props) => (
     <Layout header={<PageHeader />} footer={<PageFooter />} {...props}>
         <Section spacing='xl'>
             <Hero reversed>
-                <Hero.Image>
+                <Hero.Image rounded shadow>
                     <img
                         src={`https://images.unsplash.com/photo-1600887876365-f7dcf0e5e985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9ydGFsZXphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60`}
                         alt={`Hero Image`}
@@ -33,7 +33,7 @@ export const Home = (props) => (
                 </Hero.Body>
             </Hero>
             <Hero>
-                <Hero.Image>
+                <Hero.Image rounded shadow>
                     <img
                         src={`https://images.unsplash.com/photo-1518896286368-849011d27f4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fGJyYXppbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60`}
                         alt={`Hero Image`}
