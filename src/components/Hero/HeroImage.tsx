@@ -4,18 +4,18 @@ import styles from './HeroStyles'
 export interface HeroImageProps {
     className?: string
     children: ReactNode
-    noShadow?: boolean
-    squared?: boolean
+    shadow?: boolean
+    rounded?: boolean
 }
 
 const HeroImage: FC<HeroImageProps> = ({
     className = '',
     children,
-    noShadow,
-    squared,
+    shadow,
+    rounded,
 }): JSX.Element => {
-    const shadowStyles = noShadow ? '' : styles.shadow
-    const roundedStyles = squared ? '' : styles.rounded
+    const shadowStyles = shadow ? styles.shadow : ''
+    const roundedStyles = rounded ? styles.rounded : ''
 
     return (
         <figure
