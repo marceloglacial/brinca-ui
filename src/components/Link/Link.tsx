@@ -1,9 +1,9 @@
-import React, { AnchorHTMLAttributes, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { ButtonSizeTypes } from '..'
 import styles from './LinkStyles'
 
 export type LinkTypes = 'default' | 'primary' | 'secondary' | 'white'
-export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface LinkProps {
     variant?: LinkTypes
     full?: boolean
     children: ReactNode
@@ -11,21 +11,15 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     size?: ButtonSizeTypes
 }
 
-export const Link: React.FC<LinkProps> = (props) => {
-    const {
-        variant = 'default',
-        children,
-        full,
-        className = '',
-        size = 'md',
-    } = props
+export const Link: React.FC<LinkProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+    const { variant = 'default', children, full, className = '', size = 'md' } = props
     const isFullClassName = full ? styles.full : ''
     return (
-        <a
+        <div
             {...props}
             className={`${styles[variant]} ${isFullClassName} ${styles.size[size]} ${className}`}
         >
             {children}
-        </a>
+        </div>
     )
 }

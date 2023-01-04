@@ -4,18 +4,14 @@ import CardFooter from './CardFooter'
 import CardImage from './CardImage'
 import styles from './CardStyles'
 
-export interface CardProps
-    extends React.DetailedHTMLProps<
-        React.HtmlHTMLAttributes<HTMLDivElement>,
-        HTMLDivElement
-    > {
+export interface CardProps {
     noShadown?: boolean
     squared?: boolean
     className?: string
     children: ReactNode
 }
 
-const CardContainer: FC<CardProps> = (props): JSX.Element => {
+const CardContainer: FC<CardProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
     const { noShadown, squared, className = '', children } = props
     const noShadownStyles = noShadown ? '' : styles.shadow
     const squaredStyles = squared ? '' : styles.rounded

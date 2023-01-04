@@ -21,10 +21,9 @@ export const Home = (props) => (
                 <Hero.Body>
                     <h1>Reprehenderit quis consequat</h1>
                     <p>
-                        Proident proident nostrud velit culpa proident eiusmod
-                        pariatur. Aliqua adipisicing culpa fugiat voluptate
-                        eiusmod non laboris esse non veniam. Id eu duis sint ad
-                        ullamco proident nostrud ad excepteur sint minim eu
+                        Proident proident nostrud velit culpa proident eiusmod pariatur. Aliqua
+                        adipisicing culpa fugiat voluptate eiusmod non laboris esse non veniam. Id
+                        eu duis sint ad ullamco proident nostrud ad excepteur sint minim eu
                         proident.
                     </p>
                     <Link href='#' variant='secondary'>
@@ -43,10 +42,9 @@ export const Home = (props) => (
                 <Hero.Body>
                     <h1>Reprehenderit quis consequat</h1>
                     <p>
-                        Proident proident nostrud velit culpa proident eiusmod
-                        pariatur. Aliqua adipisicing culpa fugiat voluptate
-                        eiusmod non laboris esse non veniam. Id eu duis sint ad
-                        ullamco proident nostrud ad excepteur sint minim eu
+                        Proident proident nostrud velit culpa proident eiusmod pariatur. Aliqua
+                        adipisicing culpa fugiat voluptate eiusmod non laboris esse non veniam. Id
+                        eu duis sint ad ullamco proident nostrud ad excepteur sint minim eu
                         proident.
                     </p>
                     <Link href='#' variant='secondary'>
@@ -71,10 +69,9 @@ export const Home = (props) => (
                             <Card.Body>
                                 <h4>Dolore sunt nostrud laboris sunt est in</h4>
                                 <p>
-                                    Est ea laborum laboris sunt et ut aliquip
-                                    occaecat et dolor. Excepteur nostrud laboris
-                                    nostrud cupidatat proident esse do ut qui
-                                    irure excepteur.
+                                    Est ea laborum laboris sunt et ut aliquip occaecat et dolor.
+                                    Excepteur nostrud laboris nostrud cupidatat proident esse do ut
+                                    qui irure excepteur.
                                 </p>
                             </Card.Body>
                         </Card>
@@ -91,10 +88,9 @@ export const Home = (props) => (
                             <Card.Body>
                                 <h4>Dolore sunt nostrud laboris sunt est in</h4>
                                 <p>
-                                    Est ea laborum laboris sunt et ut aliquip
-                                    occaecat et dolor. Excepteur nostrud laboris
-                                    nostrud cupidatat proident esse do ut qui
-                                    irure excepteur.
+                                    Est ea laborum laboris sunt et ut aliquip occaecat et dolor.
+                                    Excepteur nostrud laboris nostrud cupidatat proident esse do ut
+                                    qui irure excepteur.
                                 </p>
                             </Card.Body>
                         </Card>
@@ -111,10 +107,9 @@ export const Home = (props) => (
                             <Card.Body>
                                 <h4>Dolore sunt nostrud laboris sunt est in</h4>
                                 <p>
-                                    Est ea laborum laboris sunt et ut aliquip
-                                    occaecat et dolor. Excepteur nostrud laboris
-                                    nostrud cupidatat proident esse do ut qui
-                                    irure excepteur.
+                                    Est ea laborum laboris sunt et ut aliquip occaecat et dolor.
+                                    Excepteur nostrud laboris nostrud cupidatat proident esse do ut
+                                    qui irure excepteur.
                                 </p>
                             </Card.Body>
                         </Card>
@@ -131,10 +126,9 @@ export const Home = (props) => (
                             <Card.Body>
                                 <h4>Dolore sunt nostrud laboris sunt est in</h4>
                                 <p>
-                                    Est ea laborum laboris sunt et ut aliquip
-                                    occaecat et dolor. Excepteur nostrud laboris
-                                    nostrud cupidatat proident esse do ut qui
-                                    irure excepteur.
+                                    Est ea laborum laboris sunt et ut aliquip occaecat et dolor.
+                                    Excepteur nostrud laboris nostrud cupidatat proident esse do ut
+                                    qui irure excepteur.
                                 </p>
                             </Card.Body>
                         </Card>
@@ -151,10 +145,9 @@ export const Home = (props) => (
                             <Card.Body>
                                 <h4>Dolore sunt nostrud laboris sunt est in</h4>
                                 <p>
-                                    Est ea laborum laboris sunt et ut aliquip
-                                    occaecat et dolor. Excepteur nostrud laboris
-                                    nostrud cupidatat proident esse do ut qui
-                                    irure excepteur.
+                                    Est ea laborum laboris sunt et ut aliquip occaecat et dolor.
+                                    Excepteur nostrud laboris nostrud cupidatat proident esse do ut
+                                    qui irure excepteur.
                                 </p>
                             </Card.Body>
                         </Card>
@@ -171,10 +164,9 @@ export const Home = (props) => (
                             <Card.Body>
                                 <h4>Dolore sunt nostrud laboris sunt est in</h4>
                                 <p>
-                                    Est ea laborum laboris sunt et ut aliquip
-                                    occaecat et dolor. Excepteur nostrud laboris
-                                    nostrud cupidatat proident esse do ut qui
-                                    irure excepteur.
+                                    Est ea laborum laboris sunt et ut aliquip occaecat et dolor.
+                                    Excepteur nostrud laboris nostrud cupidatat proident esse do ut
+                                    qui irure excepteur.
                                 </p>
                             </Card.Body>
                         </Card>

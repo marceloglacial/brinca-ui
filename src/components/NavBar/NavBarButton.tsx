@@ -6,23 +6,16 @@ export interface NavBarButtonProps {
     setIsOpen: (e: boolean) => void
 }
 
-const NavBarButton: FC<NavBarButtonProps> = ({
-    isOpen,
-    setIsOpen,
-}): JSX.Element => {
+const NavBarButton: FC<NavBarButtonProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+    const { isOpen, setIsOpen } = props
     return (
-        <div className={styles.buttonContainer}>
+        <div {...props} className={styles.buttonContainer}>
             <button onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? (
                     <div className={styles.closeButton}>X</div>
                 ) : (
                     <div className={styles.openButton}>
-                        <svg
-                            viewBox='0 0 100 80'
-                            width='20'
-                            height='20'
-                            className='fill-green-600'
-                        >
+                        <svg viewBox='0 0 100 80' width='20' height='20' className='fill-green-600'>
                             <rect width='100' height='15'></rect>
                             <rect y='30' width='100' height='15'></rect>
                             <rect y='60' width='100' height='15'></rect>

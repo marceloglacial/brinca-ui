@@ -9,11 +9,8 @@ export interface NavBarItemsProps {
     children: ReactNode
 }
 
-const NavBarItems: FC<NavBarItemsProps> = ({
-    variant = 'top',
-    className = '',
-    children,
-}): JSX.Element => {
+const NavBarItems: FC<NavBarItemsProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+    const { variant = 'top', className = '', children } = props
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const hasButton = variant === 'top'
     const isOpenClassName = isOpen ? styles.isOpen : styles.isClose
@@ -24,6 +21,7 @@ const NavBarItems: FC<NavBarItemsProps> = ({
     return (
         <>
             <div
+                {...props}
                 className={`${styles.items.container} ${styles.items[variant]} ${isOpenClassName} ${className}`}
             >
                 {children}

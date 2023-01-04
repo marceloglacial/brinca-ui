@@ -18,9 +18,7 @@ const HeroImage: FC<HeroImageProps> = ({
     const roundedStyles = rounded ? styles.rounded : ''
 
     return (
-        <figure
-            className={`${styles.figure} ${shadowStyles} ${roundedStyles} ${className}`}
-        >
+        <figure className={`${styles.figure} ${shadowStyles} ${roundedStyles} ${className}`}>
             {children}
         </figure>
     )

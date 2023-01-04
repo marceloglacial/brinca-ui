@@ -18,13 +18,7 @@ const navbarTypes = [
     {
         title: 'Navbar - Bottom',
         url: 'navbar--bottom',
-        tags: [
-            '.navbar',
-            '.navbar--bottom',
-            'nav',
-            '.navbar__brand',
-            '.navbar__items',
-        ],
+        tags: ['.navbar', '.navbar--bottom', 'nav', '.navbar__brand', '.navbar__items'],
     },
 ]
 
