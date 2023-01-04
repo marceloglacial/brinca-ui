@@ -6,10 +6,10 @@ export interface NavBarButtonProps {
     setIsOpen: (e: boolean) => void
 }
 
-const NavBarButton: FC<NavBarButtonProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+const NavBarButton: FC<NavBarButtonProps> = (props): JSX.Element => {
     const { isOpen, setIsOpen } = props
     return (
-        <div {...props} className={styles.buttonContainer}>
+        <div className={styles.buttonContainer}>
             <button onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? (
                     <div className={styles.closeButton}>X</div>

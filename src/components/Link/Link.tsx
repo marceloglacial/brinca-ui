@@ -14,12 +14,10 @@ export interface LinkProps {
 export const Link: React.FC<LinkProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
     const { variant = 'default', children, full, className = '', size = 'md' } = props
     const isFullClassName = full ? styles.full : ''
-    return (
-        <div
-            {...props}
-            className={`${styles[variant]} ${isFullClassName} ${styles.size[size]} ${className}`}
-        >
-            {children}
-        </div>
-    )
+    const componentProps = {
+        ...props,
+        full: undefined,
+        className: `${styles[variant]} ${isFullClassName} ${styles.size[size]} ${className}`,
+    }
+    return <div {...componentProps}>{children}</div>
 }

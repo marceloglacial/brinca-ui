@@ -13,12 +13,10 @@ export interface ButtonProps {
 export const Button: React.FC<ButtonProps & JSX.IntrinsicElements['button']> = (props) => {
     const { variant = 'primary', children, full, className = '', size = 'md' } = props
     const fullClassName = full ? styles.full : ''
-    return (
-        <button
-            {...props}
-            className={`${styles.button} ${styles[variant]} ${fullClassName} ${styles.size[size]} ${className}`}
-        >
-            {children}
-        </button>
-    )
+    const componentProps = {
+        ...props,
+        full: undefined,
+        className: `${styles.button} ${styles[variant]} ${fullClassName} ${styles.size[size]} ${className}`,
+    }
+    return <button {...componentProps}>{children}</button>
 }

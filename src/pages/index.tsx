@@ -4,8 +4,7 @@ import { Link, NavBar } from '../components'
 export const PageHeader = () => (
     <NavBar>
         <NavBar.Brand>
-            <a>
-                <a href='#'></a>{' '}
+            <a href='#'>
                 <img
                     src='https://res.cloudinary.com/brinca/image/upload/v1664060764/brinca-ui/image_qcfpyy.png'
                     alt=''
