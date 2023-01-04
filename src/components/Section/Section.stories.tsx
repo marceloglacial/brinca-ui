@@ -10,12 +10,11 @@ const Template = (args) => <Section {...args} />
 
 const content = (
     <p>
-        Et non amet ullamco exercitation. Anim sint excepteur exercitation
-        dolore dolore aliquip dolore veniam laborum dolore Lorem deserunt
-        nostrud. Lorem eiusmod ipsum laborum ad dolore tempor ipsum non. Culpa
-        sunt irure quis aute esse ut. Ad nulla culpa anim anim deserunt laborum
-        sit velit dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-        et Lorem culpa minim aliqua laboris ullamco non proident sit.
+        Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore aliquip
+        dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum ad dolore
+        tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla culpa anim anim deserunt
+        laborum sit velit dolore occaecat laboris deserunt non. Sunt Lorem amet sit do et Lorem
+        culpa minim aliqua laboris ullamco non proident sit.
     </p>
 )
 

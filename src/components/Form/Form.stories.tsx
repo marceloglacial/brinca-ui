@@ -16,12 +16,7 @@ export const KitchenSink = (props) => (
             <Form.Label htmlFor='inputText2' full>
                 Label
             </Form.Label>
-            <Form.Input
-                type='text'
-                id='inputText2'
-                placeholder='Text Input'
-                full
-            />
+            <Form.Input type='text' id='inputText2' placeholder='Text Input' full />
         </Form.Group>
         <Form.Group>
             <Form.Label htmlFor='inputText3' full>
@@ -53,17 +48,9 @@ export const KitchenSink = (props) => (
         </Form.Group>
         <Form.Group>
             <Form.Label full>Checkbox</Form.Label>
-            <Form.Input
-                type='checkbox'
-                id='checkbox'
-                placeholder='Text Input'
-            />
+            <Form.Input type='checkbox' id='checkbox' placeholder='Text Input' />
             <Form.Label htmlFor='checkbox'>checkbox</Form.Label>
-            <Form.Input
-                type='checkbox'
-                id='checkbox2'
-                placeholder='Text Input'
-            />
+            <Form.Input type='checkbox' id='checkbox2' placeholder='Text Input' />
             <Form.Label htmlFor='checkbox2'>checkbox</Form.Label>
         </Form.Group>
         <Form.Group {...props}>
@@ -77,12 +64,7 @@ export const KitchenSink = (props) => (
             <Form.Label htmlFor='textarea' full>
                 Text Area
             </Form.Label>
-            <Form.Textarea
-                id='textarea'
-                placeholder='Text area placeholder'
-                full
-                rows={10}
-            />
+            <Form.Textarea id='textarea' placeholder='Text area placeholder' full rows={10} />
         </Form.Group>
         <Form.Group>
             <Form.Input
@@ -106,11 +88,7 @@ export const Container = (props) => {
 export const Checkbox = (props) => {
     return (
         <Form.Group {...props}>
-            <Form.Input
-                type='checkbox'
-                id='checkbox'
-                placeholder='Text Input'
-            />
+            <Form.Input type='checkbox' id='checkbox' placeholder='Text Input' />
             <Form.Label htmlFor='checkbox'>checkbox</Form.Label>
         </Form.Group>
     )

@@ -10,9 +10,9 @@ const content = {
     title: <h4>CardTitle</h4>,
     description: (
         <p>
-            Officia exercitation labore proident nisi qui nisi sint fugiat in.
-            Sit culpa in eiusmod velit proident veniam elit aute aute velit aute
-            officia commodo irure. Reprehenderit do do sunt qui magna sit.
+            Officia exercitation labore proident nisi qui nisi sint fugiat in. Sit culpa in eiusmod
+            velit proident veniam elit aute aute velit aute officia commodo irure. Reprehenderit do
+            do sunt qui magna sit.
         </p>
     ),
     image: (
@@ -23,8 +23,8 @@ const content = {
         />
     ),
     link: (
-        <Link href='#' variant='primary'>
-            Link
+        <Link variant='primary'>
+            <a href='#'>Link</a>
         </Link>
     ),
     footer: `Voluptate aliqua nulla amet ad deserunt reprehenderit voluptate ea
@@ -111,13 +111,10 @@ export const BusinessCard = (props: CardProps) => {
                         />
                     </figure>
                     <div className='w-full'>
-                        <h4 className='text-[20px]'>
-                            Nostrud consectetur id fugiat dolor enim
-                        </h4>
+                        <h4 className='text-[20px]'>Nostrud consectetur id fugiat dolor enim</h4>
                         <p className='text-[16px] leading-normal'>
-                            Pariatur anim quis Lorem ipsum Lorem. Esse ut enim
-                            fugiat ea nostrud incididunt enim sint qui culpa
-                            proident.
+                            Pariatur anim quis Lorem ipsum Lorem. Esse ut enim fugiat ea nostrud
+                            incididunt enim sint qui culpa proident.
                         </p>
                     </div>
                 </div>

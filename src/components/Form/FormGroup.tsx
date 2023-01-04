@@ -6,10 +6,8 @@ export interface FormGroupProps {
     className?: string
 }
 
-const FormGroup: FC<FormGroupProps> = ({
+const FormGroup: FC<FormGroupProps & JSX.IntrinsicElements['div']> = ({
     children,
     className = '',
-}): JSX.Element => (
-    <div className={`${styles.group} ${className}`}>{children}</div>
-)
+}): JSX.Element => <div className={`${styles.group} ${className}`}>{children}</div>
 export default FormGroup

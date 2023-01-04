@@ -9,14 +9,11 @@ export interface HeroProps {
     reversed?: boolean
 }
 
-const HeroContainer: FC<HeroProps> = ({
-    className = '',
-    children,
-    reversed,
-}): JSX.Element => {
+const HeroContainer: FC<HeroProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+    const { className = '', children, reversed } = props
     const isReversedClassName = reversed ? styles.reversed : ''
     return (
-        <div className={`${styles.hero} ${isReversedClassName} ${className}`}>
+        <div {...props} className={`${styles.hero} ${isReversedClassName} ${className}`}>
             {children}
         </div>
     )

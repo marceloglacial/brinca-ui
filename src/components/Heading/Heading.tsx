@@ -6,9 +6,11 @@ export interface HeadingProps {
     className?: string
 }
 
-export const Heading: FC<HeadingProps & JSX.IntrinsicElements['div']> = ({
-    children,
-    className = '',
-}): JSX.Element => {
-    return <div className={`${styles.container} ${className}`}>{children}</div>
+export const Heading: FC<HeadingProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+    const { children, className = '' } = props
+    return (
+        <div {...props} className={`${styles.container} ${className}`}>
+            {children}
+        </div>
+    )
 }
