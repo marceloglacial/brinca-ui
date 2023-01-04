@@ -1,6 +1,6 @@
 {
     "name": "@marceloglacial/brinca-ui",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "author": "Marcelo Glacial",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
