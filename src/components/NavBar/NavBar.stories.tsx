@@ -10,7 +10,8 @@ export const Top = (props) => {
     return (
         <NavBar {...props}>
             <NavBar.Brand>
-                <a href='#'>
+                <a>
+                    <a href='#'></a>{' '}
                     <img
                         src='https://res.cloudinary.com/brinca/image/upload/v1664060764/brinca-ui/image_qcfpyy.png'
                         alt=''
@@ -19,14 +20,26 @@ export const Top = (props) => {
                 </a>
             </NavBar.Brand>
             <NavBar.Items>
-                <Link href='#'>Item 1</Link>
-                <Link href='#'>Item 2</Link>
-                <Link href='#'>Item 3</Link>
-                <Link href='#'>Item 4</Link>
-                <Link href='#'>Item 5</Link>
-                <Link href='#'>Item 6</Link>
-                <Link href='#' variant='primary'>
-                    Item 7
+                <Link>
+                    <a href='#'>Item 1</a>
+                </Link>
+                <Link>
+                    <a href='#'>Item 2</a>
+                </Link>
+                <Link>
+                    <a href='#'>Item 3</a>
+                </Link>
+                <Link>
+                    <a href='#'>Item 4</a>
+                </Link>
+                <Link>
+                    <a href='#'>Item 5</a>
+                </Link>
+                <Link>
+                    <a href='#'>Item 6</a>
+                </Link>
+                <Link variant='primary'>
+                    <a href='#'>Item 7</a>
                 </Link>
             </NavBar.Items>
         </NavBar>
@@ -45,20 +58,20 @@ export const Bottom = (props) => {
                 </a>
             </NavBar.Brand>
             <NavBar.Items variant='bottom'>
-                <Link href='#' variant='white'>
-                    Item
+                <Link variant='white'>
+                    <a href='#'>Item</a>
                 </Link>
-                <Link href='#' variant='white'>
-                    Item
+                <Link variant='white'>
+                    <a href='#'>Item</a>
                 </Link>
-                <Link href='#' variant='white'>
-                    Item
+                <Link variant='white'>
+                    <a href='#'>Item</a>
                 </Link>
-                <Link href='#' variant='white'>
-                    Item
+                <Link variant='white'>
+                    <a href='#'>Item</a>
                 </Link>
-                <Link href='#' variant='white'>
-                    Item
+                <Link variant='white'>
+                    <a href='#'>Item</a>
                 </Link>
             </NavBar.Items>
         </NavBar>
