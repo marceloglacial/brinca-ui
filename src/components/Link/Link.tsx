@@ -17,7 +17,7 @@ export const Link: React.FC<LinkProps & JSX.IntrinsicElements['div']> = (props):
     const componentProps = {
         ...props,
         full: undefined,
-        className: `${styles[variant]} ${isFullClassName} ${styles.size[size]} ${className} ${props.className}`,
+        className: `${styles[variant]} ${isFullClassName} ${styles.size[size]} ${className}`,
     }
     return <div {...componentProps}>{children}</div>
 }
