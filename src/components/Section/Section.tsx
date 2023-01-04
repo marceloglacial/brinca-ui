@@ -7,15 +7,12 @@ export interface SectionProps {
     spacing?: 's' | 'm' | 'l' | 'xl'
 }
 
-export const Section: FC<SectionProps> = ({
-    children,
-    className = '',
-    spacing = 'm',
-}): JSX.Element => {
+export const Section: FC<SectionProps & JSX.IntrinsicElements['section']> = (
+    props
+): JSX.Element => {
+    const { children, className = '', spacing = 'm' } = props
     return (
-        <section
-            className={`${styles.container} ${styles[spacing]} ${className}`}
-        >
+        <section {...props} className={`${styles.container} ${styles[spacing]} ${className}`}>
             {children}
         </section>
     )

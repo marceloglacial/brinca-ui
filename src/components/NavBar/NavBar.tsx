@@ -10,13 +10,10 @@ export interface NavBarProps {
     children: ReactNode
 }
 
-const NavBarContainer: FC<NavBarProps> = ({
-    variant = 'top',
-    className = '',
-    children,
-}): JSX.Element => {
+const NavBarContainer: FC<NavBarProps & JSX.IntrinsicElements['nav']> = (props): JSX.Element => {
+    const { variant = 'top', className = '', children } = props
     return (
-        <nav className={`${styles.container} ${styles[variant]} ${className}`}>
+        <nav {...props} className={`${styles.container} ${styles[variant]} ${className}`}>
             {children}
         </nav>
     )

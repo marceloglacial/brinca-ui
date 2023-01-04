@@ -6,10 +6,7 @@ export interface HeroBodyProps {
     children: ReactNode
 }
 
-const HeroBody: FC<HeroBodyProps> = ({
-    className = '',
-    children,
-}): JSX.Element => {
+const HeroBody: FC<HeroBodyProps> = ({ className = '', children }): JSX.Element => {
     return <figure className={`${styles.body} ${className}`}>{children}</figure>
 }
 export default HeroBody

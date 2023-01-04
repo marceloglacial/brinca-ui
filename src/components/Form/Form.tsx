@@ -6,16 +6,12 @@ import FormSelect from './FormSelect'
 import styles from './FormStyles'
 import FormTextarea from './FormTextarea'
 
-export interface FormProps
-    extends React.DetailedHTMLProps<
-        React.FormHTMLAttributes<HTMLFormElement>,
-        HTMLFormElement
-    > {
+export interface FormProps {
     className?: string
     children: ReactNode
 }
 
-const FormContainer: FC<FormProps> = (props): JSX.Element => {
+const FormContainer: FC<FormProps & JSX.IntrinsicElements['form']> = (props): JSX.Element => {
     const { className = '', children } = props
     return (
         <form {...props} className={`${styles.form} ${className}`}>

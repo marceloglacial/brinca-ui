@@ -15,125 +15,101 @@ export const Single = (props) => (
                     <h1>Page Title</h1>
                 </Heading>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation{' '}
-                    <a href='#'>
-                        dolore dolore aliquip dolore veniam laborum dolore
-                    </a>
-                    . Lorem deserunt nostrud. Lorem eiusmod ipsum laborum ad
-                    dolore tempor ipsum non. Culpa sunt irure quis aute esse ut.
-                    Ad nulla culpa anim anim deserunt laborum sit velit dolore
-                    occaecat laboris deserunt non. Sunt Lorem amet sit do et
-                    Lorem culpa minim aliqua laboris ullamco non proident sit.
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation{' '}
+                    <a href='#'>dolore dolore aliquip dolore veniam laborum dolore</a>. Lorem
+                    deserunt nostrud. Lorem eiusmod ipsum laborum ad dolore tempor ipsum non. Culpa
+                    sunt irure quis aute esse ut. Ad nulla culpa anim anim deserunt laborum sit
+                    velit dolore occaecat laboris deserunt non. Sunt Lorem amet sit do et Lorem
+                    culpa minim aliqua laboris ullamco non proident sit.
                 </p>
                 <h1>Heading 1</h1>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
                 <h2>Heading 2</h2>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
                 <h3>Heading 3</h3>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
                 <h4>Heading 4</h4>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
                 <h5>Heading 5</h5>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
                 <h6>Heading 6</h6>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
                 <ul>
                     <li>Duis incididunt mollit ea reprehenderit. </li>
                     <li>
-                        Est fugiat nisi id amet minim minim quis sunt nostrud
-                        ipsum consectetur ad.{' '}
+                        Est fugiat nisi id amet minim minim quis sunt nostrud ipsum consectetur ad.{' '}
                     </li>
                     <li>
-                        Aliqua eu et in anim ipsum. In ea mollit excepteur in
-                        mollit laboris quis.{' '}
+                        Aliqua eu et in anim ipsum. In ea mollit excepteur in mollit laboris quis.{' '}
                     </li>
                     <li>
-                        Ex excepteur id sunt nostrud pariatur excepteur quis
-                        reprehenderit fugiat eiusmod eu. Ipsum aliquip
-                        adipisicing quis exercitation mollit magna minim sint in
-                        magna dolor et occaecat et.
+                        Ex excepteur id sunt nostrud pariatur excepteur quis reprehenderit fugiat
+                        eiusmod eu. Ipsum aliquip adipisicing quis exercitation mollit magna minim
+                        sint in magna dolor et occaecat et.
                     </li>
                 </ul>
                 <ol>
                     <li>Duis incididunt mollit ea reprehenderit. </li>
                     <li>
-                        Est fugiat nisi id amet minim minim quis sunt nostrud
-                        ipsum consectetur ad.{' '}
+                        Est fugiat nisi id amet minim minim quis sunt nostrud ipsum consectetur ad.{' '}
                     </li>
                     <li>
-                        Aliqua eu et in anim ipsum. In ea mollit excepteur in
-                        mollit laboris quis.{' '}
+                        Aliqua eu et in anim ipsum. In ea mollit excepteur in mollit laboris quis.{' '}
                     </li>
                     <li>
-                        Ex excepteur id sunt nostrud pariatur excepteur quis
-                        reprehenderit fugiat eiusmod eu. Ipsum aliquip
-                        adipisicing quis exercitation mollit magna minim sint in
-                        magna dolor et occaecat et.
+                        Ex excepteur id sunt nostrud pariatur excepteur quis reprehenderit fugiat
+                        eiusmod eu. Ipsum aliquip adipisicing quis exercitation mollit magna minim
+                        sint in magna dolor et occaecat et.
                     </li>
                 </ol>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
                 <img
@@ -142,33 +118,27 @@ export const Single = (props) => (
                     className='w-full h-full object-cover rounded-xl my-4 shadow-2xl'
                 />
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
                 <blockquote>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </blockquote>
                 <p>
-                    Et non amet ullamco exercitation. Anim sint excepteur
-                    exercitation dolore dolore aliquip dolore veniam laborum
-                    dolore Lorem deserunt nostrud. Lorem eiusmod ipsum laborum
-                    ad dolore tempor ipsum non. Culpa sunt irure quis aute esse
-                    ut. Ad nulla culpa anim anim deserunt laborum sit velit
-                    dolore occaecat laboris deserunt non. Sunt Lorem amet sit do
-                    et Lorem culpa minim aliqua laboris ullamco non proident
+                    Et non amet ullamco exercitation. Anim sint excepteur exercitation dolore dolore
+                    aliquip dolore veniam laborum dolore Lorem deserunt nostrud. Lorem eiusmod ipsum
+                    laborum ad dolore tempor ipsum non. Culpa sunt irure quis aute esse ut. Ad nulla
+                    culpa anim anim deserunt laborum sit velit dolore occaecat laboris deserunt non.
+                    Sunt Lorem amet sit do et Lorem culpa minim aliqua laboris ullamco non proident
                     sit.
                 </p>
             </Section>

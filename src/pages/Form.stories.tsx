@@ -23,46 +23,25 @@ export const Forms = (props) => (
                     <Form.Label htmlFor='name' full>
                         Full Name
                     </Form.Label>
-                    <Form.Input
-                        id='name'
-                        full
-                        placeholder='Full Name'
-                        required
-                    />
+                    <Form.Input id='name' full placeholder='Full Name' required />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label htmlFor='email' full>
                         Email
                     </Form.Label>
-                    <Form.Input
-                        id='email'
-                        type='email'
-                        full
-                        placeholder='e-mail'
-                        required
-                    />
+                    <Form.Input id='email' type='email' full placeholder='e-mail' required />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label htmlFor='url' full>
                         Url Input
                     </Form.Label>
-                    <Form.Input
-                        id='url'
-                        type='url'
-                        full
-                        placeholder='https://'
-                    />
+                    <Form.Input id='url' type='url' full placeholder='https://' />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label htmlFor='message' full>
                         Message
                     </Form.Label>
-                    <Form.Textarea
-                        id='message'
-                        full
-                        placeholder='Type your message'
-                        required
-                    />
+                    <Form.Textarea id='message' full placeholder='Type your message' required />
                 </Form.Group>
                 <Form.Group>
                     <Form.Input type='submit' value='Send' />

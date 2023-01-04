@@ -1,10 +1,6 @@
 /// <reference types="cypress" />
 
-import {
-    shouldRenderElements,
-    shouldNotRenderElements,
-    testUrl,
-} from '../../tests/global'
+import { shouldRenderElements, shouldNotRenderElements, testUrl } from '../../tests/global'
 
 const types = [
     {
