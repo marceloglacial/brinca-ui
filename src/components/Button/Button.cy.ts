@@ -18,6 +18,11 @@ const buttonTypes = [
         url: 'button--full-width',
         tags: ['.button', '.button--full-width'],
     },
+    {
+        title: 'Button - Disabled',
+        url: 'button--disabled',
+        tags: ['.button', '.button--disabled'],
+    },
 ]
 
 buttonTypes.map((type) => {
