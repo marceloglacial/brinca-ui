@@ -18,6 +18,12 @@ Secondary.args = {
     children: 'Button Secondary',
     variant: 'secondary',
 }
+export const Disabled = Template.bind({})
+Disabled.args = {
+    children: 'Button Disabled',
+    disabled: true,
+}
+
 export const FullWidth = Template.bind({})
 FullWidth.args = {
     children: 'Button Full',
