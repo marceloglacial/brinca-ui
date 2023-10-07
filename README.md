@@ -17,24 +17,28 @@ The library is built with:
 -   [Cypress](https://www.cypress.io)
 -   [Esbuild](https://esbuild.github.io)
 
+## Pre-requisite
+
+Install [pnpm](https://pnpm.io/)
+
 ## Get Started
 
 Install all the dependencies
 
 ```shell
-yarn install
+pnpm install
 ```
 
 Start the project
 
 ```shell
-yarn dev
+pnpm dev
 ```
 
 Build
 
 ```shell
-yarn build
+pnpm build
 ```
 
 ## Deployment
@@ -46,7 +50,7 @@ This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.c
 1. Install the package using the following command:
 
     ```shell
-    yarn add @marceloglacial/brinca-ui
+    pnpm add @marceloglacial/brinca-ui
     ```
 
 1. Import the css file using:
