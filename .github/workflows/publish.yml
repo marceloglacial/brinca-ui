@@ -15,9 +15,9 @@ jobs:
                   node-version: 16
                   registry-url: https://registry.npmjs.org
             - name: 📦 install
-              run: yarn install
+              run: pnpm install
             - name: 🔧 build
-              run: yarn build
+              run: pnpm build
             - name: 🚀 publish
               run: npm publish --access public
               env:

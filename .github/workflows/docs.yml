@@ -11,10 +11,10 @@ jobs:
               uses: actions/checkout@v3
 
             - name: 📦 install
-              run: yarn install
+              run: pnpm install
 
             - name: 🔧 build docs
-              run: yarn build:docs
+              run: pnpm build:docs
 
             - name: 🚀 deploy
               uses: JamesIves/github-pages-deploy-action@v4
