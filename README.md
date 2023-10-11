@@ -53,7 +53,7 @@ This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.c
 
     ```css
     /* yourmaincssfile.css */
-    @import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
+    @import '../node_modules/@marceloglacial/brinca-ui/dist/style.css';
     ```
 
     ### Important (troubleshooting):
@@ -75,7 +75,7 @@ This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.c
     ...
 
     /* AFTER: */
-    @import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
+    @import '../node_modules/@marceloglacial/brinca-ui/dist/style.css';
 
     ...
     ```

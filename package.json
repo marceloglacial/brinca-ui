@@ -30,7 +30,7 @@
     },
     "scripts": {
         "dev": "yarn run storybook",
-        "build": "yarn run format && yarn run lint && rm -rf /dist && tsc && vite build",
+        "build": "yarn run format && yarn run lint && rm -rf ./dist && tsc && vite build",
         "storybook": "storybook dev -p 6006",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.ts*",
