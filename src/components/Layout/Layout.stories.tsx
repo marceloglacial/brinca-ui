@@ -1,4 +1,3 @@
-import React from 'react'
 import { Section, Layout, LayoutProps } from '..'
 
 export default {

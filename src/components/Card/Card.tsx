@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import CardBody from './CardBody'
 import CardFooter from './CardFooter'
 import CardImage from './CardImage'

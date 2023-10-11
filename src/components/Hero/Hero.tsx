@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import HeroBody from './HeroBody'
 import HeroImage from './HeroImage'
 import styles from './HeroStyles'

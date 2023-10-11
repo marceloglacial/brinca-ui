@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, NavBar } from '../components'
 
 export const PageHeader = () => (
