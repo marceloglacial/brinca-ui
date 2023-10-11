@@ -2,6 +2,7 @@
     "name": "@marceloglacial/brinca-ui",
     "version": "1.6.2",
     "author": "Marcelo Glacial",
+    "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/marceloglacial/brinca-ui.git"
