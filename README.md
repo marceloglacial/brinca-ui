@@ -17,7 +17,7 @@ The library is built with:
 -   [Cypress](https://www.cypress.io)
 -   [Esbuild](https://esbuild.github.io)
 
-## Pre-requisite
+## Pre-requisites
 
 Install [pnpm](https://pnpm.io/)
 
