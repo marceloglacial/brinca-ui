@@ -11,13 +11,26 @@
         "url": "https://github.com/marceloglacial/brinca-ui/issues"
     },
     "homepage": "https://github.com/marceloglacial/brinca-ui#readme",
-    "private": true,
-    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/brinca-ui.umd.js",
+    "module": "./dist/brinca-ui.es.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/brinca-ui.es.js",
+            "require": "./dist/brinca-ui.umd.js"
+        },
+        "./dist/style.css": "./dist/style.css"
+    },
+    "engines": {
+        "node": "18"
+    },
     "scripts": {
-        "dev": "yarn run build:tailwind && yarn run storybook",
-        "build": "yarn run format && yarn run lint && rm -rf /dist && yarn run build:tailwind",
-        "build:tailwind": "npx tailwindcss -i ./src/styles/index.css -o ./dist/index.css --minify",
-        "dev:tailwind": "build:tailwind --watch",
+        "dev": "yarn run storybook",
+        "build": "yarn run format && yarn run lint && rm -rf /dist && tsc && vite build",
         "storybook": "storybook dev -p 6006",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.ts*",
@@ -27,6 +40,10 @@
         "build-storybook": "storybook build"
     },
     "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "peerDependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
@@ -57,7 +74,8 @@
         "storybook": "^7.4.6",
         "tailwindcss": "^3.3.3",
         "typescript": "^5.0.2",
-        "vite": "^4.4.5"
+        "vite": "^4.4.5",
+        "vite-plugin-dts": "^3.6.0"
     },
     "resolutions": {
         "jackspeak": "2.1.1"

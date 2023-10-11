@@ -17,7 +17,6 @@ The library is built with:
 -   [Cypress](https://www.cypress.io)
 -   [Vite](https://vitejs.dev/)
 
-
 ## Get Started
 
 Install all the dependencies
@@ -100,3 +99,4 @@ This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.c
 -   [Build a React Component Library Using TypeScript & StoryBook](https://javascript.plainenglish.io/build-a-react-component-library-using-typescript-storybook-86d3562aa53a)
 -   [Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app)
 -   [Build and Package an NPM Component with esbuild, React and TypeScript](https://javascript.plainenglish.io/develop-and-publish-a-react-component-with-esbuild-and-typescript-3eb756adda6e)
+-   https://github.com/IgnacioNMiranda/vite-component-library-template
