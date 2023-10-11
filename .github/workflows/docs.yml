@@ -3,7 +3,7 @@ on:
     release:
         types: [published]
 jobs:
-    build-and-deploy:
+    docs:
         runs-on: ubuntu-latest
         concurrency: ci-${{ github.ref }}
         steps:
