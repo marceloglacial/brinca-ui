@@ -1,105 +1,27 @@
-# Brinca UI
+# React + TypeScript + Vite
 
-![npm](https://img.shields.io/npm/v/@marceloglacial/brinca-ui)
-![Cypress workflow](https://github.com/marceloglacial/brinca-ui/actions/workflows/tests.yml/badge.svg)
-[![wakatime](https://wakatime.com/badge/user/cee0e641-3254-41c3-a42e-8f3adfdfbc22/project/d43dcbd6-cbe2-4a85-8e06-c43ab7267059.svg)](https://wakatime.com/badge/user/cee0e641-3254-41c3-a42e-8f3adfdfbc22/project/d43dcbd6-cbe2-4a85-8e06-c43ab7267059)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Design System and React component library for [Brinca](https://brinca.ca/)
+Currently, two official plugins are available:
 
-## Details
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-The library is built with:
+## Expanding the ESLint configuration
 
--   [React](https://reactjs.org/)
--   [TypeScript](https://www.typescriptlang.org/)
--   [Storybook](https://storybook.js.org/)
--   [Tailwind CSS](https://tailwindcss.com/)
--   [Cypress](https://www.cypress.io)
--   [Esbuild](https://esbuild.github.io)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Pre-requisites
+- Configure the top-level `parserOptions` property like this:
 
-Install [pnpm](https://pnpm.io/)
-
-## Get Started
-
-Install all the dependencies
-
-```shell
-pnpm install
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
 ```
 
-Start the project
-
-```shell
-pnpm dev
-```
-
-Build
-
-```shell
-pnpm build
-```
-
-## Deployment
-
-This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.com/package/@marceloglacial/brinca-ui) and to build the docs.
-
-## How to use in a project
-
-1. Install the package using the following command:
-
-    ```shell
-    pnpm add @marceloglacial/brinca-ui
-    ```
-
-1. Import the css file using:
-
-    ```css
-    /* yourmaincssfile.css */
-    @import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
-    ```
-
-    ### Important (troubleshooting):
-
-    This is a Tailwind project and the initial CSS is already built-in on `brinca-ui` css. If you are facing CSS issues, remove initial Tailwind's @ markup.
-
-    E.g.:
-
-    ```css
-    /*
-    /* yourmaincssfile.css
-    /* BEFORE:
-    */
-
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-
-    ...
-
-    /* AFTER: */
-    @import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
-
-    ...
-    ```
-
-1. Update your [Tailwind config file](https://tailwindcss.com/docs/configuration):
-
-    ```javascript
-    // tailwind.config.js
-    module.exports = {
-      content: [
-        ...
-        './node_modules/@marceloglacial/brinca-ui/**/*.{js,ts,jsx,tsx}',
-        ...
-      ],
-      ...
-    };
-    ```
-
-## References
-
--   [Build a React Component Library Using TypeScript & StoryBook](https://javascript.plainenglish.io/build-a-react-component-library-using-typescript-storybook-86d3562aa53a)
--   [Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app)
--   [Build and Package an NPM Component with esbuild, React and TypeScript](https://javascript.plainenglish.io/develop-and-publish-a-react-component-with-esbuild-and-typescript-3eb756adda6e)
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
