@@ -44,7 +44,6 @@
   ],
   "exclude": [
     "src/**/*.stories.*",
-    "src/**/*.cy.*",
     "src/pages/**/*.*",
     "src/tests/**/*.*",
   ],
