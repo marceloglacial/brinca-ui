@@ -9,8 +9,8 @@ jobs:
             - name: 🔧 Cypress run
               uses: cypress-io/github-action@v5
               with:
-                  install: pnpm install
-                  build: pnpm run build
-                  start: pnpm start
+                  install: npm install
+                  build: npm run build
+                  start: npm start
                   wait-on: 'http://localhost:6006'
                   wait-on-timeout: 110
