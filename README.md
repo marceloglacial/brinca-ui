@@ -15,30 +15,26 @@ The library is built with:
 -   [Storybook](https://storybook.js.org/)
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [Cypress](https://www.cypress.io)
--   [Esbuild](https://esbuild.github.io)
-
-## Pre-requisites
-
-Install [pnpm](https://pnpm.io/)
+-   [Vite](https://vitejs.dev/)
 
 ## Get Started
 
 Install all the dependencies
 
 ```shell
-pnpm install
+yarn install
 ```
 
 Start the project
 
 ```shell
-pnpm dev
+yarn dev
 ```
 
 Build
 
 ```shell
-pnpm build
+yarn build
 ```
 
 ## Deployment
@@ -50,14 +46,14 @@ This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.c
 1. Install the package using the following command:
 
     ```shell
-    pnpm add @marceloglacial/brinca-ui
+    yarn add @marceloglacial/brinca-ui
     ```
 
 1. Import the css file using:
 
     ```css
     /* yourmaincssfile.css */
-    @import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
+    @import '../node_modules/@marceloglacial/brinca-ui/dist/style.css';
     ```
 
     ### Important (troubleshooting):
@@ -79,7 +75,7 @@ This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.c
     ...
 
     /* AFTER: */
-    @import '../node_modules/@marceloglacial/brinca-ui/dist/index.css';
+    @import '../node_modules/@marceloglacial/brinca-ui/dist/style.css';
 
     ...
     ```
@@ -103,3 +99,4 @@ This project uses Github Actions to deploy the [NPM Package](https://www.npmjs.c
 -   [Build a React Component Library Using TypeScript & StoryBook](https://javascript.plainenglish.io/build-a-react-component-library-using-typescript-storybook-86d3562aa53a)
 -   [Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app)
 -   [Build and Package an NPM Component with esbuild, React and TypeScript](https://javascript.plainenglish.io/develop-and-publish-a-react-component-with-esbuild-and-typescript-3eb756adda6e)
+-   https://github.com/IgnacioNMiranda/vite-component-library-template

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useState } from 'react'
+import { FC, ReactNode, useState } from 'react'
 import { NavBarTypes } from './NavBar'
 import NavBarButton from './NavBarButton'
 import styles from './NavBarStyles'

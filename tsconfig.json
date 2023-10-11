@@ -18,37 +18,38 @@
         "tests/*"
       ],
     },
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "jsx": "react",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
     "lib": [
-      "ES5",
-      "ES2015",
-      "ES2016",
+      "ES2020",
       "DOM",
-      "ESNext"
+      "DOM.Iterable"
     ],
-    "types": [
-      "node"
-    ],
-    "module": "es2015",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "noUnusedLocals": true,
-    "outDir": "dist/esm",
-    "sourceMap": true,
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
     "strict": true,
-    "target": "ES6"
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx",
   ],
   "exclude": [
     "src/**/*.stories.*",
-    "src/**/*.cy.*",
     "src/pages/**/*.*",
     "src/tests/**/*.*",
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Heading, Layout, Form, Section } from '../components'
 import { PageFooter, PageHeader } from './index'
 

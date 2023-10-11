@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import NavBarBrand from './NavBarBrand'
 import NavBarItems from './NavBarItems'
 import styles from './NavBarStyles'

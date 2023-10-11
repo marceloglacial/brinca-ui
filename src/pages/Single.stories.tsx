@@ -1,4 +1,3 @@
-import React from 'react'
 import { Layout, Section, Heading } from '../components'
 import { PageFooter, PageHeader } from '.'
 

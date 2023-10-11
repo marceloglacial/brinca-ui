@@ -1,7 +1,11 @@
 import * as buttonStyles from '../Button/ButtonStyles'
 const buttonClass = buttonStyles.default
 
-const styles = {
+type stylesType = {
+    [k: string]: string
+}
+
+const styles: stylesType = {
     form: `form mx-auto max-w-2xl space-y-8`,
     group: `form__group flex flex-wrap gap-4 items-center`,
     label: `form__label font-bold`,

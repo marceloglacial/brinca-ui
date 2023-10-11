@@ -1,4 +1,3 @@
-import React from 'react'
 import { Card, Hero, Layout, Link, Section, Heading } from '../components'
 import { PageFooter, PageHeader } from './index'
 
