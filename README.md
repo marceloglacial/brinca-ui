@@ -6,6 +6,10 @@
 
 Design System and React component library for [Brinca](https://brinca.ca/)
 
+## Docs and Demos
+
+https://brinca-ui.vercel.app/
+
 ## Details
 
 The library is built with:
@@ -31,10 +35,32 @@ Start the project
 yarn dev
 ```
 
-Build
+## Build
+
+Build Component Library
 
 ```shell
 yarn build
+```
+
+Build Docs
+
+```shell
+yarn build:docs
+```
+
+## Tests
+
+Regular Tests
+
+```shell
+yarn test
+```
+
+Headless Tests
+
+```shell
+yarn test:ci
 ```
 
 ## Deployment
