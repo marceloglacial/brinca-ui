@@ -1,6 +1,6 @@
 {
     "name": "@marceloglacial/brinca-ui",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "author": "Marcelo Glacial",
     "type": "module",
     "repository": {
@@ -26,12 +26,10 @@
         },
         "./dist/style.css": "./dist/style.css"
     },
-    "engines": {
-        "node": "18"
-    },
     "scripts": {
         "dev": "yarn run storybook",
         "build": "yarn run format && yarn run lint && rm -rf ./dist && tsc && vite build",
+        "build:docs": "storybook build -o docs",
         "storybook": "storybook dev -p 6006",
         "format": "prettier -w src",
         "lint": "eslint --fix src/**/*.ts*",
