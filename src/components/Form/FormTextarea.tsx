@@ -3,18 +3,17 @@ import styles from './FormStyles'
 
 export interface FormTextareaProps {
     children?: ReactNode
-    className?: string
     full?: boolean
 }
 
 const FormTextarea: FC<FormTextareaProps & JSX.IntrinsicElements['textarea']> = (
     props
 ): JSX.Element => {
-    const { children, full, className = '' } = props
+    const { children, full } = props
     const fullClassName = full ? styles.inputFull : ''
 
     return (
-        <textarea {...props} className={`${styles.textarea} ${fullClassName} ${className}`}>
+        <textarea {...props} className={`${styles.textarea} ${fullClassName} `}>
             {children}
         </textarea>
     )

@@ -7,17 +7,16 @@ export interface LinkProps {
     variant?: LinkTypes
     full?: boolean
     children: ReactNode
-    className?: string
     size?: ButtonSizeTypes
 }
 
 export const Link: React.FC<LinkProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
-    const { variant = 'default', children, full, className = '', size = 'md' } = props
+    const { variant = 'default', children, full, size = 'md' } = props
     const isFullClassName = full ? styles.full : ''
     const componentProps = {
         ...props,
         full: undefined,
-        className: `${styles[variant]} ${isFullClassName} ${styles.size[size]} ${className}`,
+        className: `${styles[variant]} ${isFullClassName} ${styles.size[size]} `,
     }
     return <div {...componentProps}>{children}</div>
 }

@@ -5,12 +5,12 @@ import styles from './NavBarStyles'
 
 export interface NavBarItemsProps {
     variant?: NavBarTypes
-    className?: string
+
     children: ReactNode
 }
 
 const NavBarItems: FC<NavBarItemsProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
-    const { variant = 'top', className = '', children } = props
+    const { variant = 'top', children } = props
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const hasButton = variant === 'top'
     const isOpenClassName = isOpen ? styles.isOpen : styles.isClose
@@ -22,7 +22,7 @@ const NavBarItems: FC<NavBarItemsProps & JSX.IntrinsicElements['div']> = (props)
         <>
             <div
                 {...props}
-                className={`${styles.items.container} ${styles.items[variant]} ${isOpenClassName} ${className}`}
+                className={`${styles.items.container} ${styles.items[variant]} ${isOpenClassName} `}
             >
                 {children}
             </div>

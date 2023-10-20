@@ -4,16 +4,15 @@ import HeroImage from './HeroImage'
 import styles from './HeroStyles'
 
 export interface HeroProps {
-    className?: string
     children: ReactNode
     reversed?: boolean
 }
 
 const HeroContainer: FC<HeroProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
-    const { className = '', children, reversed } = props
+    const { children, reversed } = props
     const isReversedClassName = reversed ? styles.reversed : ''
     return (
-        <div {...props} className={`${styles.hero} ${isReversedClassName} ${className}`}>
+        <div {...props} className={`${styles.hero} ${isReversedClassName} `}>
             {children}
         </div>
     )

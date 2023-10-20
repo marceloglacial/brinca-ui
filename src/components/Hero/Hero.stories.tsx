@@ -1,3 +1,4 @@
+import React from 'react'
 import { Button, Hero } from '..'
 
 export default {
