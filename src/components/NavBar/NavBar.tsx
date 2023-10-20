@@ -6,14 +6,14 @@ import styles from './NavBarStyles'
 export type NavBarTypes = 'top' | 'bottom'
 export interface NavBarProps {
     variant?: NavBarTypes
-    className?: string
+
     children: ReactNode
 }
 
 const NavBarContainer: FC<NavBarProps & JSX.IntrinsicElements['nav']> = (props): JSX.Element => {
-    const { variant = 'top', className = '', children } = props
+    const { variant = 'top', children } = props
     return (
-        <nav {...props} className={`${styles.container} ${styles[variant]} ${className}`}>
+        <nav {...props} className={`${styles.container} ${styles[variant]} `}>
             {children}
         </nav>
     )

@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link, NavBar } from '..'
 
 export default {

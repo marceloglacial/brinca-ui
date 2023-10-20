@@ -7,14 +7,13 @@ import styles from './FormStyles'
 import FormTextarea from './FormTextarea'
 
 export interface FormProps {
-    className?: string
     children: ReactNode
 }
 
 const FormContainer: FC<FormProps & JSX.IntrinsicElements['form']> = (props): JSX.Element => {
-    const { className = '', children } = props
+    const { children } = props
     return (
-        <form {...props} className={`${styles.form} ${className}`}>
+        <form {...props} className={`${styles.form} `}>
             {children}
         </form>
     )

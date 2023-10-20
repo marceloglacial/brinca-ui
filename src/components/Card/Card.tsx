@@ -7,19 +7,15 @@ import styles from './CardStyles'
 export interface CardProps {
     noShadown?: boolean
     squared?: boolean
-    className?: string
     children: ReactNode
 }
 
 const CardContainer: FC<CardProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
-    const { noShadown, squared, className = '', children } = props
+    const { noShadown, squared, children } = props
     const noShadownStyles = noShadown ? '' : styles.shadow
     const squaredStyles = squared ? '' : styles.rounded
     return (
-        <div
-            {...props}
-            className={`${styles.container} ${noShadownStyles} ${squaredStyles} ${className}`}
-        >
+        <div {...props} className={`${styles.container} ${noShadownStyles} ${squaredStyles}`}>
             {children}
         </div>
     )

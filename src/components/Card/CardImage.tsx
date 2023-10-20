@@ -2,14 +2,13 @@ import { FC, ReactNode } from 'react'
 import styles from './CardStyles'
 
 export interface CardImageProps {
-    className?: string
     children: ReactNode
 }
 
 const CardImage: FC<CardImageProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
-    const { className = '', children } = props
+    const { children } = props
     return (
-        <figure {...props} className={`${styles.figure} ${className}`}>
+        <figure {...props} className={`${styles.figure}`}>
             {children}
         </figure>
     )
