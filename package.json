@@ -27,7 +27,7 @@
         "./dist/style.css": "./dist/style.css"
     },
     "scripts": {
-        "dev": "yarn run storybook",
+        "dev": "storybook dev -p 9001 -c .storybook",
         "build": "yarn run format && yarn run lint && rm -rf ./dist && tsc && vite build",
         "build:docs": "storybook build -o docs",
         "storybook": "storybook dev -p 6006",
