@@ -144,5 +144,5 @@ export const Select = (props) => {
 }
 
 export const Textarea = (props) => {
-    return <Form.Textarea {...props}>Textarea</Form.Textarea>
+    return <Form.Textarea {...props} defaultValue={'Textarea'}></Form.Textarea>
 }
