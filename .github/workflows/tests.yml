@@ -9,6 +9,7 @@ jobs:
             - name: 🔧 Cypress run
               uses: cypress-io/github-action@v5
               with:
+                  node-version: 20
                   install: yarn install
                   build: yarn run build
                   start: yarn start
