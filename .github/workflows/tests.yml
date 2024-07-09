@@ -6,11 +6,23 @@ jobs:
         steps:
             - name: 🛎️ Checkout
               uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20
+
+            - name: 🔧 Install dependencies
+              run: yarn install
+
+            - name: 🔧 Build application
+              run: yarn run build
+
+            - name: 🔧 Start application
+              run: yarn start &
+
+            - name: 🔧 Wait for application
+              run: npx wait-on http://localhost:6006 --timeout 110000
+
             - name: 🔧 Cypress run
               uses: cypress-io/github-action@v5
-              with:
-                  install: yarn install
-                  build: yarn run build
-                  start: yarn start
-                  wait-on: 'http://localhost:6006'
-                  wait-on-timeout: 110

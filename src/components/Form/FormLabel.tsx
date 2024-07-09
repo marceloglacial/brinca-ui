@@ -7,11 +7,11 @@ export interface FormLabelProps {
 }
 
 const FormLabel: FC<FormLabelProps & JSX.IntrinsicElements['label']> = (props): JSX.Element => {
-    const { children, full } = props
+    const { children, full, ...labelProps } = props
     const fullClassName = full ? styles.inputFull : ''
 
     return (
-        <label {...props} className={`${styles.label} ${fullClassName} `}>
+        <label {...labelProps} className={`${styles.label} ${fullClassName} `}>
             {children}
         </label>
     )
