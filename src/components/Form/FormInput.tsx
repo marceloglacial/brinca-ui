@@ -6,8 +6,14 @@ export interface FormInputProps {
 }
 
 const FormInput: FC<FormInputProps & JSX.IntrinsicElements['input']> = (props): JSX.Element => {
-    const { full, type = 'text' } = props
+    const { full, type = 'text', ...inputProps } = props
     const fullClassName = full ? styles.inputFull : ''
-    return <input {...props} className={`${styles[type] || styles.text} ${fullClassName} `} />
+    return (
+        <input
+            {...inputProps}
+            type={type}
+            className={`${styles[type] || styles.text} ${fullClassName} `}
+        />
+    )
 }
 export default FormInput

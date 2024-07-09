@@ -1,21 +1,18 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import styles from './FormStyles'
 
 export interface FormTextareaProps {
-    children?: ReactNode
     full?: boolean
+    value?: string
+    defaultValue?: string
 }
 
 const FormTextarea: FC<FormTextareaProps & JSX.IntrinsicElements['textarea']> = (
     props
 ): JSX.Element => {
-    const { children, full } = props
+    const { full, ...textareaProps } = props
     const fullClassName = full ? styles.inputFull : ''
 
-    return (
-        <textarea {...props} className={`${styles.textarea} ${fullClassName} `}>
-            {children}
-        </textarea>
-    )
+    return <textarea {...textareaProps} className={`${styles.textarea} ${fullClassName}`} />
 }
 export default FormTextarea
