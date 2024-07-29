@@ -6,7 +6,7 @@ const styles = {
     full: `button--full-width w-full`,
     size: {
         sm: `py-1 px-4 `,
-        md: `py-2 lg:py-3 px-8 lg:px-10`,
+        md: `py-2 px-8 lg:py-3 lg:px-10`,
         lg: `py-3 px-10 lg:py-4 lg:px-12`,
     },
 }

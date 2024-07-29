@@ -5,8 +5,8 @@ const afterLine = `after:w-0 relative after:absolute after:block after:h-[3px] a
 const styles = {
     primary: `link link--primary ${button.button} ${button.primary}`,
     secondary: `link link--secondary ${button.button} ${button.secondary}`,
-    default: `link font-normal hover:text-green-600  after:bg-green-600 ${afterLine}`,
-    white: `link--white font-normal text-white after:bg-white ${afterLine}`,
+    default: `link inline font-normal hover:text-green-600  after:bg-green-600 ${afterLine}`,
+    white: `link--white inline font-normal text-white after:bg-white ${afterLine}`,
     full: `link--full ${button.full} inline-block text-center`,
     size: button.size,
 }
