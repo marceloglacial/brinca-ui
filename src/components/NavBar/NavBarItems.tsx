@@ -23,6 +23,7 @@ const NavBarItems: FC<NavBarItemsProps & JSX.IntrinsicElements['div']> = (props)
             <div
                 {...props}
                 className={`${styles.items.container} ${styles.items[variant]} ${isOpenClassName} `}
+                onClick={() => setIsOpen(false)}
             >
                 {children}
             </div>

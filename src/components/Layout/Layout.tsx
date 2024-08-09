@@ -10,7 +10,7 @@ export interface LayoutProps {
 export const Layout: FC<LayoutProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
     const { header, footer, children } = props
     return (
-        <div {...props} className={`${styles.container} `}>
+        <div className={`${styles.container}`}>
             <header>{header}</header>
             <main>{children}</main>
             <footer>{footer}</footer>

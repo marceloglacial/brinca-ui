@@ -16,7 +16,9 @@ export const Button: React.FC<ButtonProps & JSX.IntrinsicElements['button']> = (
     const componentProps = {
         ...props,
         full: undefined,
-        className: `${styles.button} ${styles[variant]} ${fullClassName} ${styles.size[size]} ${disabledClassName}`,
+        className: disabled
+            ? `${styles.button} ${disabledClassName} ${styles.size[size]}`
+            : `${styles.button} ${styles[variant]} ${fullClassName} ${styles.size[size]}`,
     }
     return <button {...componentProps}>{children}</button>
 }
