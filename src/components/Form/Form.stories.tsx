@@ -146,3 +146,11 @@ export const Select = (props) => {
 export const Textarea = (props) => {
     return <Form.Textarea {...props} defaultValue={'Textarea'}></Form.Textarea>
 }
+
+export const Submit = (props) => {
+    return <Form.Input {...props} type='submit' defaultValue={'Sumit'} />
+}
+
+export const SubmitDisabled = (props) => {
+    return <Form.Input {...props} type='submit' defaultValue={'Sumit'} />
+}
