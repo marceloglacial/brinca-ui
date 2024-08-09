@@ -33,3 +33,9 @@ export const White = (props) => (
         </Link>
     </div>
 )
+
+export const Disabled = (props) => (
+    <Link href='#' variant='disabled' {...props}>
+        Disabled
+    </Link>
+)

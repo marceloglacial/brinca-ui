@@ -1,7 +1,7 @@
 const styles = {
-    button: `button inline-block text-center rounded-full transition-all border-2 border-green-600 font-normal whitespace-nowrap`,
-    primary: `button--primary bg-green-600 text-white hover:bg-white hover:text-green-600`,
-    secondary: `button--secondary text-green-600 hover:bg-green-600 hover:text-white`,
+    button: `button inline-block text-center rounded-full transition-all border-2 font-normal whitespace-nowrap`,
+    primary: `button--primary border-green-600 bg-green-600 text-white hover:bg-white hover:text-green-600`,
+    secondary: `button--secondary border-green-600 text-green-600 hover:bg-green-600 hover:text-white`,
     disabled: `button--disabled text-gray-400 border-gray-300 bg-gray-50 cursor-not-allowed hover:text-gray-400 hover:border-gray-300 hover:bg-gray-50`,
     full: `button--full-width w-full`,
     size: {
