@@ -1,87 +1,87 @@
 {
-  "name": "@marceloglacial/brinca-ui",
-  "version": "1.18.0",
-  "author": "Marcelo Glacial",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/marceloglacial/brinca-ui.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/marceloglacial/brinca-ui/issues"
-  },
-  "homepage": "https://github.com/marceloglacial/brinca-ui#readme",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/brinca-ui.umd.js",
-  "module": "./dist/brinca-ui.es.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/brinca-ui.es.js",
-      "require": "./dist/brinca-ui.umd.js"
+    "name": "@marceloglacial/brinca-ui",
+    "version": "1.19.0",
+    "author": "Marcelo Glacial",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marceloglacial/brinca-ui.git"
     },
-    "./dist/style.css": "./dist/style.css"
-  },
-  "scripts": {
-    "dev": "storybook dev -p 6006 -c .storybook",
-    "build": "yarn run format && yarn run lint && rm -rf ./dist && tsc && vite build",
-    "build:docs": "storybook build -o docs",
-    "storybook": "storybook dev -p 6006",
-    "format": "prettier -w src",
-    "lint": "eslint --fix src/**/*.* --no-warn-ignored",
-    "husky-actions": "npm run format && npm run lint",
-    "prepare": "npx husky install",
-    "start": "storybook dev -p 6006 --ci --quiet --no-open",
-    "build-storybook": "storybook build",
-    "test": "concurrently \"yarn dev\" \"npx cypress open\"",
-    "test:ci": "concurrently \"yarn start\" \"npx cypress run --headless\""
-  },
-  "dependencies": {
-    "jackspeak": "4.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^8.2.8",
-    "@storybook/addon-interactions": "^8.2.8",
-    "@storybook/addon-links": "^8.2.8",
-    "@storybook/addon-onboarding": "^8.2.8",
-    "@storybook/blocks": "^8.2.8",
-    "@storybook/react": "^8.2.8",
-    "@storybook/react-vite": "^8.2.8",
-    "@storybook/testing-library": "^0.2.2",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.1.0",
-    "@typescript-eslint/parser": "^8.1.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.20",
-    "concurrently": "^8.2.2",
-    "cypress": "^13.13.2",
-    "eslint": "^9.9.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.9",
-    "eslint-plugin-storybook": "^0.8.0",
-    "postcss": "^8.4.41",
-    "prettier": "^3.3.3",
-    "storybook": "^8.2.8",
-    "tailwindcss": "^3.4.9",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.0",
-    "vite-plugin-dts": "^4.0.2"
-  },
-  "resolutions": {
-    "jackspeak": "2.1.1"
-  }
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/marceloglacial/brinca-ui/issues"
+    },
+    "homepage": "https://github.com/marceloglacial/brinca-ui#readme",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/brinca-ui.umd.js",
+    "module": "./dist/brinca-ui.es.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/brinca-ui.es.js",
+            "require": "./dist/brinca-ui.umd.js"
+        },
+        "./dist/style.css": "./dist/style.css"
+    },
+    "scripts": {
+        "dev": "storybook dev -p 6006 -c .storybook",
+        "build": "yarn run format && yarn run lint && rm -rf ./dist && tsc && vite build",
+        "build:docs": "storybook build -o docs",
+        "storybook": "storybook dev -p 6006",
+        "format": "prettier -w src",
+        "lint": "eslint --fix src/**/*.* --no-warn-ignored",
+        "husky-actions": "npm run format && npm run lint",
+        "prepare": "npx husky install",
+        "start": "storybook dev -p 6006 --ci --quiet --no-open",
+        "build-storybook": "storybook build",
+        "test": "concurrently \"yarn dev\" \"npx cypress open\"",
+        "test:ci": "concurrently \"yarn start\" \"npx cypress run --headless\""
+    },
+    "dependencies": {
+        "jackspeak": "4.0.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@storybook/addon-essentials": "^8.2.8",
+        "@storybook/addon-interactions": "^8.2.8",
+        "@storybook/addon-links": "^8.2.8",
+        "@storybook/addon-onboarding": "^8.2.8",
+        "@storybook/blocks": "^8.2.8",
+        "@storybook/react": "^8.2.8",
+        "@storybook/react-vite": "^8.2.8",
+        "@storybook/testing-library": "^0.2.2",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/eslint-plugin": "^8.1.0",
+        "@typescript-eslint/parser": "^8.1.0",
+        "@vitejs/plugin-react": "^4.3.1",
+        "autoprefixer": "^10.4.20",
+        "concurrently": "^8.2.2",
+        "cypress": "^13.13.2",
+        "eslint": "^9.9.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "5.2.1",
+        "eslint-plugin-react": "^7.35.0",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-refresh": "^0.4.9",
+        "eslint-plugin-storybook": "^0.8.0",
+        "postcss": "^8.4.41",
+        "prettier": "^3.3.3",
+        "storybook": "^8.2.8",
+        "tailwindcss": "^3.4.9",
+        "typescript": "^5.5.4",
+        "vite": "^5.4.0",
+        "vite-plugin-dts": "^4.0.2"
+    },
+    "resolutions": {
+        "jackspeak": "2.1.1"
+    }
 }
