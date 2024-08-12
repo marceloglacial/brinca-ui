@@ -94,6 +94,15 @@ export const Checkbox = (props) => {
     )
 }
 
+export const CheckboxDisabled = (props) => {
+    return (
+        <Form.Group {...props}>
+            <Form.Input type='checkbox' id='checkbox' placeholder='Text Input' disabled />
+            <Form.Label htmlFor='checkbox'>checkbox</Form.Label>
+        </Form.Group>
+    )
+}
+
 export const RadioButton = (props) => {
     return (
         <Form.Group {...props} full>
@@ -105,12 +114,27 @@ export const RadioButton = (props) => {
     )
 }
 
+export const RadioButtonDisabled = (props) => {
+    return (
+        <Form.Group {...props} full>
+            <Form.Input type='radio' id='radio1' name='radio' disabled />
+            <Form.Label htmlFor='radio1'>radio</Form.Label>
+            <Form.Input type='radio' id='radio2' name='radio' disabled />
+            <Form.Label htmlFor='radio2'>radio</Form.Label>
+        </Form.Group>
+    )
+}
+
 export const Group = (props) => {
     return <Form.Group {...props}>content</Form.Group>
 }
 
 export const Text = (props) => {
     return <Form.Input {...props} placeholder='input text' />
+}
+
+export const TextDisabled = () => {
+    return <Form.Input placeholder='input text' disabled={true} />
 }
 
 export const TextFullWidth = (props) => {
@@ -143,8 +167,35 @@ export const Select = (props) => {
     )
 }
 
+export const SelectDisabled = (props) => {
+    return (
+        <Form.Select
+            options={[
+                {
+                    label: 'Option 1',
+                    value: '1',
+                },
+                {
+                    label: 'Option 2',
+                    value: '2',
+                },
+                {
+                    label: 'Option 3',
+                    value: '3',
+                },
+            ]}
+            {...props}
+            disabled
+        />
+    )
+}
+
 export const Textarea = (props) => {
     return <Form.Textarea {...props} defaultValue={'Textarea'}></Form.Textarea>
+}
+
+export const TextareaDisabled = (props) => {
+    return <Form.Textarea {...props} defaultValue={'Textarea'} disabled></Form.Textarea>
 }
 
 export const Submit = (props) => {
@@ -152,5 +203,5 @@ export const Submit = (props) => {
 }
 
 export const SubmitDisabled = (props) => {
-    return <Form.Input {...props} type='submit' defaultValue={'Sumit'} />
+    return <Form.Input {...props} type='submit' defaultValue={'Sumit'} disabled />
 }

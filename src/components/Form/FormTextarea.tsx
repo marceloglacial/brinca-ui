@@ -12,7 +12,13 @@ const FormTextarea: FC<FormTextareaProps & JSX.IntrinsicElements['textarea']> = 
 ): JSX.Element => {
     const { full, ...textareaProps } = props
     const fullClassName = full ? styles.inputFull : ''
+    const disabledClassname = props.disabled ? styles.disabled : ` `
 
-    return <textarea {...textareaProps} className={`${styles.textarea} ${fullClassName}`} />
+    return (
+        <textarea
+            {...textareaProps}
+            className={`${styles.textarea} ${fullClassName} ${disabledClassname}`}
+        />
+    )
 }
 export default FormTextarea
