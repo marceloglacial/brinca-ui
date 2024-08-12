@@ -12,13 +12,13 @@ export interface ButtonProps {
 export const Button: React.FC<ButtonProps & JSX.IntrinsicElements['button']> = (props) => {
     const { variant = 'primary', children, full, size = 'md', disabled } = props
     const fullClassName = full ? styles.full : ''
-    const disabledClassName = disabled ? styles.disabled : ''
+    const buttoClassName = disabled
+        ? `${styles.button} ${styles.disabled} ${styles.size[size]}`
+        : `${styles.button} ${styles[variant]} ${fullClassName} ${styles.size[size]}`
     const componentProps = {
         ...props,
         full: undefined,
-        className: disabled
-            ? `${styles.button} ${disabledClassName} ${styles.size[size]}`
-            : `${styles.button} ${styles[variant]} ${fullClassName} ${styles.size[size]}`,
+        className: buttoClassName,
     }
     return <button {...componentProps}>{children}</button>
 }
