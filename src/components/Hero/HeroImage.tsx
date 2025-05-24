@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, ReactElement } from 'react'
 import styles from './HeroStyles'
 
 export interface HeroImageProps {
@@ -7,7 +7,7 @@ export interface HeroImageProps {
     rounded?: boolean
 }
 
-const HeroImage: FC<HeroImageProps> = ({ children, shadow, rounded }): JSX.Element => {
+const HeroImage: FC<HeroImageProps> = ({ children, shadow, rounded }): ReactElement => {
     const shadowStyles = shadow ? styles.shadow : ''
     const roundedStyles = rounded ? styles.rounded : ''
 

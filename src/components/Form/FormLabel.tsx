@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, ComponentPropsWithoutRef, ReactElement } from 'react'
 import styles from './FormStyles'
 
 export interface FormLabelProps {
@@ -6,7 +6,7 @@ export interface FormLabelProps {
     full?: boolean
 }
 
-const FormLabel: FC<FormLabelProps & JSX.IntrinsicElements['label']> = (props): JSX.Element => {
+const FormLabel: FC<FormLabelProps & ComponentPropsWithoutRef<'label'>> = (props): ReactElement => {
     const { children, full, ...labelProps } = props
     const fullClassName = full ? styles.inputFull : ''
 

@@ -1,11 +1,11 @@
-import { FC } from 'react'
+import { FC, ComponentPropsWithoutRef, ReactElement } from 'react'
 import styles from './FormStyles'
 
 export interface FormInputProps {
     full?: boolean
 }
 
-const FormInput: FC<FormInputProps & JSX.IntrinsicElements['input']> = (props): JSX.Element => {
+const FormInput: FC<FormInputProps & ComponentPropsWithoutRef<'input'>> = (props): ReactElement => {
     const { full, type = 'text', disabled, ...inputProps } = props
     const fullClassName = full ? styles.inputFull : ''
     const disabledClassName = disabled ? styles.disabled : ''

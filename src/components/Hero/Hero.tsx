@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, ComponentPropsWithoutRef, ReactElement } from 'react'
 import HeroBody from './HeroBody'
 import HeroImage from './HeroImage'
 import styles from './HeroStyles'
@@ -8,7 +8,7 @@ export interface HeroProps {
     reversed?: boolean
 }
 
-const HeroContainer: FC<HeroProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+const HeroContainer: FC<HeroProps & ComponentPropsWithoutRef<'div'>> = (props): ReactElement => {
     const { children, reversed } = props
     const isReversedClassName = reversed ? styles.reversed : ''
     return (

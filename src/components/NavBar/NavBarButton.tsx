@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ReactElement } from 'react'
 import styles from './NavBarStyles'
 
 export interface NavBarButtonProps {
@@ -6,7 +6,7 @@ export interface NavBarButtonProps {
     setIsOpen: (e: boolean) => void
 }
 
-const NavBarButton: FC<NavBarButtonProps> = (props): JSX.Element => {
+const NavBarButton: FC<NavBarButtonProps> = (props): ReactElement => {
     const { isOpen, setIsOpen } = props
     return (
         <div className={styles.buttonContainer}>

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, ComponentPropsWithoutRef, ReactElement } from 'react'
 import styles from './LayoutStyles'
 
 export interface LayoutProps {
@@ -7,7 +7,7 @@ export interface LayoutProps {
     children?: ReactNode
 }
 
-export const Layout: FC<LayoutProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+export const Layout: FC<LayoutProps & ComponentPropsWithoutRef<'div'>> = (props): ReactElement => {
     const { header, footer, children } = props
     return (
         <div className={`${styles.container}`}>

@@ -61,6 +61,7 @@
         "@storybook/react-vite": "^8.6.14",
         "@storybook/test": "^8.6.14",
         "@storybook/theming": "^8.6.14",
+        "@tailwindcss/postcss": "^4.1.7",
         "@types/react": "^19.1.5",
         "@types/react-dom": "^19.1.5",
         "@typescript-eslint/eslint-plugin": "^8.32.1",
