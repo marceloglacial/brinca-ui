@@ -68,7 +68,7 @@
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.0.1",
-    "cypress": "^13.15.0",
+    "cypress": "^14.4.0",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "5.2.1",
@@ -86,5 +86,10 @@
   },
   "resolutions": {
     "jackspeak": "2.1.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "cypress"
+    ]
   }
 }
