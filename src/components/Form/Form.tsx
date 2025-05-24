@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, ComponentPropsWithoutRef, ReactElement } from 'react'
 import FormGroup from './FormGroup'
 import FormInput from './FormInput'
 import FormLabel from './FormLabel'
@@ -10,7 +10,7 @@ export interface FormProps {
     children: ReactNode
 }
 
-const FormContainer: FC<FormProps & JSX.IntrinsicElements['form']> = (props): JSX.Element => {
+const FormContainer: FC<FormProps & ComponentPropsWithoutRef<'form'>> = (props): ReactElement => {
     const { children } = props
     return (
         <form {...props} className={`${styles.form} `}>

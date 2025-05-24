@@ -1,11 +1,11 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, ComponentPropsWithoutRef, ReactElement } from 'react'
 import styles from './CardStyles'
 
 export interface CardImageProps {
     children: ReactNode
 }
 
-const CardImage: FC<CardImageProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+const CardImage: FC<CardImageProps & ComponentPropsWithoutRef<'div'>> = (props): ReactElement => {
     const { children } = props
     return (
         <figure {...props} className={`${styles.figure}`}>

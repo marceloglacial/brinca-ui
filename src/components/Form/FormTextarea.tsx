@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ComponentPropsWithoutRef, ReactElement } from 'react'
 import styles from './FormStyles'
 
 export interface FormTextareaProps {
@@ -7,9 +7,9 @@ export interface FormTextareaProps {
     defaultValue?: string
 }
 
-const FormTextarea: FC<FormTextareaProps & JSX.IntrinsicElements['textarea']> = (
+const FormTextarea: FC<FormTextareaProps & ComponentPropsWithoutRef<'textarea'>> = (
     props
-): JSX.Element => {
+): ReactElement => {
     const { full, ...textareaProps } = props
     const fullClassName = full ? styles.inputFull : ''
     const disabledClassname = props.disabled ? styles.disabled : ` `

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, ComponentPropsWithoutRef, ReactElement } from 'react'
 import CardBody from './CardBody'
 import CardFooter from './CardFooter'
 import CardImage from './CardImage'
@@ -10,7 +10,7 @@ export interface CardProps {
     children: ReactNode
 }
 
-const CardContainer: FC<CardProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+const CardContainer: FC<CardProps & ComponentPropsWithoutRef<'div'>> = (props): ReactElement => {
     const { noShadown, squared, children } = props
     const noShadownStyles = noShadown ? '' : styles.shadow
     const squaredStyles = squared ? '' : styles.rounded
