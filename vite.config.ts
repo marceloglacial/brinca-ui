@@ -4,10 +4,15 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
 import { UserConfigExport } from 'vite'
-import { name } from './package.json'
+import pkg from './package.json' assert { type: 'json' }
+import { fileURLToPath } from 'node:url'
+import { dirname } from 'node:path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const app = async (): Promise<UserConfigExport> => {
-    const formattedName = name.match(/[^/]+$/)?.[0] ?? name
+    const formattedName = pkg.name.match(/[^/]+$/)?.[0] ?? pkg.name
 
     return defineConfig({
         plugins: [

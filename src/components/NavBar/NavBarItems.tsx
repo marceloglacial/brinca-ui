@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from 'react'
+import { FC, ReactNode, useState, ComponentPropsWithoutRef, ReactElement } from 'react'
 import { NavBarTypes } from './NavBar'
 import NavBarButton from './NavBarButton'
 import styles from './NavBarStyles'
@@ -9,7 +9,9 @@ export interface NavBarItemsProps {
     children: ReactNode
 }
 
-const NavBarItems: FC<NavBarItemsProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+const NavBarItems: FC<NavBarItemsProps & ComponentPropsWithoutRef<'div'>> = (
+    props
+): ReactElement => {
     const { variant = 'top', children } = props
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const hasButton = variant === 'top'
@@ -22,7 +24,7 @@ const NavBarItems: FC<NavBarItemsProps & JSX.IntrinsicElements['div']> = (props)
         <>
             <div
                 {...props}
-                className={`${styles.items.container} ${styles.items[variant]} ${isOpenClassName} `}
+                className={`${styles.items.container} ${(styles.items as any)[variant]} ${isOpenClassName} `}
                 onClick={() => setIsOpen(false)}
             >
                 {children}

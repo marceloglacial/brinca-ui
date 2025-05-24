@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, ComponentPropsWithoutRef, ReactElement } from 'react'
 import NavBarBrand from './NavBarBrand'
 import NavBarItems from './NavBarItems'
 import styles from './NavBarStyles'
@@ -10,10 +10,12 @@ export interface NavBarProps {
     children: ReactNode
 }
 
-const NavBarContainer: FC<NavBarProps & JSX.IntrinsicElements['nav']> = (props): JSX.Element => {
+const NavBarContainer: FC<NavBarProps & ComponentPropsWithoutRef<'nav'>> = (
+    props
+): ReactElement => {
     const { variant = 'top', children } = props
     return (
-        <nav {...props} className={`${styles.container} ${styles[variant]} `}>
+        <nav {...props} className={`${styles.container} ${(styles as any)[variant]} `}>
             {children}
         </nav>
     )

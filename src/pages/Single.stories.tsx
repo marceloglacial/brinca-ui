@@ -78,10 +78,12 @@ export const Single = (props) => (
                 <ul>
                     <li>Duis incididunt mollit ea reprehenderit. </li>
                     <li>
-                        Est fugiat nisi id amet minim minim quis sunt nostrud ipsum consectetur ad.{' '}
+                        Est fugiat nisi id amet minim minim quis sunt nostrud ipsum consectetur
+                        ad.{' '}
                     </li>
                     <li>
-                        Aliqua eu et in anim ipsum. In ea mollit excepteur in mollit laboris quis.{' '}
+                        Aliqua eu et in anim ipsum. In ea mollit excepteur in mollit laboris
+                        quis.{' '}
                     </li>
                     <li>
                         Ex excepteur id sunt nostrud pariatur excepteur quis reprehenderit fugiat
@@ -92,10 +94,12 @@ export const Single = (props) => (
                 <ol>
                     <li>Duis incididunt mollit ea reprehenderit. </li>
                     <li>
-                        Est fugiat nisi id amet minim minim quis sunt nostrud ipsum consectetur ad.{' '}
+                        Est fugiat nisi id amet minim minim quis sunt nostrud ipsum consectetur
+                        ad.{' '}
                     </li>
                     <li>
-                        Aliqua eu et in anim ipsum. In ea mollit excepteur in mollit laboris quis.{' '}
+                        Aliqua eu et in anim ipsum. In ea mollit excepteur in mollit laboris
+                        quis.{' '}
                     </li>
                     <li>
                         Ex excepteur id sunt nostrud pariatur excepteur quis reprehenderit fugiat

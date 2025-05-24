@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, ComponentPropsWithoutRef, ReactElement, FC } from 'react'
 import { ButtonSizeTypes } from '..'
 import styles from './LinkStyles'
 
@@ -10,15 +10,15 @@ export interface LinkProps {
     size?: ButtonSizeTypes
 }
 
-export const Link: React.FC<LinkProps & JSX.IntrinsicElements['div']> = (props): JSX.Element => {
+export const Link: FC<LinkProps & ComponentPropsWithoutRef<'div'>> = (props): ReactElement => {
     const { variant = 'default', children, full, size = 'md' } = props
     const isFullClassName = full ? styles.full : ''
     const isButton = !['default', 'white'].includes(variant)
-    const linkSize = isButton ? styles.size[size] : ''
+    const linkSize = isButton ? (styles.size as any)[size] : ''
     const componentProps = {
         ...props,
         full: undefined,
-        className: `${styles[variant]} ${isFullClassName} ${linkSize} `,
+        className: `${(styles as any)[variant]} ${isFullClassName} ${linkSize} `,
     }
     return <div {...componentProps}>{children}</div>
 }

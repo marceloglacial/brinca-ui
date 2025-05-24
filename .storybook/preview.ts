@@ -12,7 +12,8 @@ const preview: Preview = {
         docs: {
             theme: brincaTheme,
         },
-        actions: { argTypesRegex: '^on[A-Z].*' },
+        // actions: { argTypesRegex: '^on[A-Z].*' }, // Removed per Storybook 8 migration
+        // To mock actions in play functions, use the `fn` function from '@storybook/test'.
         controls: {
             matchers: {
                 color: /(background|color)$/i,
@@ -21,7 +22,7 @@ const preview: Preview = {
         },
     },
 
-    tags: ['autodocs']
+    tags: ['autodocs', 'autodocs'],
 }
 
 export default preview

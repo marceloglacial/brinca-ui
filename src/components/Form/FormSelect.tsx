@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ComponentPropsWithoutRef, ReactElement } from 'react'
 import styles from './FormStyles'
 
 export type OptionsType = {
@@ -11,7 +11,9 @@ export interface FormSelectProps {
     options: OptionsType[]
 }
 
-const FormSelect: FC<FormSelectProps & JSX.IntrinsicElements['select']> = (props): JSX.Element => {
+const FormSelect: FC<FormSelectProps & ComponentPropsWithoutRef<'select'>> = (
+    props
+): ReactElement => {
     const { full, options, ...selectProps } = props
     const fullClassName = full ? styles.inputFull : ''
     const disabledClassname = props.disabled ? styles.disabled : ''
@@ -21,7 +23,7 @@ const FormSelect: FC<FormSelectProps & JSX.IntrinsicElements['select']> = (props
                 {...selectProps}
                 className={`${styles.select} ${fullClassName} ${disabledClassname}`}
             >
-                {options.map((option, index) => (
+                {options.map((option: OptionsType, index: number) => (
                     <option key={index} value={option.value}>
                         {option.label}
                     </option>
