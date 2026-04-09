@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
 import { UserConfigExport } from 'vite'
-import pkg from './package.json' assert { type: 'json' }
+import pkg from './package.json' with { type: 'json' }
 import { fileURLToPath } from 'node:url'
 import { dirname } from 'node:path'
 
